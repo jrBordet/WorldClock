@@ -6,12 +6,21 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 @main
 struct WordClockApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+			ContentView(
+			store: Store(
+			  initialState: TimersState(),
+			  reducer: timersReducer,
+			  environment: TimersEnvironment(
+				mainQueue: DispatchQueue.main.eraseToAnyScheduler()
+			  )
+			)
+		  )
         }
     }
 }
