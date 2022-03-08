@@ -16,10 +16,7 @@ struct WordClockApp: App {
 			store: Store(
 			  initialState: TimersState(),
 			  reducer: timersReducer,
-			  environment: TimersEnvironment(
-				mainQueue: DispatchQueue.main.eraseToAnyScheduler()
-			  )
-			)
+			  environment: .mock()			)
 		  )
         }
     }
