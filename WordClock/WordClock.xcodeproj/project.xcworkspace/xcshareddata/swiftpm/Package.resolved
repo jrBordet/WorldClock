@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "TimeInWords",
+        "repositoryURL": "https://github.com/jrBordet/TimeInWords.git",
+        "state": {
+          "branch": "master",
+          "revision": "d1887d6bd9af42848c2c7eb28073b778631bb426",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
