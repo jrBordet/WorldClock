@@ -87,8 +87,8 @@ let timersReducer = Reducer<TimersState, TimersAction, TimersEnvironment> { stat
 	case .timerTicked:
 		state.secondsElapsed += 1
 		
-		let dateComponents = dateComponents(from: Date())
-		
+		let dateComponents = dateComponents(from: state.now)
+				
 		guard let dateComponents = dateComponents else {
 			return .none
 		}
