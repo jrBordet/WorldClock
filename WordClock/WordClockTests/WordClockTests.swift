@@ -6,6 +6,8 @@
 //
 
 import XCTest
+import ComposableArchitecture
+import TimeInWords
 @testable import WordClock
 
 class WordClockTests: XCTestCase {
@@ -19,11 +21,60 @@ class WordClockTests: XCTestCase {
     }
 
     func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+		class TimersTests: XCTestCase {
+		  let scheduler = DispatchQueue.test
+
+		  func testStart() {
+			let store = TestStore(
+			  initialState: TimersState(),
+			  reducer: timersReducer,
+			  environment: TimersEnvironment(
+				mainQueue: self.scheduler.eraseToAnyScheduler(),
+				timeInWords: { h, m in
+					   let value = TimeInWords.timeInWords(
+						   h: h,
+						   m: m
+					   )
+					   
+					   return Effect(value: value)
+				}
+			  )
+			)
+
+			store.assert(
+			  .send(.toggleTimerButtonTapped) {
+				$0.isTimerActive = true
+			  },
+			  .do { self.scheduler.advance(by: 1) },
+			  .receive(.timerTicked) {
+				$0.secondsElapsed = 1
+			  },
+			  .receive(TimersAction.timeInWordsResponse(.success("twenty nine minutes to twelve")), { state in
+				  state.timeInwords = "twenty nine minutes to twelve"
+			  }),
+//			  .do { self.scheduler.advance(by: 5) },
+//			  .receive(.timerTicked) {
+//				$0.secondsElapsed = 2
+//			  },
+//			  .receive(.timerTicked) {
+//				$0.secondsElapsed = 3
+//			  },
+//			  .receive(.timerTicked) {
+//				$0.secondsElapsed = 4
+//			  },
+//			  .receive(.timerTicked) {
+//				$0.secondsElapsed = 5
+//			  },
+//			  .receive(.timerTicked) {
+//				$0.secondsElapsed = 6
+//			  },
+			  .send(.toggleTimerButtonTapped) {
+				$0.isTimerActive = false
+			  }
+			)
+		  }
+		}
+
     }
 
     func testPerformanceExample() throws {

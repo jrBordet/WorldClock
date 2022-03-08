@@ -18,7 +18,7 @@ struct TimersState: Equatable {
 	var timeInwords: String = ""
 }
 
-enum TimersAction {
+enum TimersAction: Equatable {
 	case timerTicked
 	case toggleTimerButtonTapped
 	
@@ -37,7 +37,12 @@ extension TimersEnvironment {
 	static var live: Self = .init(
 		mainQueue: DispatchQueue.main.eraseToAnyScheduler(),
 		timeInWords: { h, m in
-			fatalError()
+			let value = TimeInWords.timeInWords(
+				h: h,
+				m: m
+			)
+			
+			return Effect(value: value)
 		}
 	)
 }
@@ -54,23 +59,61 @@ extension TimersEnvironment {
 	}
 }
 
+/**
+ 
+ return Effect.merge(
+ Effect<MapStationsAction, Never>(
+ value: MapStationsAction.currentLocationButtonTapped
+ ),
+ Effect<MapStationsAction, Never>(
+ value: MapStationsAction.load
+ ),
+ environment
+ .locationManager
+ .create(id: LocationManagerId())
+ .map(MapStationsAction.locationManager)
+ )
+ 
+ .receive(on: environment.mainQueue)
+ .catchToEffect()
+ .map { .ricercaPosizioneResponse($0) }
+ 
+ */
+
 let timersReducer = Reducer<TimersState, TimersAction, TimersEnvironment> { state, action, environment in
 	struct TimerId: Hashable {}
 	
 	switch action {
 	case .timerTicked:
 		state.secondsElapsed += 1
-		return .none
+		
+		let dateComponents = dateComponents(from: Date())
+		
+		guard let dateComponents = dateComponents else {
+			return .none
+		}
+		
+		return environment
+			.timeInWords(dateComponents.hour, dateComponents.minutes)
+			.receive(on: environment.mainQueue)
+			.catchToEffect()
+			.map(TimersAction.timeInWordsResponse)
 		
 	case .toggleTimerButtonTapped:
 		state.isTimerActive.toggle()
 		
 		return state.isTimerActive
-		? Effect.timer(id: TimerId(), every: 1, tolerance: .zero, on: environment.mainQueue)
+		? Effect.timer(
+			id: TimerId(),
+			every: 1,
+			tolerance: .zero,
+			on: environment.mainQueue
+		)
 			.map { _ in TimersAction.timerTicked }
 		: Effect.cancel(id: TimerId())
 		
 	case let .timeInWordsResponse(.success(response)):
+		state.timeInwords = response
 		return .none
 		
 	case let .timeInWordsResponse(.failure(e)):
@@ -98,10 +141,8 @@ struct ContentView: View {
 	
 	var body: some View {
 		VStack {
-			//		  Text(readMe)
 			
-			Text(timeInWords(h: 1, m: 0))
-				.padding()
+			Text(viewStore.timeInwords)
 			
 			ZStack {
 				Circle()

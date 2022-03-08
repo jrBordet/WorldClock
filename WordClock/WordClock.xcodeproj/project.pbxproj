@@ -16,6 +16,7 @@
 		F8B1349827D74E8900BE6503 /* WordClockUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B1349727D74E8900BE6503 /* WordClockUITestsLaunchTests.swift */; };
 		F8B134A627D74EBD00BE6503 /* TimeInWords in Frameworks */ = {isa = PBXBuildFile; productRef = F8B134A527D74EBD00BE6503 /* TimeInWords */; };
 		F8B134A927D751A900BE6503 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = F8B134A827D751A900BE6503 /* ComposableArchitecture */; };
+		F8B134AC27D75E3900BE6503 /* Utils+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B134AB27D75E3900BE6503 /* Utils+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		F8B1349127D74E8900BE6503 /* WordClockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordClockUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8B1349527D74E8900BE6503 /* WordClockUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordClockUITests.swift; sourceTree = "<group>"; };
 		F8B1349727D74E8900BE6503 /* WordClockUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordClockUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F8B134AA27D75B9F00BE6503 /* WordClock.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = WordClock.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		F8B134AB27D75E3900BE6503 /* Utils+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Utils+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +81,7 @@
 		F8B1346E27D74E8600BE6503 = {
 			isa = PBXGroup;
 			children = (
+				F8B134AA27D75B9F00BE6503 /* WordClock.playground */,
 				F8B1347927D74E8600BE6503 /* WordClock */,
 				F8B1348A27D74E8900BE6503 /* WordClockTests */,
 				F8B1349427D74E8900BE6503 /* WordClockUITests */,
@@ -100,6 +104,7 @@
 			children = (
 				F8B1347A27D74E8600BE6503 /* WordClockApp.swift */,
 				F8B1347C27D74E8600BE6503 /* ContentView.swift */,
+				F8B134AB27D75E3900BE6503 /* Utils+.swift */,
 				F8B1347E27D74E8800BE6503 /* Assets.xcassets */,
 				F8B1348027D74E8800BE6503 /* Preview Content */,
 			);
@@ -269,6 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8B134AC27D75E3900BE6503 /* Utils+.swift in Sources */,
 				F8B1347D27D74E8600BE6503 /* ContentView.swift in Sources */,
 				F8B1347B27D74E8600BE6503 /* WordClockApp.swift in Sources */,
 			);

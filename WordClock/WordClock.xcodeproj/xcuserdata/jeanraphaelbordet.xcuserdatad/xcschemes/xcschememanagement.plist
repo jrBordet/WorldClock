@@ -25,6 +25,27 @@
 			<key>orderHint</key>
 			<integer>19</integer>
 		</dict>
+		<key>WordClock (Playground) 1.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>23</integer>
+		</dict>
+		<key>WordClock (Playground) 2.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>24</integer>
+		</dict>
+		<key>WordClock (Playground).xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>22</integer>
+		</dict>
 		<key>WordClock.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>

@@ -16,7 +16,8 @@ struct WordClockApp: App {
 			store: Store(
 			  initialState: TimersState(),
 			  reducer: timersReducer,
-			  environment: .mock()			)
+			  environment: .live
+			)
 		  )
         }
     }
