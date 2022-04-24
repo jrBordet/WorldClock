@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		38783FC2281589260044F7AA /* TimeInWords in Frameworks */ = {isa = PBXBuildFile; productRef = 38783FC1281589260044F7AA /* TimeInWords */; };
-		38783FC42815C6850044F7AA /* TimeInWorldFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38783FC32815C6850044F7AA /* TimeInWorldFeature.swift */; };
+		38783FCE2815DEEE0044F7AA /* TimeInWorldFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 38783FCD2815DEEE0044F7AA /* TimeInWorldFeature */; };
 		F8B1347B27D74E8600BE6503 /* WordClockApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B1347A27D74E8600BE6503 /* WordClockApp.swift */; };
 		F8B1347D27D74E8600BE6503 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B1347C27D74E8600BE6503 /* ContentView.swift */; };
 		F8B1347F27D74E8800BE6503 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8B1347E27D74E8800BE6503 /* Assets.xcassets */; };
@@ -38,7 +38,7 @@
 
 /* Begin PBXFileReference section */
 		38783FBF281588FC0044F7AA /* TimeInWords */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = TimeInWords; path = ../../TimeInWords; sourceTree = "<group>"; };
-		38783FC32815C6850044F7AA /* TimeInWorldFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeInWorldFeature.swift; sourceTree = "<group>"; };
+		38783FCC2815DEB70044F7AA /* TimeInWorldFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = TimeInWorldFeature; path = ../../TimeInWorldFeature; sourceTree = "<group>"; };
 		F8B1347727D74E8600BE6503 /* WordClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8B1347A27D74E8600BE6503 /* WordClockApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordClockApp.swift; sourceTree = "<group>"; };
 		F8B1347C27D74E8600BE6503 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,6 +58,7 @@
 			files = (
 				38783FC2281589260044F7AA /* TimeInWords in Frameworks */,
 				F8B134A927D751A900BE6503 /* ComposableArchitecture in Frameworks */,
+				38783FCE2815DEEE0044F7AA /* TimeInWorldFeature in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,9 +119,9 @@
 		F8B1347927D74E8600BE6503 /* WordClock */ = {
 			isa = PBXGroup;
 			children = (
+				38783FCC2815DEB70044F7AA /* TimeInWorldFeature */,
 				F8B1347A27D74E8600BE6503 /* WordClockApp.swift */,
 				F8B1347C27D74E8600BE6503 /* ContentView.swift */,
-				38783FC32815C6850044F7AA /* TimeInWorldFeature.swift */,
 				F8B1347E27D74E8800BE6503 /* Assets.xcassets */,
 				F8B1348027D74E8800BE6503 /* Preview Content */,
 			);
@@ -171,6 +172,7 @@
 			packageProductDependencies = (
 				F8B134A827D751A900BE6503 /* ComposableArchitecture */,
 				38783FC1281589260044F7AA /* TimeInWords */,
+				38783FCD2815DEEE0044F7AA /* TimeInWorldFeature */,
 			);
 			productName = WordClock;
 			productReference = F8B1347727D74E8600BE6503 /* WordClock.app */;
@@ -290,7 +292,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8B1347D27D74E8600BE6503 /* ContentView.swift in Sources */,
-				38783FC42815C6850044F7AA /* TimeInWorldFeature.swift in Sources */,
 				F8B1347B27D74E8600BE6503 /* WordClockApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -634,6 +635,10 @@
 		38783FC1281589260044F7AA /* TimeInWords */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = TimeInWords;
+		};
+		38783FCD2815DEEE0044F7AA /* TimeInWorldFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TimeInWorldFeature;
 		};
 		F8B134A827D751A900BE6503 /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;

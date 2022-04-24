@@ -8,11 +8,7 @@
 import SwiftUI
 import TimeInWords
 import ComposableArchitecture
-
-//public struct Error: Swift.Error, Equatable {
-//    public init() {}
-//}
-
+import TimeInWorldFeature
 
 private let readMe = """
   This application demonstrates how to work with timers in the Composable Architecture.

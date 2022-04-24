@@ -8,6 +8,7 @@
 import SwiftUI
 import ComposableArchitecture
 import TimeInWords
+import TimeInWorldFeature
 
 @main
 struct WordClockApp: App {
