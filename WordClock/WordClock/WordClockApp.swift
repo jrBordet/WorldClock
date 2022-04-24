@@ -7,6 +7,7 @@
 
 import SwiftUI
 import ComposableArchitecture
+import TimeInWords
 
 @main
 struct WordClockApp: App {
@@ -17,7 +18,10 @@ struct WordClockApp: App {
 			  initialState: TimersState(),
 			  reducer: timersReducer,
 			  environment: TimersEnvironment(
-				mainQueue: DispatchQueue.main.eraseToAnyScheduler()
+				mainQueue: DispatchQueue.main.eraseToAnyScheduler(),
+                timeInWords: { (h: Int, m: Int) -> Effect<String, Error> in
+                    Effect(value: timeInWords(h: h, m: m))
+                }
 			  )
 			)
 		  )
