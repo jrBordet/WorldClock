@@ -8,7 +8,6 @@
 import SwiftUI
 import TimeInWords
 import ComposableArchitecture
-import TimeInWorldFeature
 
 private let readMe = """
   This application demonstrates how to work with timers in the Composable Architecture.
@@ -18,14 +17,14 @@ private let readMe = """
   `Effect.timer` API that works with schedulers and can be tested.
   """
 
-struct ContentView: View {
+public struct ContentView: View {
     @ObservedObject var viewStore: ViewStore<TimeInWorldState, TimeInWordsAction>
     
-    init(store: Store<TimeInWorldState, TimeInWordsAction>) {
+    public init(store: Store<TimeInWorldState, TimeInWordsAction>) {
         self.viewStore = ViewStore(store)
     }
     
-    var body: some View {
+    public var body: some View {
         VStack {
             //Text(readMe)
             
@@ -84,10 +83,6 @@ struct ContentView: View {
         .padding()
         .navigationBarTitle("Timers")
     }
-    //    var body: some View {
-    //		Text(timeInWords(h: 10, m: 45))
-    //			.padding()
-    //    }
 }
 
 struct ContentView_Previews: PreviewProvider {

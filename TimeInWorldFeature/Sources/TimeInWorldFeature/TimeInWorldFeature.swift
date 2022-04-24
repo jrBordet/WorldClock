@@ -14,6 +14,7 @@ var calendar = Calendar.current
 // MARK: - Timer feature domain
 
 public struct TimeInWorldState: Equatable {
+    public var date = Date()
     public var isTimerActive = false
     public var secondsElapsed = 0
     public var timeInWords: String = ""
@@ -22,8 +23,10 @@ public struct TimeInWorldState: Equatable {
     public var minutes: WordNumber = .zero
     public var accessory: Accessory = .o_clock
     
-    public init() {
-        
+    public init(
+        date: Date = Date()
+    ) {
+        self.date = date
     }
 }
 
@@ -84,10 +87,8 @@ public let timeInWordsReducer = Reducer<TimeInWorldState, TimeInWordsAction, Tim
         return Effect<TimeInWordsAction, Never>(value: .timeInWords)
         
     case .timeInWords:
-        let date = Date()
-
-        let hour = calendar.component(.hour, from: date)
-        let minutes = calendar.component(.minute, from: date)
+        let hour = calendar.component(.hour, from: state.date)
+        let minutes = calendar.component(.minute, from: state.date)
         
         return Effect.merge(
             environment
