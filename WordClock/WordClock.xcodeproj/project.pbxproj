@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38783FC2281589260044F7AA /* TimeInWords in Frameworks */ = {isa = PBXBuildFile; productRef = 38783FC1281589260044F7AA /* TimeInWords */; };
+		38783FCE2815DEEE0044F7AA /* TimeInWorldFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 38783FCD2815DEEE0044F7AA /* TimeInWorldFeature */; };
 		F8B1347B27D74E8600BE6503 /* WordClockApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B1347A27D74E8600BE6503 /* WordClockApp.swift */; };
 		F8B1347D27D74E8600BE6503 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B1347C27D74E8600BE6503 /* ContentView.swift */; };
 		F8B1347F27D74E8800BE6503 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8B1347E27D74E8800BE6503 /* Assets.xcassets */; };
@@ -14,7 +16,6 @@
 		F8B1348C27D74E8900BE6503 /* WordClockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B1348B27D74E8900BE6503 /* WordClockTests.swift */; };
 		F8B1349627D74E8900BE6503 /* WordClockUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B1349527D74E8900BE6503 /* WordClockUITests.swift */; };
 		F8B1349827D74E8900BE6503 /* WordClockUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B1349727D74E8900BE6503 /* WordClockUITestsLaunchTests.swift */; };
-		F8B134A627D74EBD00BE6503 /* TimeInWords in Frameworks */ = {isa = PBXBuildFile; productRef = F8B134A527D74EBD00BE6503 /* TimeInWords */; };
 		F8B134A927D751A900BE6503 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = F8B134A827D751A900BE6503 /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		38783FBF281588FC0044F7AA /* TimeInWords */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = TimeInWords; path = ../../TimeInWords; sourceTree = "<group>"; };
+		38783FCC2815DEB70044F7AA /* TimeInWorldFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = TimeInWorldFeature; path = ../../TimeInWorldFeature; sourceTree = "<group>"; };
 		F8B1347727D74E8600BE6503 /* WordClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8B1347A27D74E8600BE6503 /* WordClockApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordClockApp.swift; sourceTree = "<group>"; };
 		F8B1347C27D74E8600BE6503 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,8 +56,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38783FC2281589260044F7AA /* TimeInWords in Frameworks */,
 				F8B134A927D751A900BE6503 /* ComposableArchitecture in Frameworks */,
-				F8B134A627D74EBD00BE6503 /* TimeInWords in Frameworks */,
+				38783FCE2815DEEE0044F7AA /* TimeInWorldFeature in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,13 +79,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		38783FBE281588FC0044F7AA /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				38783FBF281588FC0044F7AA /* TimeInWords */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		38783FC0281589260044F7AA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F8B1346E27D74E8600BE6503 = {
 			isa = PBXGroup;
 			children = (
+				38783FBE281588FC0044F7AA /* Packages */,
 				F8B1347927D74E8600BE6503 /* WordClock */,
 				F8B1348A27D74E8900BE6503 /* WordClockTests */,
 				F8B1349427D74E8900BE6503 /* WordClockUITests */,
 				F8B1347827D74E8600BE6503 /* Products */,
+				38783FC0281589260044F7AA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,6 +119,7 @@
 		F8B1347927D74E8600BE6503 /* WordClock */ = {
 			isa = PBXGroup;
 			children = (
+				38783FCC2815DEB70044F7AA /* TimeInWorldFeature */,
 				F8B1347A27D74E8600BE6503 /* WordClockApp.swift */,
 				F8B1347C27D74E8600BE6503 /* ContentView.swift */,
 				F8B1347E27D74E8800BE6503 /* Assets.xcassets */,
@@ -148,8 +170,9 @@
 			);
 			name = WordClock;
 			packageProductDependencies = (
-				F8B134A527D74EBD00BE6503 /* TimeInWords */,
 				F8B134A827D751A900BE6503 /* ComposableArchitecture */,
+				38783FC1281589260044F7AA /* TimeInWords */,
+				38783FCD2815DEEE0044F7AA /* TimeInWorldFeature */,
 			);
 			productName = WordClock;
 			productReference = F8B1347727D74E8600BE6503 /* WordClock.app */;
@@ -224,7 +247,6 @@
 			);
 			mainGroup = F8B1346E27D74E8600BE6503;
 			packageReferences = (
-				F8B134A427D74EBD00BE6503 /* XCRemoteSwiftPackageReference "TimeInWords" */,
 				F8B134A727D751A900BE6503 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 			);
 			productRefGroup = F8B1347827D74E8600BE6503 /* Products */;
@@ -599,14 +621,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		F8B134A427D74EBD00BE6503 /* XCRemoteSwiftPackageReference "TimeInWords" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/jrBordet/TimeInWords.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 		F8B134A727D751A900BE6503 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
@@ -618,10 +632,13 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		F8B134A527D74EBD00BE6503 /* TimeInWords */ = {
+		38783FC1281589260044F7AA /* TimeInWords */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = F8B134A427D74EBD00BE6503 /* XCRemoteSwiftPackageReference "TimeInWords" */;
 			productName = TimeInWords;
+		};
+		38783FCD2815DEEE0044F7AA /* TimeInWorldFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TimeInWorldFeature;
 		};
 		F8B134A827D751A900BE6503 /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
