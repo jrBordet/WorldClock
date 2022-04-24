@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		38783FC2281589260044F7AA /* TimeInWords in Frameworks */ = {isa = PBXBuildFile; productRef = 38783FC1281589260044F7AA /* TimeInWords */; };
+		38783FC42815C6850044F7AA /* TimeInWorldFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38783FC32815C6850044F7AA /* TimeInWorldFeature.swift */; };
 		F8B1347B27D74E8600BE6503 /* WordClockApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B1347A27D74E8600BE6503 /* WordClockApp.swift */; };
 		F8B1347D27D74E8600BE6503 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B1347C27D74E8600BE6503 /* ContentView.swift */; };
 		F8B1347F27D74E8800BE6503 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8B1347E27D74E8800BE6503 /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		38783FBF281588FC0044F7AA /* TimeInWords */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = TimeInWords; path = ../../TimeInWords; sourceTree = "<group>"; };
+		38783FC32815C6850044F7AA /* TimeInWorldFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeInWorldFeature.swift; sourceTree = "<group>"; };
 		F8B1347727D74E8600BE6503 /* WordClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8B1347A27D74E8600BE6503 /* WordClockApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordClockApp.swift; sourceTree = "<group>"; };
 		F8B1347C27D74E8600BE6503 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			children = (
 				F8B1347A27D74E8600BE6503 /* WordClockApp.swift */,
 				F8B1347C27D74E8600BE6503 /* ContentView.swift */,
+				38783FC32815C6850044F7AA /* TimeInWorldFeature.swift */,
 				F8B1347E27D74E8800BE6503 /* Assets.xcassets */,
 				F8B1348027D74E8800BE6503 /* Preview Content */,
 			);
@@ -287,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8B1347D27D74E8600BE6503 /* ContentView.swift in Sources */,
+				38783FC42815C6850044F7AA /* TimeInWorldFeature.swift in Sources */,
 				F8B1347B27D74E8600BE6503 /* WordClockApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

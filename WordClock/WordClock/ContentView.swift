@@ -9,71 +9,10 @@ import SwiftUI
 import TimeInWords
 import ComposableArchitecture
 
-public struct Error: Swift.Error, Equatable {
-    public init() {}
-}
+//public struct Error: Swift.Error, Equatable {
+//    public init() {}
+//}
 
-var calendar = Calendar.current
-
-// MARK: - Timer feature domain
-
-struct TimersState: Equatable {
-    var isTimerActive = false
-    var secondsElapsed = 0
-    var timeInWords: String = ""
-}
-
-enum TimersAction {
-    case timerTicked
-    case toggleTimerButtonTapped
-    case timeInWords, timeInWordsResponse(Result<String, Error>)
-}
-
-struct TimersEnvironment {
-    var mainQueue: AnySchedulerOf<DispatchQueue>
-    var timeInWords: (Int, Int) -> Effect<String, Error>
-}
-
-let timersReducer = Reducer<TimersState, TimersAction, TimersEnvironment> {
-    state, action, environment in
-    struct TimerId: Hashable {}
-    
-    switch action {
-    case .toggleTimerButtonTapped:
-        state.isTimerActive.toggle()
-        
-        return state.isTimerActive
-        ? Effect.timer(id: TimerId(), every: 1, tolerance: .zero, on: environment.mainQueue)
-            .map { _ in TimersAction.timerTicked }
-        : Effect.cancel(id: TimerId())
-    
-    case .timerTicked:
-        state.secondsElapsed += 1
-        
-        return Effect<TimersAction, Never>(value: .timeInWords)
-        
-    case .timeInWords:
-        let date = Date()
-
-        let hour = calendar.component(.hour, from: date)
-        let minutes = calendar.component(.minute, from: date)
-        
-        return environment
-            .timeInWords(hour, minutes)
-            .receive(on: environment.mainQueue)
-            .catchToEffect()
-            .map { TimersAction.timeInWordsResponse($0) }
-                    
-    case let .timeInWordsResponse(.success(time)):
-        state.timeInWords = time
-        return .none
-        
-    case let .timeInWordsResponse(.failure(error)):
-        return .none
-    }
-}
-    .signpost()
-    .debug()
 
 private let readMe = """
   This application demonstrates how to work with timers in the Composable Architecture.
@@ -84,9 +23,9 @@ private let readMe = """
   """
 
 struct ContentView: View {
-    @ObservedObject var viewStore: ViewStore<TimersState, TimersAction>
+    @ObservedObject var viewStore: ViewStore<TimeInWorldState, TimeInWordsAction>
     
-    init(store: Store<TimersState, TimersAction>) {
+    init(store: Store<TimeInWorldState, TimeInWordsAction>) {
         self.viewStore = ViewStore(store)
     }
     
@@ -160,12 +99,16 @@ struct ContentView_Previews: PreviewProvider {
         NavigationView {
             ContentView(
                 store: Store(
-                    initialState: TimersState(),
-                    reducer: timersReducer,
-                    environment: TimersEnvironment(
+                    initialState: TimeInWorldState(),
+                    reducer: timeInWordsReducer,
+                    environment: TimeInWordsEnvironment(
                         mainQueue: DispatchQueue.main.eraseToAnyScheduler(),
                         timeInWords: { (h: Int, m: Int) -> Effect<String, Error> in
                             Effect(value: timeInWords(h: h, m: m))
+                        },
+                        time12InWords: { h, m in
+                            fatalError()
+                            //Effect(value: time12InWords(h: h, m: m))
                         }
                     )
                 )
