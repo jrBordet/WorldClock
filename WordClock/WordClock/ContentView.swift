@@ -20,6 +20,7 @@ var calendar = Calendar.current
 struct TimersState: Equatable {
     var isTimerActive = false
     var secondsElapsed = 0
+    var timeInWords: String = ""
 }
 
 enum TimersAction {
@@ -64,7 +65,7 @@ let timersReducer = Reducer<TimersState, TimersAction, TimersEnvironment> {
             .map { TimersAction.timeInWordsResponse($0) }
                     
     case let .timeInWordsResponse(.success(time)):
-        print("[TIME] - \(time)")
+        state.timeInWords = time
         return .none
         
     case let .timeInWordsResponse(.failure(error)):
@@ -91,7 +92,9 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Text(readMe)
+            //Text(readMe)
+            
+            Text(viewStore.timeInWords)
             
             ZStack {
                 Circle()
