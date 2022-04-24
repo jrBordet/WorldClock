@@ -51,6 +51,20 @@ public struct TimeInWordsEnvironment {
     }
 }
 
+extension TimeInWordsEnvironment {
+    public static func mock (
+        mainQueue: AnySchedulerOf<DispatchQueue>,
+        timeInWords: @escaping(Int, Int) -> Effect<String, Error> = { _, _ in fatalError() },
+        time12InWords: @escaping(Int, Int) -> Effect<((hour: WordNumber, minutes: WordNumber, accessory: Accessory)), Error> = { _, _ in fatalError() }
+    ) -> Self {
+        .init(
+            mainQueue: mainQueue,
+            timeInWords: timeInWords,
+            time12InWords: time12InWords
+        )
+    }
+}
+
 public let timeInWordsReducer = Reducer<TimeInWorldState, TimeInWordsAction, TimeInWordsEnvironment> {
     state, action, environment in
     struct TimerId: Hashable {}
