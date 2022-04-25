@@ -28,10 +28,10 @@ public struct PastView: View {
 
     public var body: some View {
         HStack() {
-            LetterView("P", highighted: viewStore.accessory == .past)
-            LetterView("A", highighted: viewStore.accessory == .past)
-            LetterView("S", highighted: viewStore.accessory == .past)
-            LetterView("T", highighted: viewStore.accessory == .past)
+            LetterView("P", highighted: viewStore.accessory == .past || viewStore.accessory == .quarter_past || viewStore.accessory == .half)
+            LetterView("A", highighted: viewStore.accessory == .past || viewStore.accessory == .quarter_past || viewStore.accessory == .half)
+            LetterView("S", highighted: viewStore.accessory == .past || viewStore.accessory == .quarter_past || viewStore.accessory == .half)
+            LetterView("T", highighted: viewStore.accessory == .past || viewStore.accessory == .quarter_past || viewStore.accessory == .half)
         }
     }
 }

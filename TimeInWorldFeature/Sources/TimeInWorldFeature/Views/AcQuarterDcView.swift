@@ -25,13 +25,13 @@ public struct QuarterView: View {
     
     public var body: some View {
         HStack() {
-            LetterView("Q", highighted: viewStore.accessory == .quarter_past)
-            LetterView("U", highighted: viewStore.accessory == .quarter_past)
-            LetterView("A", highighted: viewStore.accessory == .quarter_past)
-            LetterView("R", highighted: viewStore.accessory == .quarter_past)
-            LetterView("T", highighted: viewStore.accessory == .quarter_past)
-            LetterView("E", highighted: viewStore.accessory == .quarter_past)
-            LetterView("R", highighted: viewStore.accessory == .quarter_past)
+            LetterView("Q", highighted: viewStore.accessory == .quarter_past || viewStore.accessory == .quarter_to)
+            LetterView("U", highighted: viewStore.accessory == .quarter_past || viewStore.accessory == .quarter_to)
+            LetterView("A", highighted: viewStore.accessory == .quarter_past || viewStore.accessory == .quarter_to)
+            LetterView("R", highighted: viewStore.accessory == .quarter_past || viewStore.accessory == .quarter_to)
+            LetterView("T", highighted: viewStore.accessory == .quarter_past || viewStore.accessory == .quarter_to)
+            LetterView("E", highighted: viewStore.accessory == .quarter_past || viewStore.accessory == .quarter_to)
+            LetterView("R", highighted: viewStore.accessory == .quarter_past || viewStore.accessory == .quarter_to)
         }
     }
 }

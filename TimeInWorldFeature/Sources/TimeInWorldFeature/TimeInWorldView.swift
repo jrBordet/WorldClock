@@ -27,7 +27,7 @@ public struct TimeInWorldView: View {
     }
     
     public var body: some View {
-        VStack(alignment: .center) {
+        VStack(alignment: .center, spacing: 18) {
             //Text(readMe)
             
 //            Text(viewStore.timeInWords)
@@ -51,7 +51,16 @@ public struct TimeInWorldView: View {
             SevenTwelveView(viewStore: viewStore)
             
             TenOClockView(viewStore: viewStore)
-            
+        }
+        .onAppear(perform: {
+            viewStore.send(.toggleTimerButtonTapped)
+        })
+        .padding(16)
+        .navigationBarTitle("Timers")
+    }
+}
+
+
 //            HStack(alignment: .center, spacing: 16) {
 //                Text("AC")
 //                    .font(.custom("SpaceMono-Bold", size: 16))
@@ -227,16 +236,6 @@ public struct TimeInWorldView: View {
 //                    Text("OCLOCK")
 //                }
 //            }
-            
-        }
-        .onAppear(perform: {
-            viewStore.send(.toggleTimerButtonTapped)
-        })
-        .padding(16)
-        .navigationBarTitle("Timers")
-    }
-}
-
 
 //Text(viewStore.timeInWords)
 

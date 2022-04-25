@@ -53,8 +53,8 @@ public struct ToView: View {
 
     public var body: some View {
         HStack() {
-            LetterView("T", highighted: viewStore.accessory == .to)
-            LetterView("O", highighted: viewStore.accessory == .to)
+            LetterView("T", highighted: viewStore.accessory == .to || viewStore.accessory == .quarter_to)
+            LetterView("O", highighted: viewStore.accessory == .to || viewStore.accessory == .quarter_to)
         }
     }
 }
