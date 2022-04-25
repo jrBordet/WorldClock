@@ -19,90 +19,6 @@ private let readMe = """
 
 // https://www.hackingwithswift.com/quick-start/swiftui/how-to-position-views-in-a-grid-using-lazyvgrid-and-lazyhgrid
 
-public struct ItIsAsexlaView: View {
-    public var body: some View {
-        HStack() {
-            ItIsView()
-            AsexlaView()
-        }
-        .padding(EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16))
-    }
-}
-
-public struct ItIsView: View {
-    public var body: some View {
-        HStack() {
-            LetterView("I", highighted: true)
-            LetterView("T", highighted: true)
-            LetterView("L")
-            LetterView("I", highighted: true)
-            LetterView("S", highighted: true)
-        }
-    }
-}
-
-public struct AsexlaView: View {
-    public var body: some View {
-        HStack() {
-            LetterView("A")
-            LetterView("S")
-            LetterView("E")
-            LetterView("X")
-            LetterView("L")
-            LetterView("A")
-        }
-    }
-}
-
-public struct AcView: View {
-    @ObservedObject var viewStore: ViewStore<TimeInWorldState, TimeInWordsAction>
-
-    public var body: some View {
-        HStack() {
-            LetterView("A", highighted: viewStore.accessory == .quarter_past)
-            LetterView("C")
-        }
-    }
-}
-
-public struct QuarterView: View {
-    @ObservedObject var viewStore: ViewStore<TimeInWorldState, TimeInWordsAction>
-    
-    public var body: some View {
-        HStack() {
-            LetterView("Q", highighted: viewStore.accessory == .quarter_past)
-            LetterView("U", highighted: viewStore.accessory == .quarter_past)
-            LetterView("A", highighted: viewStore.accessory == .quarter_past)
-            LetterView("R", highighted: viewStore.accessory == .quarter_past)
-            LetterView("T", highighted: viewStore.accessory == .quarter_past)
-            LetterView("E", highighted: viewStore.accessory == .quarter_past)
-            LetterView("R", highighted: viewStore.accessory == .quarter_past)
-        }
-    }
-}
-
-public struct DcView: View {
-    public var body: some View {
-        HStack() {
-            LetterView("D")
-            LetterView("C")
-        }
-    }
-}
-
-public struct AcQuarterDcView: View {
-    @ObservedObject var viewStore: ViewStore<TimeInWorldState, TimeInWordsAction>
-    
-    public var body: some View {
-        HStack {
-            AcView(viewStore: viewStore)
-            QuarterView(viewStore: viewStore)
-            DcView()
-        }
-        .padding(EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16))
-    }
-}
-
 public struct TimeInWorldView: View {
     @ObservedObject var viewStore: ViewStore<TimeInWorldState, TimeInWordsAction>
     
@@ -119,6 +35,22 @@ public struct TimeInWorldView: View {
             ItIsAsexlaView()
             
             AcQuarterDcView(viewStore: viewStore)
+            
+            TwentyFiveXView(viewStore: viewStore)
+            
+            HalfTenToView(viewStore: viewStore)
+            
+            PastNineView(viewStore: viewStore)
+            
+            OneSixThreeView(viewStore: viewStore)
+            
+            FourFiveTwoView(viewStore: viewStore)
+            
+            EightElevenView(viewStore: viewStore)
+            
+            SevenTwelveView(viewStore: viewStore)
+            
+            TenOClockView(viewStore: viewStore)
             
 //            HStack(alignment: .center, spacing: 16) {
 //                Text("AC")
