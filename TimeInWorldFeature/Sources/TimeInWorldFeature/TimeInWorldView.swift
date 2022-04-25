@@ -28,7 +28,7 @@ public struct TimeInWorldView: View {
         VStack {
             //Text(readMe)
             
-            Text(viewStore.timeInWords)
+//            Text(viewStore.timeInWords)
             
             HStack() {
                 Text("IT")
@@ -39,40 +39,170 @@ public struct TimeInWorldView: View {
                 Text("ASEXLA")
             }
             
-            if viewStore.accessory == .quarter_past {
-                HStack() {
-                    Text("AC")
+            HStack() {
+                Text("AC")
+                
+                if viewStore.accessory == .quarter_past {
                     Text("QUARTER")
                         .foregroundColor(Color.red)
-                    Text("DC")
-                }
-            } else {
-                HStack() {
-                    Text("AC")
+                } else {
                     Text("QUARTER")
-                    Text("DC")
+                }
+                
+                Text("DC")
+            }
+            
+            HStack() {
+                if viewStore.minutes == .twenty {
+                    Text("TWENTY")
+                        .foregroundColor(Color.red)
+                } else {
+                    Text("TWENTY")
+                }
+                
+                if viewStore.minutes == .five {
+                    Text("FIVE")
+                        .foregroundColor(Color.red)
+                } else {
+                    Text("FIVE")
+                }
+                
+                Text("X")
+            }
+            
+            HStack() {
+                if viewStore.accessory == .half {
+                    Text("HALF")
+                        .foregroundColor(Color.red)
+                } else {
+                    Text("HALF")
+                }
+                
+                Text("B")
+                
+                if viewStore.minutes == .ten {
+                    Text("TEN")
+                        .foregroundColor(Color.red)
+                } else {
+                    Text("TEN")
+                }
+                
+                Text("FTO")
+            }
+            
+            HStack() {
+                if viewStore.accessory == .past || viewStore.accessory == .quarter_past {
+                    Text("PAST")
+                        .foregroundColor(Color.red)
+                } else {
+                    Text("PAST")
+                }
+                
+                Text("ERU")
+                
+                if viewStore.hour == .nine {
+                    Text("NINE")
+                        .foregroundColor(Color.red)
+                } else {
+                    Text("NINE")
                 }
             }
             
             HStack() {
-                Text("TWENTY")
-                Text("FIVE")
-                Text("X")
+                if viewStore.hour == .one {
+                    Text("ONE")
+                        .foregroundColor(Color.red)
+                } else {
+                    Text("ONE")
+                }
+                
+                if viewStore.hour == .six {
+                    Text("SIX")
+                        .foregroundColor(Color.red)
+                } else {
+                    Text("SIX")
+                }
+                
+                if viewStore.hour == .three {
+                    Text("THREE")
+                        .foregroundColor(Color.red)
+                } else {
+                    Text("THREE")
+                }
             }
             
-            //Text(viewStore.timeInWords)
+            HStack() {
+                if viewStore.hour == .four {
+                    Text("FOUR")
+                        .foregroundColor(Color.red)
+                } else {
+                    Text("FOUR")
+                }
+                
+                if viewStore.hour == .five {
+                    Text("FIVE")
+                        .foregroundColor(Color.red)
+                } else {
+                    Text("FIVE")
+                }
+                
+                if viewStore.hour == .two {
+                    Text("TWO")
+                        .foregroundColor(Color.red)
+                } else {
+                    Text("TWO")
+                }
+            }
             
-//            Button(action: { self.viewStore.send(.toggleTimerButtonTapped) }) {
-//                HStack {
-//                    Text(self.viewStore.isTimerActive ? "Stop" : "Start")
-//                }
-//                .foregroundColor(.white)
-//                .padding()
-//                .background(self.viewStore.isTimerActive ? Color.red : .blue)
-//                .cornerRadius(16)
-//            }
+            HStack() {
+                if viewStore.hour == .eight {
+                    Text("EIGHT")
+                        .foregroundColor(Color.red)
+                } else {
+                    Text("EIGHT")
+                }
+                
+                Text("E")
+                
+                if viewStore.hour == .eleven {
+                    Text("ELEVEN")
+                        .foregroundColor(Color.red)
+                } else {
+                    Text("ELEVEN")
+                }
+            }
             
-            Spacer()
+            HStack() {
+                if viewStore.hour == .seven {
+                    Text("SEVEN")
+                        .foregroundColor(Color.red)
+                } else {
+                    Text("SEVEN")
+                }
+                if viewStore.hour == .twelve {
+                    Text("TWELVE")
+                        .foregroundColor(Color.red)
+                } else {
+                    Text("TWELVE")
+                }
+            }
+            
+            HStack() {
+                if viewStore.hour == .ten {
+                    Text("TEN")
+                        .foregroundColor(Color.red)
+                } else {
+                    Text("TEN")
+                }
+                Text("E")
+                if viewStore.accessory == .o_clock {
+                    Text("OCLOCK")
+                        .foregroundColor(Color.red)
+                } else {
+                    Text("OCLOCK")
+                }
+            }
+            
         }
         .onAppear(perform: {
             viewStore.send(.toggleTimerButtonTapped)
@@ -82,6 +212,20 @@ public struct TimeInWorldView: View {
     }
 }
 
+
+//Text(viewStore.timeInWords)
+
+//            Button(action: { self.viewStore.send(.toggleTimerButtonTapped) }) {
+//                HStack {
+//                    Text(self.viewStore.isTimerActive ? "Stop" : "Start")
+//                }
+//                .foregroundColor(.white)
+//                .padding()
+//                .background(self.viewStore.isTimerActive ? Color.red : .blue)
+//                .cornerRadius(16)
+//            }
+//
+//            Spacer()
 
 //            ZStack {
 //                Circle()
