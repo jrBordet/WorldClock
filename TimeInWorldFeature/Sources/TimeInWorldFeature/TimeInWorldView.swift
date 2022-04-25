@@ -21,49 +21,85 @@ private let readMe = """
 
 public struct ItIsAsexlaView: View {
     public var body: some View {
-        HStack(alignment: .center, spacing: 16) {
+        HStack() {
             ItIsView()
-            
             AsexlaView()
         }
+        .padding(EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16))
     }
 }
 
 public struct ItIsView: View {
     public var body: some View {
-        HStack(alignment: .center, spacing: 16) {
-            Text("I")
-                .foregroundColor(Color.red)
-                .font(.custom("SpaceMono-Bold", size: 16))
-            Text("T")
-                .foregroundColor(Color.red)
-                .font(.custom("SpaceMono-Bold", size: 16))
-            Text("L")
-                .font(.custom("SpaceMono-Bold", size: 16))
-            Text("I")
-                .foregroundColor(Color.red)
-            Text("S")
-                .foregroundColor(Color.red)
+        HStack() {
+            LetterView("I", highighted: true)
+            LetterView("T", highighted: true)
+            LetterView("L")
+            LetterView("I", highighted: true)
+            LetterView("S", highighted: true)
         }
     }
 }
 
 public struct AsexlaView: View {
     public var body: some View {
-        HStack(alignment: .center, spacing: 16) {
-            Text("A")
-                .font(.custom("SpaceMono-Bold", size: 16))
-            Text("S")
-                .font(.custom("SpaceMono-Bold", size: 16))
-            Text("E")
-                .font(.custom("SpaceMono-Bold", size: 16))
-            Text("X")
-                .font(.custom("SpaceMono-Bold", size: 16))
-            Text("L")
-                .font(.custom("SpaceMono-Bold", size: 16))
-            Text("A")
-                .font(.custom("SpaceMono-Bold", size: 16))
+        HStack() {
+            LetterView("A")
+            LetterView("S")
+            LetterView("E")
+            LetterView("X")
+            LetterView("L")
+            LetterView("A")
         }
+    }
+}
+
+public struct AcView: View {
+    @ObservedObject var viewStore: ViewStore<TimeInWorldState, TimeInWordsAction>
+
+    public var body: some View {
+        HStack() {
+            LetterView("A", highighted: viewStore.accessory == .quarter_past)
+            LetterView("C")
+        }
+    }
+}
+
+public struct QuarterView: View {
+    @ObservedObject var viewStore: ViewStore<TimeInWorldState, TimeInWordsAction>
+    
+    public var body: some View {
+        HStack() {
+            LetterView("Q", highighted: viewStore.accessory == .quarter_past)
+            LetterView("U", highighted: viewStore.accessory == .quarter_past)
+            LetterView("A", highighted: viewStore.accessory == .quarter_past)
+            LetterView("R", highighted: viewStore.accessory == .quarter_past)
+            LetterView("T", highighted: viewStore.accessory == .quarter_past)
+            LetterView("E", highighted: viewStore.accessory == .quarter_past)
+            LetterView("R", highighted: viewStore.accessory == .quarter_past)
+        }
+    }
+}
+
+public struct DcView: View {
+    public var body: some View {
+        HStack() {
+            LetterView("D")
+            LetterView("C")
+        }
+    }
+}
+
+public struct AcQuarterDcView: View {
+    @ObservedObject var viewStore: ViewStore<TimeInWorldState, TimeInWordsAction>
+    
+    public var body: some View {
+        HStack {
+            AcView(viewStore: viewStore)
+            QuarterView(viewStore: viewStore)
+            DcView()
+        }
+        .padding(EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16))
     }
 }
 
@@ -82,22 +118,24 @@ public struct TimeInWorldView: View {
             
             ItIsAsexlaView()
             
-            HStack(alignment: .center, spacing: 16) {
-                Text("AC")
-                    .font(.custom("SpaceMono-Bold", size: 16))
-
-                if viewStore.accessory == .quarter_past {
-                    Text("QUARTER")
-                        .foregroundColor(Color.red)
-                        .font(.custom("SpaceMono-Bold", size: 16))
-                } else {
-                    Text("QUARTER")
-                        .font(.custom("SpaceMono-Bold", size: 16))
-                }
-
-                Text("DC")
-                    .font(.custom("SpaceMono-Bold", size: 16))
-            }
+            AcQuarterDcView(viewStore: viewStore)
+            
+//            HStack(alignment: .center, spacing: 16) {
+//                Text("AC")
+//                    .font(.custom("SpaceMono-Bold", size: 16))
+//
+//                if viewStore.accessory == .quarter_past {
+//                    Text("QUARTER")
+//                        .foregroundColor(Color.red)
+//                        .font(.custom("SpaceMono-Bold", size: 16))
+//                } else {
+//                    Text("QUARTER")
+//                        .font(.custom("SpaceMono-Bold", size: 16))
+//                }
+//
+//                Text("DC")
+//                    .font(.custom("SpaceMono-Bold", size: 16))
+//            }
 //
 //            HStack(alignment: .center, spacing: 16) {
 //                if viewStore.minutes == .twenty || viewStore.minutes == .twenty_five {
@@ -262,7 +300,7 @@ public struct TimeInWorldView: View {
         .onAppear(perform: {
             viewStore.send(.toggleTimerButtonTapped)
         })
-        .padding()
+        .padding(16)
         .navigationBarTitle("Timers")
     }
 }

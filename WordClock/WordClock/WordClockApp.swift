@@ -16,7 +16,7 @@ struct WordClockApp: App {
         WindowGroup {
             TimeInWorldView(
                 store: Store(
-                    initialState: TimeInWorldState(date: Date()),
+                    initialState: TimeInWorldState(date: .quarterPastTen),
                     reducer: timeInWordsReducer,
                     environment: .live
                 )
