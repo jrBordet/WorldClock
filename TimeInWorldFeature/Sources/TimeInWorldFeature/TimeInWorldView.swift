@@ -17,6 +17,56 @@ private let readMe = """
   `Effect.timer` API that works with schedulers and can be tested.
   """
 
+// https://www.hackingwithswift.com/quick-start/swiftui/how-to-position-views-in-a-grid-using-lazyvgrid-and-lazyhgrid
+
+public struct ItIsAsexlaView: View {
+    public var body: some View {
+        HStack(alignment: .center, spacing: 16) {
+            ItIsView()
+            
+            AsexlaView()
+        }
+    }
+}
+
+public struct ItIsView: View {
+    public var body: some View {
+        HStack(alignment: .center, spacing: 16) {
+            Text("I")
+                .foregroundColor(Color.red)
+                .font(.custom("SpaceMono-Bold", size: 16))
+            Text("T")
+                .foregroundColor(Color.red)
+                .font(.custom("SpaceMono-Bold", size: 16))
+            Text("L")
+                .font(.custom("SpaceMono-Bold", size: 16))
+            Text("I")
+                .foregroundColor(Color.red)
+            Text("S")
+                .foregroundColor(Color.red)
+        }
+    }
+}
+
+public struct AsexlaView: View {
+    public var body: some View {
+        HStack(alignment: .center, spacing: 16) {
+            Text("A")
+                .font(.custom("SpaceMono-Bold", size: 16))
+            Text("S")
+                .font(.custom("SpaceMono-Bold", size: 16))
+            Text("E")
+                .font(.custom("SpaceMono-Bold", size: 16))
+            Text("X")
+                .font(.custom("SpaceMono-Bold", size: 16))
+            Text("L")
+                .font(.custom("SpaceMono-Bold", size: 16))
+            Text("A")
+                .font(.custom("SpaceMono-Bold", size: 16))
+        }
+    }
+}
+
 public struct TimeInWorldView: View {
     @ObservedObject var viewStore: ViewStore<TimeInWorldState, TimeInWordsAction>
     
@@ -25,27 +75,17 @@ public struct TimeInWorldView: View {
     }
     
     public var body: some View {
-        VStack {
+        VStack(alignment: .center) {
             //Text(readMe)
             
 //            Text(viewStore.timeInWords)
             
-            HStack() {
-                Text("IT")
-                    .foregroundColor(Color.red)
-                    .font(.custom("SpaceMono-Bold", size: 16))
-                Text("L")
-                    .font(.custom("SpaceMono-Bold", size: 16))
-                Text("IS")
-                    .foregroundColor(Color.red)
-                Text("ASEXLA")
-                    .font(.custom("SpaceMono-Bold", size: 16))
-            }
+            ItIsAsexlaView()
             
-            HStack() {
+            HStack(alignment: .center, spacing: 16) {
                 Text("AC")
                     .font(.custom("SpaceMono-Bold", size: 16))
-                
+
                 if viewStore.accessory == .quarter_past {
                     Text("QUARTER")
                         .foregroundColor(Color.red)
@@ -54,169 +94,169 @@ public struct TimeInWorldView: View {
                     Text("QUARTER")
                         .font(.custom("SpaceMono-Bold", size: 16))
                 }
-                
+
                 Text("DC")
                     .font(.custom("SpaceMono-Bold", size: 16))
             }
-            
-            HStack() {
-                if viewStore.minutes == .twenty {
-                    Text("TWENTY")
-                        .foregroundColor(Color.red)
-                        .font(.custom("SpaceMono-Bold", size: 16))
-                } else {
-                    Text("TWENTY")
-                        .font(.custom("SpaceMono-Bold", size: 16))
-                }
-                
-                if viewStore.minutes == .five {
-                    Text("FIVE")
-                        .foregroundColor(Color.red)
-                        .font(.custom("SpaceMono-Bold", size: 16))
-                } else {
-                    Text("FIVE")
-                        .font(.custom("SpaceMono-Bold", size: 16))
-                }
-                
-                Text("X")
-                    .font(.custom("SpaceMono-Bold", size: 16))
-            }
-            
-            HStack() {
-                if viewStore.accessory == .half {
-                    Text("HALF")
-                        .foregroundColor(Color.red)
-                        .font(.custom("SpaceMono-Bold", size: 16))
-                } else {
-                    Text("HALF")
-                        .font(.custom("SpaceMono-Bold", size: 16))
-                }
-                
-                Text("B")
-                    .font(.custom("SpaceMono-Bold", size: 16))
-                
-                if viewStore.minutes == .ten {
-                    Text("TEN")
-                        .foregroundColor(Color.red)
-                } else {
-                    Text("TEN")
-                }
-                
-                Text("FTO")
-            }
-            
-            HStack() {
-                if viewStore.accessory == .past || viewStore.accessory == .quarter_past {
-                    Text("PAST")
-                        .foregroundColor(Color.red)
-                } else {
-                    Text("PAST")
-                }
-                
-                Text("ERU")
-                
-                if viewStore.hour == .nine {
-                    Text("NINE")
-                        .foregroundColor(Color.red)
-                } else {
-                    Text("NINE")
-                }
-            }
-            
-            HStack() {
-                if viewStore.hour == .one {
-                    Text("ONE")
-                        .foregroundColor(Color.red)
-                } else {
-                    Text("ONE")
-                }
-                
-                if viewStore.hour == .six {
-                    Text("SIX")
-                        .foregroundColor(Color.red)
-                } else {
-                    Text("SIX")
-                }
-                
-                if viewStore.hour == .three {
-                    Text("THREE")
-                        .foregroundColor(Color.red)
-                } else {
-                    Text("THREE")
-                }
-            }
-            
-            HStack() {
-                if viewStore.hour == .four {
-                    Text("FOUR")
-                        .foregroundColor(Color.red)
-                } else {
-                    Text("FOUR")
-                }
-                
-                if viewStore.hour == .five {
-                    Text("FIVE")
-                        .foregroundColor(Color.red)
-                } else {
-                    Text("FIVE")
-                }
-                
-                if viewStore.hour == .two {
-                    Text("TWO")
-                        .foregroundColor(Color.red)
-                } else {
-                    Text("TWO")
-                }
-            }
-            
-            HStack() {
-                if viewStore.hour == .eight {
-                    Text("EIGHT")
-                        .foregroundColor(Color.red)
-                } else {
-                    Text("EIGHT")
-                }
-                
-                Text("E")
-                
-                if viewStore.hour == .eleven {
-                    Text("ELEVEN")
-                        .foregroundColor(Color.red)
-                } else {
-                    Text("ELEVEN")
-                }
-            }
-            
-            HStack() {
-                if viewStore.hour == .seven {
-                    Text("SEVEN")
-                        .foregroundColor(Color.red)
-                } else {
-                    Text("SEVEN")
-                }
-                if viewStore.hour == .twelve {
-                    Text("TWELVE")
-                        .foregroundColor(Color.red)
-                } else {
-                    Text("TWELVE")
-                }
-            }
-            
-            HStack() {
-                if viewStore.hour == .ten {
-                    Text("TEN")
-                        .foregroundColor(Color.red)
-                } else {
-                    Text("TEN")
-                }
-                Text("E")
-                if viewStore.accessory == .o_clock {
-                    Text("OCLOCK")
-                        .foregroundColor(Color.red)
-                } else {
-                    Text("OCLOCK")
-                }
-            }
+//
+//            HStack(alignment: .center, spacing: 16) {
+//                if viewStore.minutes == .twenty || viewStore.minutes == .twenty_five {
+//                    Text("TWENTY")
+//                        .foregroundColor(Color.red)
+//                        .font(.custom("SpaceMono-Bold", size: 16))
+//                } else {
+//                    Text("TWENTY")
+//                        .font(.custom("SpaceMono-Bold", size: 16))
+//                }
+//
+//                if viewStore.minutes == .five || viewStore.minutes == .twenty_five {
+//                    Text("FIVE")
+//                        .foregroundColor(Color.red)
+//                        .font(.custom("SpaceMono-Bold", size: 16))
+//                } else {
+//                    Text("FIVE")
+//                        .font(.custom("SpaceMono-Bold", size: 16))
+//                }
+//
+//                Text("X")
+//                    .font(.custom("SpaceMono-Bold", size: 16))
+//            }
+//
+//            HStack(alignment: .center, spacing: 16) {
+//                if viewStore.accessory == .half {
+//                    Text("HALF")
+//                        .foregroundColor(Color.red)
+//                        .font(.custom("SpaceMono-Bold", size: 16))
+//                } else {
+//                    Text("HALF")
+//                        .font(.custom("SpaceMono-Bold", size: 16))
+//                }
+//
+//                Text("B")
+//                    .font(.custom("SpaceMono-Bold", size: 16))
+//
+//                if viewStore.minutes == .ten {
+//                    Text("TEN")
+//                        .foregroundColor(Color.red)
+//                } else {
+//                    Text("TEN")
+//                }
+//
+//                Text("FTO")
+//            }
+//
+//            HStack(alignment: .center, spacing: 16) {
+//                if viewStore.accessory == .past || viewStore.accessory == .quarter_past {
+//                    Text("PAST")
+//                        .foregroundColor(Color.red)
+//                } else {
+//                    Text("PAST")
+//                }
+//
+//                Text("ERU")
+//
+//                if viewStore.hour == .nine {
+//                    Text("NINE")
+//                        .foregroundColor(Color.red)
+//                } else {
+//                    Text("NINE")
+//                }
+//            }
+//
+//            HStack(alignment: .center, spacing: 16) {
+//                if viewStore.hour == .one {
+//                    Text("ONE")
+//                        .foregroundColor(Color.red)
+//                } else {
+//                    Text("ONE")
+//                }
+//
+//                if viewStore.hour == .six {
+//                    Text("SIX")
+//                        .foregroundColor(Color.red)
+//                } else {
+//                    Text("SIX")
+//                }
+//
+//                if viewStore.hour == .three {
+//                    Text("THREE")
+//                        .foregroundColor(Color.red)
+//                } else {
+//                    Text("THREE")
+//                }
+//            }
+//
+//            HStack(alignment: .center, spacing: 16) {
+//                if viewStore.hour == .four {
+//                    Text("FOUR")
+//                        .foregroundColor(Color.red)
+//                } else {
+//                    Text("FOUR")
+//                }
+//
+//                if viewStore.hour == .five {
+//                    Text("FIVE")
+//                        .foregroundColor(Color.red)
+//                } else {
+//                    Text("FIVE")
+//                }
+//
+//                if viewStore.hour == .two {
+//                    Text("TWO")
+//                        .foregroundColor(Color.red)
+//                } else {
+//                    Text("TWO")
+//                }
+//            }
+//
+//            HStack(alignment: .center, spacing: 16) {
+//                if viewStore.hour == .eight {
+//                    Text("EIGHT")
+//                        .foregroundColor(Color.red)
+//                } else {
+//                    Text("EIGHT")
+//                }
+//
+//                Text("E")
+//
+//                if viewStore.hour == .eleven {
+//                    Text("ELEVEN")
+//                        .foregroundColor(Color.red)
+//                } else {
+//                    Text("ELEVEN")
+//                }
+//            }
+//
+//            HStack(alignment: .center, spacing: 16) {
+//                if viewStore.hour == .seven {
+//                    Text("SEVEN")
+//                        .foregroundColor(Color.red)
+//                } else {
+//                    Text("SEVEN")
+//                }
+//                if viewStore.hour == .twelve {
+//                    Text("TWELVE")
+//                        .foregroundColor(Color.red)
+//                } else {
+//                    Text("TWELVE")
+//                }
+//            }
+//
+//            HStack(alignment: .center, spacing: 16) {
+//                if viewStore.hour == .ten {
+//                    Text("TEN")
+//                        .foregroundColor(Color.red)
+//                } else {
+//                    Text("TEN")
+//                }
+//                Text("E")
+//                if viewStore.accessory == .o_clock {
+//                    Text("OCLOCK")
+//                        .foregroundColor(Color.red)
+//                } else {
+//                    Text("OCLOCK")
+//                }
+//            }
             
         }
         .onAppear(perform: {
