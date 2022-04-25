@@ -14,7 +14,7 @@ import TimeInWorldFeature
 struct WordClockApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView(
+            TimeInWorldView(
                 store: Store(
                     initialState: TimeInWorldState(),
                     reducer: timeInWordsReducer,

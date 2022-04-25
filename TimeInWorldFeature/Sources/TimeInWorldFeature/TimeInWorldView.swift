@@ -17,20 +17,21 @@ private let readMe = """
   `Effect.timer` API that works with schedulers and can be tested.
   """
 
-// TimeInWorldView
-public struct ContentView: View {
+public struct TimeInWorldView: View {
     @ObservedObject var viewStore: ViewStore<TimeInWorldState, TimeInWordsAction>
-
+    
     public init(store: Store<TimeInWorldState, TimeInWordsAction>) {
         self.viewStore = ViewStore(store)
     }
-
+    
     public var body: some View {
         VStack {
             //Text(readMe)
-
+            
             Text(viewStore.timeInWords)
-
+            
+            //Text(viewStore.timeInWords)
+            
             Button(action: { self.viewStore.send(.toggleTimerButtonTapped) }) {
                 HStack {
                     Text(self.viewStore.isTimerActive ? "Stop" : "Start")
@@ -40,7 +41,7 @@ public struct ContentView: View {
                 .background(self.viewStore.isTimerActive ? Color.red : .blue)
                 .cornerRadius(16)
             }
-
+            
             Spacer()
         }
         .padding()
@@ -51,21 +52,23 @@ public struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            ContentView(
-                store: Store(
-                    initialState: TimeInWorldState(),
-                    reducer: timeInWordsReducer,
-                    environment: TimeInWordsEnvironment(
-                        mainQueue: DispatchQueue.main.eraseToAnyScheduler(),
-                        timeInWords: { (h: Int, m: Int) -> Effect<String, Error> in
-                            Effect(value: timeInWords(h: h, m: m))
-                        },
-                        time12InWords: { h, m in
-                            fatalError()
-                            //Effect(value: time12InWords(h: h, m: m))
-                        }
+            TimeInWorldView(
+                store:
+                    Store(
+                        initialState: TimeInWorldState(
+                            date: Date(timeIntervalSince1970: 1650831129)
+                        ),
+                        reducer: timeInWordsReducer,
+                        environment: .mock(
+                            mainQueue: DispatchQueue.main.eraseToAnyScheduler(),
+                            timeInWords: { (h: Int, m: Int) -> Effect<String, Error> in
+                                Effect(value: timeInWords(h: h, m: m))
+                            },
+                            time12InWords: { h, m in
+                                Effect(value: time12InWords(h: h, m: m))
+                            }
+                        )
                     )
-                )
             )
         }
     }
