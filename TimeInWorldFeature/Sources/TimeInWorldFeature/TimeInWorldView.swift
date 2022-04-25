@@ -33,52 +33,67 @@ public struct TimeInWorldView: View {
             HStack() {
                 Text("IT")
                     .foregroundColor(Color.red)
+                    .font(.custom("SpaceMono-Bold", size: 16))
                 Text("L")
+                    .font(.custom("SpaceMono-Bold", size: 16))
                 Text("IS")
                     .foregroundColor(Color.red)
                 Text("ASEXLA")
+                    .font(.custom("SpaceMono-Bold", size: 16))
             }
             
             HStack() {
                 Text("AC")
+                    .font(.custom("SpaceMono-Bold", size: 16))
                 
                 if viewStore.accessory == .quarter_past {
                     Text("QUARTER")
                         .foregroundColor(Color.red)
+                        .font(.custom("SpaceMono-Bold", size: 16))
                 } else {
                     Text("QUARTER")
+                        .font(.custom("SpaceMono-Bold", size: 16))
                 }
                 
                 Text("DC")
+                    .font(.custom("SpaceMono-Bold", size: 16))
             }
             
             HStack() {
                 if viewStore.minutes == .twenty {
                     Text("TWENTY")
                         .foregroundColor(Color.red)
+                        .font(.custom("SpaceMono-Bold", size: 16))
                 } else {
                     Text("TWENTY")
+                        .font(.custom("SpaceMono-Bold", size: 16))
                 }
                 
                 if viewStore.minutes == .five {
                     Text("FIVE")
                         .foregroundColor(Color.red)
+                        .font(.custom("SpaceMono-Bold", size: 16))
                 } else {
                     Text("FIVE")
+                        .font(.custom("SpaceMono-Bold", size: 16))
                 }
                 
                 Text("X")
+                    .font(.custom("SpaceMono-Bold", size: 16))
             }
             
             HStack() {
                 if viewStore.accessory == .half {
                     Text("HALF")
                         .foregroundColor(Color.red)
+                        .font(.custom("SpaceMono-Bold", size: 16))
                 } else {
                     Text("HALF")
+                        .font(.custom("SpaceMono-Bold", size: 16))
                 }
                 
                 Text("B")
+                    .font(.custom("SpaceMono-Bold", size: 16))
                 
                 if viewStore.minutes == .ten {
                     Text("TEN")

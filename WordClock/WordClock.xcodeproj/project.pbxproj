@@ -11,6 +11,8 @@
 		38783FD02815E4F80044F7AA /* TimeInWordsEnvironment+live.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38783FCF2815E4F80044F7AA /* TimeInWordsEnvironment+live.swift */; };
 		38783FD22815E56A0044F7AA /* TimeInWorldFeature_Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38783FD12815E56A0044F7AA /* TimeInWorldFeature_Preview.swift */; };
 		3883949628166F5C00EE9458 /* TimeInWords in Frameworks */ = {isa = PBXBuildFile; productRef = 3883949528166F5C00EE9458 /* TimeInWords */; };
+		38B7401C2816825F0095E534 /* SpaceMono-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38B740182816825F0095E534 /* SpaceMono-Bold.ttf */; };
+		38B7401D2816825F0095E534 /* SpaceMono-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38B740192816825F0095E534 /* SpaceMono-Regular.ttf */; };
 		F8B1347B27D74E8600BE6503 /* WordClockApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B1347A27D74E8600BE6503 /* WordClockApp.swift */; };
 		F8B1347F27D74E8800BE6503 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8B1347E27D74E8800BE6503 /* Assets.xcassets */; };
 		F8B1348227D74E8800BE6503 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8B1348127D74E8800BE6503 /* Preview Assets.xcassets */; };
@@ -41,6 +43,9 @@
 		38783FCC2815DEB70044F7AA /* TimeInWorldFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = TimeInWorldFeature; path = ../../TimeInWorldFeature; sourceTree = "<group>"; };
 		38783FCF2815E4F80044F7AA /* TimeInWordsEnvironment+live.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInWordsEnvironment+live.swift"; sourceTree = "<group>"; };
 		38783FD12815E56A0044F7AA /* TimeInWorldFeature_Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeInWorldFeature_Preview.swift; sourceTree = "<group>"; };
+		38B740182816825F0095E534 /* SpaceMono-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpaceMono-Bold.ttf"; sourceTree = "<group>"; };
+		38B740192816825F0095E534 /* SpaceMono-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpaceMono-Regular.ttf"; sourceTree = "<group>"; };
+		38B740202816829B0095E534 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F8B1347727D74E8600BE6503 /* WordClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8B1347A27D74E8600BE6503 /* WordClockApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordClockApp.swift; sourceTree = "<group>"; };
 		F8B1347E27D74E8800BE6503 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -87,6 +92,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		38B74017281682450095E534 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				38B740182816825F0095E534 /* SpaceMono-Bold.ttf */,
+				38B740192816825F0095E534 /* SpaceMono-Regular.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
 		F8B1346E27D74E8600BE6503 = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +125,8 @@
 		F8B1347927D74E8600BE6503 /* WordClock */ = {
 			isa = PBXGroup;
 			children = (
+				38B740202816829B0095E534 /* Info.plist */,
+				38B74017281682450095E534 /* fonts */,
 				38783FCC2815DEB70044F7AA /* TimeInWorldFeature */,
 				F8B1347A27D74E8600BE6503 /* WordClockApp.swift */,
 				38783FCF2815E4F80044F7AA /* TimeInWordsEnvironment+live.swift */,
@@ -260,6 +276,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8B1348227D74E8800BE6503 /* Preview Assets.xcassets in Resources */,
+				38B7401D2816825F0095E534 /* SpaceMono-Regular.ttf in Resources */,
+				38B7401C2816825F0095E534 /* SpaceMono-Bold.ttf in Resources */,
 				F8B1347F27D74E8800BE6503 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -451,6 +469,7 @@
 				DEVELOPMENT_TEAM = XP6P798NUV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WordClock/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -481,6 +500,7 @@
 				DEVELOPMENT_TEAM = XP6P798NUV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WordClock/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
