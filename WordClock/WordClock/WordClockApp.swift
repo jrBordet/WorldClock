@@ -16,11 +16,16 @@ struct WordClockApp: App {
         WindowGroup {
             TimeInWorldView(
                 store: Store(
-                    initialState: TimeInWorldState(),
+                    initialState: TimeInWorldState(date: .quarterPastTen),
                     reducer: timeInWordsReducer,
                     environment: .live
                 )
             )
         }
     }
+}
+
+
+extension Date {
+    static var quarterPastTen = Date(timeIntervalSince1970: 1650874500)
 }

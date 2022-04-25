@@ -30,47 +30,55 @@ public struct TimeInWorldView: View {
             
             Text(viewStore.timeInWords)
             
+            HStack() {
+                Text("IT")
+                    .foregroundColor(Color.red)
+                Text("L")
+                Text("IS")
+                    .foregroundColor(Color.red)
+                Text("ASEXLA")
+            }
+            
+            if viewStore.accessory == .quarter_past {
+                HStack() {
+                    Text("AC")
+                    Text("QUARTER")
+                        .foregroundColor(Color.red)
+                    Text("DC")
+                }
+            } else {
+                HStack() {
+                    Text("AC")
+                    Text("QUARTER")
+                    Text("DC")
+                }
+            }
+            
+            HStack() {
+                Text("TWENTY")
+                Text("FIVE")
+                Text("X")
+            }
+            
             //Text(viewStore.timeInWords)
             
-            Button(action: { self.viewStore.send(.toggleTimerButtonTapped) }) {
-                HStack {
-                    Text(self.viewStore.isTimerActive ? "Stop" : "Start")
-                }
-                .foregroundColor(.white)
-                .padding()
-                .background(self.viewStore.isTimerActive ? Color.red : .blue)
-                .cornerRadius(16)
-            }
+//            Button(action: { self.viewStore.send(.toggleTimerButtonTapped) }) {
+//                HStack {
+//                    Text(self.viewStore.isTimerActive ? "Stop" : "Start")
+//                }
+//                .foregroundColor(.white)
+//                .padding()
+//                .background(self.viewStore.isTimerActive ? Color.red : .blue)
+//                .cornerRadius(16)
+//            }
             
             Spacer()
         }
+        .onAppear(perform: {
+            viewStore.send(.toggleTimerButtonTapped)
+        })
         .padding()
         .navigationBarTitle("Timers")
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationView {
-            TimeInWorldView(
-                store:
-                    Store(
-                        initialState: TimeInWorldState(
-                            date: Date(timeIntervalSince1970: 1650831129)
-                        ),
-                        reducer: timeInWordsReducer,
-                        environment: .mock(
-                            mainQueue: DispatchQueue.main.eraseToAnyScheduler(),
-                            timeInWords: { (h: Int, m: Int) -> Effect<String, Error> in
-                                Effect(value: timeInWords(h: h, m: m))
-                            },
-                            time12InWords: { h, m in
-                                Effect(value: time12InWords(h: h, m: m))
-                            }
-                        )
-                    )
-            )
-        }
     }
 }
 
