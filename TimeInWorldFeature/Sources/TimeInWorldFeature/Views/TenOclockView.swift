@@ -26,9 +26,9 @@ public struct TenOView: View {
 
     public var body: some View {
         HStack() {
-            LetterView("T", highighted: viewStore.hour == .ten)
-            LetterView("E", highighted: viewStore.hour == .ten)
-            LetterView("N", highighted: viewStore.hour == .ten)
+            LetterView("T", highlighted: viewStore.hour == .ten)
+            LetterView("E", highlighted: viewStore.hour == .ten)
+            LetterView("N", highlighted: viewStore.hour == .ten)
         }
     }
 }
@@ -38,13 +38,13 @@ public struct OClockView: View {
 
     public var body: some View {
         HStack() {
-            LetterView("O", highighted: viewStore.accessory == .o_clock)
-            LetterView("'", highighted: viewStore.accessory == .o_clock)
-            LetterView("C", highighted: viewStore.accessory == .o_clock)
-            LetterView("L", highighted: viewStore.accessory == .o_clock)
-            LetterView("O", highighted: viewStore.accessory == .o_clock)
-            LetterView("C", highighted: viewStore.accessory == .o_clock)
-            LetterView("K", highighted: viewStore.accessory == .o_clock)
+            LetterView("O", highlighted: viewStore.accessory == .o_clock)
+            LetterView("'", highlighted: viewStore.accessory == .o_clock)
+            LetterView("C", highlighted: viewStore.accessory == .o_clock)
+            LetterView("L", highlighted: viewStore.accessory == .o_clock)
+            LetterView("O", highlighted: viewStore.accessory == .o_clock)
+            LetterView("C", highlighted: viewStore.accessory == .o_clock)
+            LetterView("K", highlighted: viewStore.accessory == .o_clock)
         }
     }
 }

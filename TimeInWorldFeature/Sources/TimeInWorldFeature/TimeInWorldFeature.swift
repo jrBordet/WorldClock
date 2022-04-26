@@ -9,6 +9,10 @@ import Foundation
 import TimeInWords
 import ComposableArchitecture
 
+public struct Error: Swift.Error, Equatable {
+    public init() {}
+}
+
 var calendar = Calendar.current
 
 // MARK: - Timer feature domain
@@ -30,23 +34,23 @@ public struct TimeInWorldState: Equatable {
     }
 }
 
-public enum TimeInWordsAction {
+public enum TimeInWordsAction: Equatable {
     case timerTicked
     case toggleTimerButtonTapped
     case timeInWords, timeInWordsResponse(Result<String, Error>)
     
-    case timw12InWordsResponse(Result<((hour: WordNumber, minutes: WordNumber, accessory: Accessory)), Error>)
+    case timw12InWordsResponse(Result<TimeIn12Components, Error>)
 }
 
 public struct TimeInWordsEnvironment {
     var mainQueue: AnySchedulerOf<DispatchQueue>
     var timeInWords: (Int, Int) -> Effect<String, Error>
-    var time12InWords: (Int, Int) -> Effect<((hour: WordNumber, minutes: WordNumber, accessory: Accessory)), Error>
+    var time12InWords: (Int, Int) -> Effect<TimeIn12Components, Error>
     
     public init(
         mainQueue: AnySchedulerOf<DispatchQueue>,
         timeInWords: @escaping(Int, Int) -> Effect<String, Error>,
-        time12InWords: @escaping(Int, Int) -> Effect<((hour: WordNumber, minutes: WordNumber, accessory: Accessory)), Error>
+        time12InWords: @escaping(Int, Int) -> Effect<TimeIn12Components, Error>
     ) {
         self.mainQueue = mainQueue
         self.timeInWords = timeInWords
@@ -58,7 +62,7 @@ extension TimeInWordsEnvironment {
     public static func mock (
         mainQueue: AnySchedulerOf<DispatchQueue>,
         timeInWords: @escaping(Int, Int) -> Effect<String, Error> = { _, _ in fatalError() },
-        time12InWords: @escaping(Int, Int) -> Effect<((hour: WordNumber, minutes: WordNumber, accessory: Accessory)), Error> = { _, _ in fatalError() }
+        time12InWords: @escaping(Int, Int) -> Effect<TimeIn12Components, Error> = { _, _ in fatalError() }
     ) -> Self {
         .init(
             mainQueue: mainQueue,
@@ -81,7 +85,12 @@ public let timeInWordsReducer = Reducer<TimeInWorldState, TimeInWordsAction, Tim
             .map { _ in TimeInWordsAction.timerTicked }
         : Effect.cancel(id: TimerId())
     
-    case .timerTicked:
+    case .timerTicked:        
+        var dateComponent = DateComponents()
+        dateComponent.second = 1
+                
+        state.date = Calendar.current.date(byAdding: dateComponent, to: state.date) ?? Date()
+        
         state.secondsElapsed += 1
         
         return Effect<TimeInWordsAction, Never>(value: .timeInWords)

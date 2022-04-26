@@ -22,11 +22,11 @@ public struct ItIsAsexlaView: View {
 public struct ItIsView: View {
     public var body: some View {
         HStack() {
-            LetterView("I", highighted: true)
-            LetterView("T", highighted: true)
+            LetterView("I", highlighted: true)
+            LetterView("T", highlighted: true)
             LetterView("L")
-            LetterView("I", highighted: true)
-            LetterView("S", highighted: true)
+            LetterView("I", highlighted: true)
+            LetterView("S", highlighted: true)
         }
     }
 }

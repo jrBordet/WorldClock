@@ -28,10 +28,10 @@ public struct PastView: View {
 
     public var body: some View {
         HStack() {
-            LetterView("P", highighted: viewStore.accessory == .past || viewStore.accessory == .quarter_past || viewStore.accessory == .half)
-            LetterView("A", highighted: viewStore.accessory == .past || viewStore.accessory == .quarter_past || viewStore.accessory == .half)
-            LetterView("S", highighted: viewStore.accessory == .past || viewStore.accessory == .quarter_past || viewStore.accessory == .half)
-            LetterView("T", highighted: viewStore.accessory == .past || viewStore.accessory == .quarter_past || viewStore.accessory == .half)
+            LetterView("P", highlighted: viewStore.accessory == .past || viewStore.accessory == .quarter_past || viewStore.accessory == .half)
+            LetterView("A", highlighted: viewStore.accessory == .past || viewStore.accessory == .quarter_past || viewStore.accessory == .half)
+            LetterView("S", highlighted: viewStore.accessory == .past || viewStore.accessory == .quarter_past || viewStore.accessory == .half)
+            LetterView("T", highlighted: viewStore.accessory == .past || viewStore.accessory == .quarter_past || viewStore.accessory == .half)
         }
     }
 }
@@ -41,10 +41,10 @@ public struct NineView: View {
 
     public var body: some View {
         HStack() {
-            LetterView("N", highighted: viewStore.hour == .nine)
-            LetterView("I", highighted: viewStore.hour == .nine)
-            LetterView("N", highighted: viewStore.hour == .nine)
-            LetterView("E", highighted: viewStore.hour == .nine)
+            LetterView("N", highlighted: viewStore.hour == .nine)
+            LetterView("I", highlighted: viewStore.hour == .nine)
+            LetterView("N", highlighted: viewStore.hour == .nine)
+            LetterView("E", highlighted: viewStore.hour == .nine)
         }
     }
 }

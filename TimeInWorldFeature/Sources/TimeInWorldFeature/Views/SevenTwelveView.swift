@@ -25,11 +25,11 @@ public struct SevenView: View {
 
     public var body: some View {
         HStack() {
-            LetterView("S", highighted: viewStore.hour == .seven)
-            LetterView("E", highighted: viewStore.hour == .seven)
-            LetterView("V", highighted: viewStore.hour == .seven)
-            LetterView("E", highighted: viewStore.hour == .seven)
-            LetterView("N", highighted: viewStore.hour == .seven)
+            LetterView("S", highlighted: viewStore.hour == .seven)
+            LetterView("E", highlighted: viewStore.hour == .seven)
+            LetterView("V", highlighted: viewStore.hour == .seven)
+            LetterView("E", highlighted: viewStore.hour == .seven)
+            LetterView("N", highlighted: viewStore.hour == .seven)
         }
     }
 }
@@ -39,12 +39,12 @@ public struct TwelveView: View {
 
     public var body: some View {
         HStack() {
-            LetterView("T", highighted: viewStore.hour == .twelve)
-            LetterView("W", highighted: viewStore.hour == .twelve)
-            LetterView("E", highighted: viewStore.hour == .twelve)
-            LetterView("L", highighted: viewStore.hour == .twelve)
-            LetterView("V", highighted: viewStore.hour == .twelve)
-            LetterView("E", highighted: viewStore.hour == .twelve)
+            LetterView("T", highlighted: viewStore.hour == .twelve)
+            LetterView("W", highlighted: viewStore.hour == .twelve)
+            LetterView("E", highlighted: viewStore.hour == .twelve)
+            LetterView("L", highlighted: viewStore.hour == .twelve)
+            LetterView("V", highlighted: viewStore.hour == .twelve)
+            LetterView("E", highlighted: viewStore.hour == .twelve)
         }
     }
 }

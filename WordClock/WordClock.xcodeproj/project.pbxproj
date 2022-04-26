@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		38783FCE2815DEEE0044F7AA /* TimeInWorldFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 38783FCD2815DEEE0044F7AA /* TimeInWorldFeature */; };
-		38783FD02815E4F80044F7AA /* TimeInWordsEnvironment+live.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38783FCF2815E4F80044F7AA /* TimeInWordsEnvironment+live.swift */; };
 		38783FD22815E56A0044F7AA /* TimeInWorldFeature_Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38783FD12815E56A0044F7AA /* TimeInWorldFeature_Preview.swift */; };
-		3883949628166F5C00EE9458 /* TimeInWords in Frameworks */ = {isa = PBXBuildFile; productRef = 3883949528166F5C00EE9458 /* TimeInWords */; };
+		38ADDEA02818768E00DD1940 /* TimeInWords in Frameworks */ = {isa = PBXBuildFile; productRef = 38ADDE9F2818768E00DD1940 /* TimeInWords */; };
 		38B7401C2816825F0095E534 /* SpaceMono-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38B740182816825F0095E534 /* SpaceMono-Bold.ttf */; };
 		38B7401D2816825F0095E534 /* SpaceMono-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38B740192816825F0095E534 /* SpaceMono-Regular.ttf */; };
+		38B74025281811860095E534 /* TimeInWordsEnvironment+live.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B74024281811860095E534 /* TimeInWordsEnvironment+live.swift */; };
 		F8B1347B27D74E8600BE6503 /* WordClockApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B1347A27D74E8600BE6503 /* WordClockApp.swift */; };
 		F8B1347F27D74E8800BE6503 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8B1347E27D74E8800BE6503 /* Assets.xcassets */; };
 		F8B1348227D74E8800BE6503 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8B1348127D74E8800BE6503 /* Preview Assets.xcassets */; };
@@ -41,11 +41,11 @@
 
 /* Begin PBXFileReference section */
 		38783FCC2815DEB70044F7AA /* TimeInWorldFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = TimeInWorldFeature; path = ../../TimeInWorldFeature; sourceTree = "<group>"; };
-		38783FCF2815E4F80044F7AA /* TimeInWordsEnvironment+live.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInWordsEnvironment+live.swift"; sourceTree = "<group>"; };
 		38783FD12815E56A0044F7AA /* TimeInWorldFeature_Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeInWorldFeature_Preview.swift; sourceTree = "<group>"; };
 		38B740182816825F0095E534 /* SpaceMono-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpaceMono-Bold.ttf"; sourceTree = "<group>"; };
 		38B740192816825F0095E534 /* SpaceMono-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpaceMono-Regular.ttf"; sourceTree = "<group>"; };
 		38B740202816829B0095E534 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		38B74024281811860095E534 /* TimeInWordsEnvironment+live.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInWordsEnvironment+live.swift"; sourceTree = "<group>"; };
 		F8B1347727D74E8600BE6503 /* WordClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8B1347A27D74E8600BE6503 /* WordClockApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordClockApp.swift; sourceTree = "<group>"; };
 		F8B1347E27D74E8800BE6503 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -63,7 +63,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8B134A927D751A900BE6503 /* ComposableArchitecture in Frameworks */,
-				3883949628166F5C00EE9458 /* TimeInWords in Frameworks */,
+				38ADDEA02818768E00DD1940 /* TimeInWords in Frameworks */,
 				38783FCE2815DEEE0044F7AA /* TimeInWorldFeature in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -129,7 +129,7 @@
 				38B74017281682450095E534 /* fonts */,
 				38783FCC2815DEB70044F7AA /* TimeInWorldFeature */,
 				F8B1347A27D74E8600BE6503 /* WordClockApp.swift */,
-				38783FCF2815E4F80044F7AA /* TimeInWordsEnvironment+live.swift */,
+				38B74024281811860095E534 /* TimeInWordsEnvironment+live.swift */,
 				F8B1347E27D74E8800BE6503 /* Assets.xcassets */,
 				F8B1348027D74E8800BE6503 /* Preview Content */,
 			);
@@ -181,7 +181,7 @@
 			packageProductDependencies = (
 				F8B134A827D751A900BE6503 /* ComposableArchitecture */,
 				38783FCD2815DEEE0044F7AA /* TimeInWorldFeature */,
-				3883949528166F5C00EE9458 /* TimeInWords */,
+				38ADDE9F2818768E00DD1940 /* TimeInWords */,
 			);
 			productName = WordClock;
 			productReference = F8B1347727D74E8600BE6503 /* WordClock.app */;
@@ -257,7 +257,7 @@
 			mainGroup = F8B1346E27D74E8600BE6503;
 			packageReferences = (
 				F8B134A727D751A900BE6503 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
-				3883949428166F5C00EE9458 /* XCRemoteSwiftPackageReference "TimeInWords" */,
+				38ADDE9E2818768E00DD1940 /* XCRemoteSwiftPackageReference "TimeInWords" */,
 			);
 			productRefGroup = F8B1347827D74E8600BE6503 /* Products */;
 			projectDirPath = "";
@@ -303,8 +303,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38B74025281811860095E534 /* TimeInWordsEnvironment+live.swift in Sources */,
 				F8B1347B27D74E8600BE6503 /* WordClockApp.swift in Sources */,
-				38783FD02815E4F80044F7AA /* TimeInWordsEnvironment+live.swift in Sources */,
 				38783FD22815E56A0044F7AA /* TimeInWorldFeature_Preview.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -474,7 +474,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -505,7 +505,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -638,12 +638,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		3883949428166F5C00EE9458 /* XCRemoteSwiftPackageReference "TimeInWords" */ = {
+		38ADDE9E2818768E00DD1940 /* XCRemoteSwiftPackageReference "TimeInWords" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/jrBordet/TimeInWords";
 			requirement = {
-				kind = exactVersion;
-				version = 0.0.2;
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.4;
 			};
 		};
 		F8B134A727D751A900BE6503 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
@@ -661,9 +661,9 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = TimeInWorldFeature;
 		};
-		3883949528166F5C00EE9458 /* TimeInWords */ = {
+		38ADDE9F2818768E00DD1940 /* TimeInWords */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3883949428166F5C00EE9458 /* XCRemoteSwiftPackageReference "TimeInWords" */;
+			package = 38ADDE9E2818768E00DD1940 /* XCRemoteSwiftPackageReference "TimeInWords" */;
 			productName = TimeInWords;
 		};
 		F8B134A827D751A900BE6503 /* ComposableArchitecture */ = {

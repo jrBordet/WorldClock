@@ -28,10 +28,10 @@ public struct HalfView: View {
 
     public var body: some View {
         HStack() {
-            LetterView("H", highighted: viewStore.accessory == .half)
-            LetterView("A", highighted: viewStore.accessory == .half)
-            LetterView("L", highighted: viewStore.accessory == .half)
-            LetterView("F", highighted: viewStore.accessory == .half)
+            LetterView("H", highlighted: viewStore.accessory == .half)
+            LetterView("A", highlighted: viewStore.accessory == .half)
+            LetterView("L", highlighted: viewStore.accessory == .half)
+            LetterView("F", highlighted: viewStore.accessory == .half)
         }
     }
 }
@@ -41,9 +41,9 @@ public struct TenView: View {
 
     public var body: some View {
         HStack() {
-            LetterView("T", highighted: viewStore.minutes == .ten)
-            LetterView("E", highighted: viewStore.minutes == .ten)
-            LetterView("N", highighted: viewStore.minutes == .ten)
+            LetterView("T", highlighted: viewStore.minutes == .ten)
+            LetterView("E", highlighted: viewStore.minutes == .ten)
+            LetterView("N", highlighted: viewStore.minutes == .ten)
         }
     }
 }
@@ -53,8 +53,8 @@ public struct ToView: View {
 
     public var body: some View {
         HStack() {
-            LetterView("T", highighted: viewStore.accessory == .to || viewStore.accessory == .quarter_to)
-            LetterView("O", highighted: viewStore.accessory == .to || viewStore.accessory == .quarter_to)
+            LetterView("T", highlighted: viewStore.accessory == .to || viewStore.accessory == .quarter_to)
+            LetterView("O", highlighted: viewStore.accessory == .to || viewStore.accessory == .quarter_to)
         }
     }
 }

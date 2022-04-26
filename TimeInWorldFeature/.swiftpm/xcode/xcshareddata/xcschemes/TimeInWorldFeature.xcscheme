@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F8B1347627D74E8600BE6503"
-               BuildableName = "WordClock.app"
-               BlueprintName = "WordClock"
-               ReferencedContainer = "container:WordClock.xcodeproj">
+               BlueprintIdentifier = "TimeInWorldFeature"
+               BuildableName = "TimeInWorldFeature"
+               BlueprintName = "TimeInWorldFeature"
+               ReferencedContainer = "container:">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -27,22 +27,14 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
-      codeCoverageEnabled = "YES"
-      onlyGenerateCoverageForSpecifiedTargets = "YES">
+      codeCoverageEnabled = "YES">
       <CodeCoverageTargets>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "TimeInWorldFeature"
             BuildableName = "TimeInWorldFeature"
             BlueprintName = "TimeInWorldFeature"
-            ReferencedContainer = "container:../TimeInWorldFeature">
-         </BuildableReference>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F8B1347627D74E8600BE6503"
-            BuildableName = "WordClock.app"
-            BlueprintName = "WordClock"
-            ReferencedContainer = "container:WordClock.xcodeproj">
+            ReferencedContainer = "container:">
          </BuildableReference>
       </CodeCoverageTargets>
       <Testables>
@@ -50,30 +42,10 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F8B1348627D74E8900BE6503"
-               BuildableName = "WordClockTests.xctest"
-               BlueprintName = "WordClockTests"
-               ReferencedContainer = "container:WordClock.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F8B1349027D74E8900BE6503"
-               BuildableName = "WordClockUITests.xctest"
-               BlueprintName = "WordClockUITests"
-               ReferencedContainer = "container:WordClock.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "TimeInWorldFeatureTests"
                BuildableName = "TimeInWorldFeatureTests"
                BlueprintName = "TimeInWorldFeatureTests"
-               ReferencedContainer = "container:../TimeInWorldFeature">
+               ReferencedContainer = "container:">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -88,16 +60,6 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F8B1347627D74E8600BE6503"
-            BuildableName = "WordClock.app"
-            BlueprintName = "WordClock"
-            ReferencedContainer = "container:WordClock.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -105,16 +67,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F8B1347627D74E8600BE6503"
-            BuildableName = "WordClock.app"
-            BlueprintName = "WordClock"
-            ReferencedContainer = "container:WordClock.xcodeproj">
+            BlueprintIdentifier = "TimeInWorldFeature"
+            BuildableName = "TimeInWorldFeature"
+            BlueprintName = "TimeInWorldFeature"
+            ReferencedContainer = "container:">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

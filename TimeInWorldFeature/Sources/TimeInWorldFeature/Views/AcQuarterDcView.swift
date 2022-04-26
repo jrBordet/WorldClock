@@ -14,7 +14,7 @@ public struct AcView: View {
 
     public var body: some View {
         HStack() {
-            LetterView("A", highighted: viewStore.accessory == .quarter_past)
+            LetterView("A", highlighted: viewStore.accessory == .quarter_past)
             LetterView("C")
         }
     }
@@ -25,13 +25,13 @@ public struct QuarterView: View {
     
     public var body: some View {
         HStack() {
-            LetterView("Q", highighted: viewStore.accessory == .quarter_past || viewStore.accessory == .quarter_to)
-            LetterView("U", highighted: viewStore.accessory == .quarter_past || viewStore.accessory == .quarter_to)
-            LetterView("A", highighted: viewStore.accessory == .quarter_past || viewStore.accessory == .quarter_to)
-            LetterView("R", highighted: viewStore.accessory == .quarter_past || viewStore.accessory == .quarter_to)
-            LetterView("T", highighted: viewStore.accessory == .quarter_past || viewStore.accessory == .quarter_to)
-            LetterView("E", highighted: viewStore.accessory == .quarter_past || viewStore.accessory == .quarter_to)
-            LetterView("R", highighted: viewStore.accessory == .quarter_past || viewStore.accessory == .quarter_to)
+            LetterView("Q", highlighted: viewStore.accessory == .quarter_past || viewStore.accessory == .quarter_to)
+            LetterView("U", highlighted: viewStore.accessory == .quarter_past || viewStore.accessory == .quarter_to)
+            LetterView("A", highlighted: viewStore.accessory == .quarter_past || viewStore.accessory == .quarter_to)
+            LetterView("R", highlighted: viewStore.accessory == .quarter_past || viewStore.accessory == .quarter_to)
+            LetterView("T", highlighted: viewStore.accessory == .quarter_past || viewStore.accessory == .quarter_to)
+            LetterView("E", highlighted: viewStore.accessory == .quarter_past || viewStore.accessory == .quarter_to)
+            LetterView("R", highlighted: viewStore.accessory == .quarter_past || viewStore.accessory == .quarter_to)
         }
     }
 }
