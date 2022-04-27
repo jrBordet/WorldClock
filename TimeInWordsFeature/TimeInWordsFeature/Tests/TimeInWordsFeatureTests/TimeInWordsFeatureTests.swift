@@ -1,10 +1,9 @@
 import XCTest
 import ComposableArchitecture
 import TimeInWords
-//import SnapshotTesting
-@testable import TimeInWorldFeature
+@testable import TimeInWordsFeature
 
-final class TimeInWorldFeatureTests: XCTestCase {
+final class TimeInWordsFeatureTests: XCTestCase {
     let scheduler = DispatchQueue.test
 
     func testTimeInWords() throws {
