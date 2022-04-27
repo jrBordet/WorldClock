@@ -10,7 +10,7 @@ import SwiftUI
 import ComposableArchitecture
 
 public struct TwentyFiveXView: View {
-    @ObservedObject var viewStore: ViewStore<TimeInWorldState, TimeInWordsAction>
+    @ObservedObject var viewStore: ViewStore<TimeInWordsState, TimeInWordsAction>
 
     public var body: some View {
         HStack() {
@@ -22,7 +22,7 @@ public struct TwentyFiveXView: View {
 }
 
 public struct TwentyView: View {
-    @ObservedObject var viewStore: ViewStore<TimeInWorldState, TimeInWordsAction>
+    @ObservedObject var viewStore: ViewStore<TimeInWordsState, TimeInWordsAction>
 
     public var body: some View {
         HStack() {
@@ -37,7 +37,7 @@ public struct TwentyView: View {
 }
 
 public struct TwentyFiveView: View {
-    @ObservedObject var viewStore: ViewStore<TimeInWorldState, TimeInWordsAction>
+    @ObservedObject var viewStore: ViewStore<TimeInWordsState, TimeInWordsAction>
 
     public var body: some View {
         HStack() {

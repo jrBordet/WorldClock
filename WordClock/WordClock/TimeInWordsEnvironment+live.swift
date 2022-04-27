@@ -8,7 +8,7 @@
 import Foundation
 import ComposableArchitecture
 import TimeInWords
-import TimeInWorldFeature
+import TimeInWordsFeature
 
 extension TimeInWordsEnvironment {
     public static var live: Self = .init(

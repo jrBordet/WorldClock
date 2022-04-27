@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		38783FCE2815DEEE0044F7AA /* TimeInWorldFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 38783FCD2815DEEE0044F7AA /* TimeInWorldFeature */; };
-		38783FD22815E56A0044F7AA /* TimeInWorldFeature_Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38783FD12815E56A0044F7AA /* TimeInWorldFeature_Preview.swift */; };
+		38783FD22815E56A0044F7AA /* TimeInWordsFeature_Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38783FD12815E56A0044F7AA /* TimeInWordsFeature_Preview.swift */; };
 		38ADDEA02818768E00DD1940 /* TimeInWords in Frameworks */ = {isa = PBXBuildFile; productRef = 38ADDE9F2818768E00DD1940 /* TimeInWords */; };
+		38ADDEA92819222300DD1940 /* TimeInWordsFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 38ADDEA82819222300DD1940 /* TimeInWordsFeature */; };
+		38ADDEAD2819231F00DD1940 /* AppFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38ADDEAC2819231F00DD1940 /* AppFeature.swift */; };
+		38ADDEB02819282100DD1940 /* AppDelegateFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38ADDEAF2819282100DD1940 /* AppDelegateFeature.swift */; };
 		38B7401C2816825F0095E534 /* SpaceMono-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38B740182816825F0095E534 /* SpaceMono-Bold.ttf */; };
 		38B7401D2816825F0095E534 /* SpaceMono-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38B740192816825F0095E534 /* SpaceMono-Regular.ttf */; };
 		38B74025281811860095E534 /* TimeInWordsEnvironment+live.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B74024281811860095E534 /* TimeInWordsEnvironment+live.swift */; };
@@ -40,8 +42,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		38783FCC2815DEB70044F7AA /* TimeInWorldFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = TimeInWorldFeature; path = ../../TimeInWorldFeature; sourceTree = "<group>"; };
-		38783FD12815E56A0044F7AA /* TimeInWorldFeature_Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeInWorldFeature_Preview.swift; sourceTree = "<group>"; };
+		38783FD12815E56A0044F7AA /* TimeInWordsFeature_Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeInWordsFeature_Preview.swift; sourceTree = "<group>"; };
+		38ADDEA72819207100DD1940 /* TimeInWordsFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = TimeInWordsFeature; path = ../TimeInWordsFeature/TimeInWordsFeature; sourceTree = "<group>"; };
+		38ADDEAC2819231F00DD1940 /* AppFeature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppFeature.swift; sourceTree = "<group>"; };
+		38ADDEAF2819282100DD1940 /* AppDelegateFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateFeature.swift; sourceTree = "<group>"; };
 		38B740182816825F0095E534 /* SpaceMono-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpaceMono-Bold.ttf"; sourceTree = "<group>"; };
 		38B740192816825F0095E534 /* SpaceMono-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpaceMono-Regular.ttf"; sourceTree = "<group>"; };
 		38B740202816829B0095E534 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -62,9 +66,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38ADDEA92819222300DD1940 /* TimeInWordsFeature in Frameworks */,
 				F8B134A927D751A900BE6503 /* ComposableArchitecture in Frameworks */,
 				38ADDEA02818768E00DD1940 /* TimeInWords in Frameworks */,
-				38783FCE2815DEEE0044F7AA /* TimeInWorldFeature in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +96,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		38ADDEAB2819231F00DD1940 /* AppFeature */ = {
+			isa = PBXGroup;
+			children = (
+				38ADDEAC2819231F00DD1940 /* AppFeature.swift */,
+			);
+			path = AppFeature;
+			sourceTree = "<group>";
+		};
+		38ADDEAE2819280E00DD1940 /* AppDelegateFeature */ = {
+			isa = PBXGroup;
+			children = (
+				38ADDEAF2819282100DD1940 /* AppDelegateFeature.swift */,
+			);
+			path = AppDelegateFeature;
+			sourceTree = "<group>";
+		};
 		38B74017281682450095E534 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +124,7 @@
 		F8B1346E27D74E8600BE6503 = {
 			isa = PBXGroup;
 			children = (
+				38ADDEA72819207100DD1940 /* TimeInWordsFeature */,
 				F8B1347927D74E8600BE6503 /* WordClock */,
 				F8B1348A27D74E8900BE6503 /* WordClockTests */,
 				F8B1349427D74E8900BE6503 /* WordClockUITests */,
@@ -125,12 +146,13 @@
 		F8B1347927D74E8600BE6503 /* WordClock */ = {
 			isa = PBXGroup;
 			children = (
+				38ADDEAE2819280E00DD1940 /* AppDelegateFeature */,
+				38ADDEAB2819231F00DD1940 /* AppFeature */,
 				38B740202816829B0095E534 /* Info.plist */,
-				38B74017281682450095E534 /* fonts */,
-				38783FCC2815DEB70044F7AA /* TimeInWorldFeature */,
 				F8B1347A27D74E8600BE6503 /* WordClockApp.swift */,
 				38B74024281811860095E534 /* TimeInWordsEnvironment+live.swift */,
 				F8B1347E27D74E8800BE6503 /* Assets.xcassets */,
+				38B74017281682450095E534 /* fonts */,
 				F8B1348027D74E8800BE6503 /* Preview Content */,
 			);
 			path = WordClock;
@@ -140,7 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				F8B1348127D74E8800BE6503 /* Preview Assets.xcassets */,
-				38783FD12815E56A0044F7AA /* TimeInWorldFeature_Preview.swift */,
+				38783FD12815E56A0044F7AA /* TimeInWordsFeature_Preview.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -180,8 +202,8 @@
 			name = WordClock;
 			packageProductDependencies = (
 				F8B134A827D751A900BE6503 /* ComposableArchitecture */,
-				38783FCD2815DEEE0044F7AA /* TimeInWorldFeature */,
 				38ADDE9F2818768E00DD1940 /* TimeInWords */,
+				38ADDEA82819222300DD1940 /* TimeInWordsFeature */,
 			);
 			productName = WordClock;
 			productReference = F8B1347727D74E8600BE6503 /* WordClock.app */;
@@ -303,9 +325,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38ADDEAD2819231F00DD1940 /* AppFeature.swift in Sources */,
 				38B74025281811860095E534 /* TimeInWordsEnvironment+live.swift in Sources */,
 				F8B1347B27D74E8600BE6503 /* WordClockApp.swift in Sources */,
-				38783FD22815E56A0044F7AA /* TimeInWorldFeature_Preview.swift in Sources */,
+				38783FD22815E56A0044F7AA /* TimeInWordsFeature_Preview.swift in Sources */,
+				38ADDEB02819282100DD1940 /* AppDelegateFeature.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -657,14 +681,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		38783FCD2815DEEE0044F7AA /* TimeInWorldFeature */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = TimeInWorldFeature;
-		};
 		38ADDE9F2818768E00DD1940 /* TimeInWords */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 38ADDE9E2818768E00DD1940 /* XCRemoteSwiftPackageReference "TimeInWords" */;
 			productName = TimeInWords;
+		};
+		38ADDEA82819222300DD1940 /* TimeInWordsFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TimeInWordsFeature;
 		};
 		F8B134A827D751A900BE6503 /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;

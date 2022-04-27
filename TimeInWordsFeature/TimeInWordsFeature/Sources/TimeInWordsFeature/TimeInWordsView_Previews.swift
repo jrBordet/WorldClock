@@ -1,29 +1,27 @@
 //
-//  TimeInWorldFeature_Preview.swift
-//  WordClock
+//  File.swift
+//  
 //
-//  Created by Jean Raphael Bordet  on 24/04/22.
+//  Created by Jean Raphael Bordet  on 25/04/22.
 //
 
-import Foundation
 import SwiftUI
-import TimeInWords
 import ComposableArchitecture
-import TimeInWorldFeature
+import TimeInWords
 
-struct ContentView_Previews: PreviewProvider {
+struct TimeInWordsView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            TimeInWorldView(
+            TimeInWordsView(
                 store:
                     Store(
-                        initialState: TimeInWorldState(
-                            date: Date(timeIntervalSince1970: 1650831129)
+                        initialState: TimeInWordsState(
+                            date: Date(timeIntervalSince1970: 1650874500)
                         ),
                         reducer: timeInWordsReducer,
                         environment: .mock(
                             mainQueue: DispatchQueue.main.eraseToAnyScheduler(),
-                            timeInWords: { (h: Int, m: Int) -> Effect<String, Error> in
+                            timeInWords: { h, m in
                                 Effect(value: timeInWords(h: h, m: m))
                             },
                             time12InWords: { h, m in

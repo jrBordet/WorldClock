@@ -17,7 +17,7 @@ var calendar = Calendar.current
 
 // MARK: - Timer feature domain
 
-public struct TimeInWorldState: Equatable {
+public struct TimeInWordsState: Equatable {
     public var date = Date()
     public var isTimerActive = false
     public var secondsElapsed = 0
@@ -36,6 +36,7 @@ public struct TimeInWorldState: Equatable {
 
 public enum TimeInWordsAction: Equatable {
     case timerTicked
+    case startTimer
     case toggleTimerButtonTapped
     case timeInWords, timeInWordsResponse(Result<String, Error>)
     
@@ -72,7 +73,7 @@ extension TimeInWordsEnvironment {
     }
 }
 
-public let timeInWordsReducer = Reducer<TimeInWorldState, TimeInWordsAction, TimeInWordsEnvironment> {
+public let timeInWordsReducer = Reducer<TimeInWordsState, TimeInWordsAction, TimeInWordsEnvironment> {
     state, action, environment in
     struct TimerId: Hashable {}
     
@@ -89,7 +90,9 @@ public let timeInWordsReducer = Reducer<TimeInWorldState, TimeInWordsAction, Tim
         var dateComponent = DateComponents()
         dateComponent.second = 1
                 
-        state.date = Calendar.current.date(byAdding: dateComponent, to: state.date) ?? Date()
+//        state.date = Calendar.current.date(byAdding: dateComponent, to: state.date) ?? Date()
+        
+        state.date = Date()
         
         state.secondsElapsed += 1
         
@@ -127,6 +130,13 @@ public let timeInWordsReducer = Reducer<TimeInWorldState, TimeInWordsAction, Tim
         return .none
     case let .timw12InWordsResponse(.failure(error)):
         return .none
+        
+    case .startTimer:
+        state.date = Date()
+
+        return Effect.timer(id: TimerId(), every: 1, tolerance: .zero, on: environment.mainQueue)
+            .map { _ in TimeInWordsAction.timerTicked }
+        
     }
 }
     .signpost()
