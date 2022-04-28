@@ -8,53 +8,108 @@
 import Foundation
 import SwiftUI
 import ComposableArchitecture
+import TimeInWords
 
 public struct HalfTenToView: View {
-    @ObservedObject var viewStore: ViewStore<TimeInWordsState, TimeInWordsAction>
-
+    let store: Store<TimeInWordsState, TimeInWordsAction>
+    
+    public init(
+        store: Store<TimeInWordsState, TimeInWordsAction>
+    ) {
+        self.store = store
+    }
+    
     public var body: some View {
         HStack() {
-            HalfView(viewStore: viewStore)
+            HalfView(store: store)
             LetterView("B")
-            TenView(viewStore: viewStore)
+            TenView(store: store)
             LetterView("F")
-            ToView(viewStore: viewStore)
+            ToView(store: store)
         }
     }
 }
 
 public struct HalfView: View {
-    @ObservedObject var viewStore: ViewStore<TimeInWordsState, TimeInWordsAction>
-
+    struct ViewState: Equatable {
+        var highlighted: Bool
+        
+        public init(state: TimeInWordsState) {
+            self.highlighted = state.accessory == .half
+        }
+    }
+    
+    let store: Store<TimeInWordsState, TimeInWordsAction>
+    @ObservedObject var viewStore: ViewStore<ViewState, TimeInWordsAction>
+    
+    public init(
+        store: Store<TimeInWordsState, TimeInWordsAction>
+    ) {
+        self.store = store
+        self.viewStore = ViewStore(store.scope(state: ViewState.init))
+    }
+    
     public var body: some View {
         HStack() {
-            LetterView("H", highlighted: viewStore.accessory == .half)
-            LetterView("A", highlighted: viewStore.accessory == .half)
-            LetterView("L", highlighted: viewStore.accessory == .half)
-            LetterView("F", highlighted: viewStore.accessory == .half)
+            LetterView("H", highlighted: viewStore.highlighted)
+            LetterView("A", highlighted: viewStore.highlighted)
+            LetterView("L", highlighted: viewStore.highlighted)
+            LetterView("F", highlighted: viewStore.highlighted)
         }
     }
 }
 
 public struct TenView: View {
-    @ObservedObject var viewStore: ViewStore<TimeInWordsState, TimeInWordsAction>
-
+    struct ViewState: Equatable {
+        var highlighted: Bool
+        
+        public init(state: TimeInWordsState) {
+            self.highlighted = state.minutes == .ten
+        }
+    }
+    
+    let store: Store<TimeInWordsState, TimeInWordsAction>
+    @ObservedObject var viewStore: ViewStore<ViewState, TimeInWordsAction>
+    
+    public init(
+        store: Store<TimeInWordsState, TimeInWordsAction>
+    ) {
+        self.store = store
+        self.viewStore = ViewStore(store.scope(state: ViewState.init))
+    }
+    
     public var body: some View {
         HStack() {
-            LetterView("T", highlighted: viewStore.minutes == .ten)
-            LetterView("E", highlighted: viewStore.minutes == .ten)
-            LetterView("N", highlighted: viewStore.minutes == .ten)
+            LetterView("T", highlighted: viewStore.highlighted)
+            LetterView("E", highlighted: viewStore.highlighted)
+            LetterView("N", highlighted: viewStore.highlighted)
         }
     }
 }
 
 public struct ToView: View {
-    @ObservedObject var viewStore: ViewStore<TimeInWordsState, TimeInWordsAction>
-
+    struct ViewState: Equatable {
+        var highlighted: Bool
+        
+        public init(state: TimeInWordsState) {
+            self.highlighted = state.accessory == .to || state.accessory == .quarter_to
+        }
+    }
+    
+    let store: Store<TimeInWordsState, TimeInWordsAction>
+    @ObservedObject var viewStore: ViewStore<ViewState, TimeInWordsAction>
+    
+    public init(
+        store: Store<TimeInWordsState, TimeInWordsAction>
+    ) {
+        self.store = store
+        self.viewStore = ViewStore(store.scope(state: ViewState.init))
+    }
+    
     public var body: some View {
         HStack() {
-            LetterView("T", highlighted: viewStore.accessory == .to || viewStore.accessory == .quarter_to)
-            LetterView("O", highlighted: viewStore.accessory == .to || viewStore.accessory == .quarter_to)
+            LetterView("T", highlighted: viewStore.highlighted)
+            LetterView("O", highlighted: viewStore.highlighted)
         }
     }
 }

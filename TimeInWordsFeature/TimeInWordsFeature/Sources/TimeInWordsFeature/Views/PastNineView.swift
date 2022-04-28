@@ -8,43 +8,82 @@
 import Foundation
 import SwiftUI
 import ComposableArchitecture
+import TimeInWords
 
 public struct PastNineView: View {
-    @ObservedObject var viewStore: ViewStore<TimeInWordsState, TimeInWordsAction>
-
+    let store: Store<TimeInWordsState, TimeInWordsAction>
+    
+    public init(
+        store: Store<TimeInWordsState, TimeInWordsAction>
+    ) {
+        self.store = store
+    }
+    
     public var body: some View {
         HStack() {
-            PastView(viewStore: viewStore)
+            PastView(store: store)
             LetterView("E")
             LetterView("R")
             LetterView("U")
-            NineView(viewStore: viewStore)
+            NineView(store: store)
         }
     }
 }
 
 public struct PastView: View {
-    @ObservedObject var viewStore: ViewStore<TimeInWordsState, TimeInWordsAction>
-
+    struct ViewState: Equatable {
+        var highlighted: Bool
+        
+        public init(state: TimeInWordsState) {
+            self.highlighted = state.accessory == .past || state.accessory == .quarter_past || state.accessory == .half
+        }
+    }
+    
+    let store: Store<TimeInWordsState, TimeInWordsAction>
+    @ObservedObject var viewStore: ViewStore<ViewState, TimeInWordsAction>
+    
+    public init(
+        store: Store<TimeInWordsState, TimeInWordsAction>
+    ) {
+        self.store = store
+        self.viewStore = ViewStore(store.scope(state: ViewState.init))
+    }
+    
     public var body: some View {
         HStack() {
-            LetterView("P", highlighted: viewStore.accessory == .past || viewStore.accessory == .quarter_past || viewStore.accessory == .half)
-            LetterView("A", highlighted: viewStore.accessory == .past || viewStore.accessory == .quarter_past || viewStore.accessory == .half)
-            LetterView("S", highlighted: viewStore.accessory == .past || viewStore.accessory == .quarter_past || viewStore.accessory == .half)
-            LetterView("T", highlighted: viewStore.accessory == .past || viewStore.accessory == .quarter_past || viewStore.accessory == .half)
+            LetterView("P", highlighted: viewStore.highlighted)
+            LetterView("A", highlighted: viewStore.highlighted)
+            LetterView("S", highlighted: viewStore.highlighted)
+            LetterView("T", highlighted: viewStore.highlighted)
         }
     }
 }
 
 public struct NineView: View {
-    @ObservedObject var viewStore: ViewStore<TimeInWordsState, TimeInWordsAction>
-
+    struct ViewState: Equatable {
+        var highlighted: Bool
+        
+        public init(state: TimeInWordsState) {
+            self.highlighted = state.hour == .nine
+        }
+    }
+    
+    let store: Store<TimeInWordsState, TimeInWordsAction>
+    @ObservedObject var viewStore: ViewStore<ViewState, TimeInWordsAction>
+    
+    public init(
+        store: Store<TimeInWordsState, TimeInWordsAction>
+    ) {
+        self.store = store
+        self.viewStore = ViewStore(store.scope(state: ViewState.init))
+    }
+    
     public var body: some View {
         HStack() {
-            LetterView("N", highlighted: viewStore.hour == .nine)
-            LetterView("I", highlighted: viewStore.hour == .nine)
-            LetterView("N", highlighted: viewStore.hour == .nine)
-            LetterView("E", highlighted: viewStore.hour == .nine)
+            LetterView("N", highlighted: viewStore.highlighted)
+            LetterView("I", highlighted: viewStore.highlighted)
+            LetterView("N", highlighted: viewStore.highlighted)
+            LetterView("E", highlighted: viewStore.highlighted)
         }
     }
 }

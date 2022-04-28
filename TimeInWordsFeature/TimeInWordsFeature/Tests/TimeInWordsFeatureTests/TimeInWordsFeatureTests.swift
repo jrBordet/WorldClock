@@ -1,14 +1,18 @@
 import XCTest
 import ComposableArchitecture
 import TimeInWords
+import SnapshotTesting
+import SwiftUI
 @testable import TimeInWordsFeature
 
 final class TimeInWordsFeatureTests: XCTestCase {
     let scheduler = DispatchQueue.test
-
+    
     func testTimeInWords() throws {
         let store = TestStore(
-            initialState: TimeInWorldState(date: .eightoClock),
+            initialState: TimeInWordsState(
+                date: .eightoClock
+            ),
             reducer: timeInWordsReducer,
             environment: .mock(
                 mainQueue: self.scheduler.eraseToAnyScheduler(),
@@ -21,19 +25,25 @@ final class TimeInWordsFeatureTests: XCTestCase {
             )
         )
         
-        var dateComponent = DateComponents()
-        dateComponent.second = 1
-        
         store.send(.toggleTimerButtonTapped, {
             $0.isTimerActive = true
         })
         
+        //var dateComponent = DateComponents()
+        //dateComponent.second = 1
+                
+       // state.date = Calendar.current.date(byAdding: dateComponent, to: state.date) ?? Date()
+        
         self.scheduler.advance(by: 1)
+        
+        var dateComponent = DateComponents()
+        dateComponent.second = 1
+        
+        let date: Date = .eightoClock//Calendar.current.date(byAdding: dateComponent, to: .eightoClock) ?? Date()
         
         store.receive(.timerTicked) {
             $0.secondsElapsed = 1
-            
-            $0.date = Calendar.current.date(byAdding: dateComponent, to: $0.date)!
+            $0.date = date
         }
         
         store.receive(.timeInWords)
@@ -41,7 +51,7 @@ final class TimeInWordsFeatureTests: XCTestCase {
         store.receive(.timeInWordsResponse(.success("eight o' clock")), {
             $0.timeInWords = "eight o' clock"
         })
-                
+        
         store.receive(.timw12InWordsResponse(.success(TimeIn12Components(hour: .eight, minutes: .zero, accessory: .o_clock))), {
             $0.hour = .eight
             $0.minutes = .zero
@@ -49,7 +59,7 @@ final class TimeInWordsFeatureTests: XCTestCase {
         })
         
         store.send(.toggleTimerButtonTapped) {
-          $0.isTimerActive = false
+            $0.isTimerActive = false
         }
     }
 }

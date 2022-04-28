@@ -28,9 +28,15 @@ public struct TimeInWordsState: Equatable {
     public var accessory: Accessory = .o_clock
     
     public init(
-        date: Date = Date()
+        date: Date = Date(),
+        hour: WordNumber = .zero,
+        minutes: WordNumber = .zero,
+        accessory: Accessory = .o_clock
     ) {
         self.date = date
+        self.hour = hour
+        self.minutes = minutes
+        self.accessory = accessory
     }
 }
 

@@ -8,43 +8,82 @@
 import Foundation
 import SwiftUI
 import ComposableArchitecture
+import TimeInWords
 
 public struct SevenTwelveView: View {
-    @ObservedObject var viewStore: ViewStore<TimeInWordsState, TimeInWordsAction>
+    let store: Store<TimeInWordsState, TimeInWordsAction>
+    
+    public init(
+        store: Store<TimeInWordsState, TimeInWordsAction>
+    ) {
+        self.store = store
+    }
 
     public var body: some View {
         HStack() {
-            SevenView(viewStore: viewStore)
-            TwelveView(viewStore: viewStore)
+            SevenView(store: store)
+            TwelveView(store: store)
         }
     }
 }
 
 public struct SevenView: View {
-    @ObservedObject var viewStore: ViewStore<TimeInWordsState, TimeInWordsAction>
+    struct ViewState: Equatable {
+        var highlighted: Bool
+        
+        public init(state: TimeInWordsState) {
+            self.highlighted = state.hour == .seven
+        }
+    }
+    
+    let store: Store<TimeInWordsState, TimeInWordsAction>
+    @ObservedObject var viewStore: ViewStore<ViewState, TimeInWordsAction>
+    
+    public init(
+        store: Store<TimeInWordsState, TimeInWordsAction>
+    ) {
+        self.store = store
+        self.viewStore = ViewStore(store.scope(state: ViewState.init))
+    }
 
     public var body: some View {
         HStack() {
-            LetterView("S", highlighted: viewStore.hour == .seven)
-            LetterView("E", highlighted: viewStore.hour == .seven)
-            LetterView("V", highlighted: viewStore.hour == .seven)
-            LetterView("E", highlighted: viewStore.hour == .seven)
-            LetterView("N", highlighted: viewStore.hour == .seven)
+            LetterView("S", highlighted: viewStore.highlighted)
+            LetterView("E", highlighted: viewStore.highlighted)
+            LetterView("V", highlighted: viewStore.highlighted)
+            LetterView("E", highlighted: viewStore.highlighted)
+            LetterView("N", highlighted: viewStore.highlighted)
         }
     }
 }
 
 public struct TwelveView: View {
-    @ObservedObject var viewStore: ViewStore<TimeInWordsState, TimeInWordsAction>
-
+    struct ViewState: Equatable {
+        var highlighted: Bool
+        
+        public init(state: TimeInWordsState) {
+            self.highlighted = state.hour == .twelve
+        }
+    }
+    
+    let store: Store<TimeInWordsState, TimeInWordsAction>
+    @ObservedObject var viewStore: ViewStore<ViewState, TimeInWordsAction>
+    
+    public init(
+        store: Store<TimeInWordsState, TimeInWordsAction>
+    ) {
+        self.store = store
+        self.viewStore = ViewStore(store.scope(state: ViewState.init))
+    }
+    
     public var body: some View {
         HStack() {
-            LetterView("T", highlighted: viewStore.hour == .twelve)
-            LetterView("W", highlighted: viewStore.hour == .twelve)
-            LetterView("E", highlighted: viewStore.hour == .twelve)
-            LetterView("L", highlighted: viewStore.hour == .twelve)
-            LetterView("V", highlighted: viewStore.hour == .twelve)
-            LetterView("E", highlighted: viewStore.hour == .twelve)
+            LetterView("T", highlighted: viewStore.highlighted)
+            LetterView("W", highlighted: viewStore.highlighted)
+            LetterView("E", highlighted: viewStore.highlighted)
+            LetterView("L", highlighted: viewStore.highlighted)
+            LetterView("V", highlighted: viewStore.highlighted)
+            LetterView("E", highlighted: viewStore.highlighted)
         }
     }
 }
