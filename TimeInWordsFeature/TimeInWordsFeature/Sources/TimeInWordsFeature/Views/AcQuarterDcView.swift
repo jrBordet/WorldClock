@@ -8,30 +8,63 @@
 import Foundation
 import SwiftUI
 import ComposableArchitecture
+import TimeInWords
 
 public struct AcView: View {
-    @ObservedObject var viewStore: ViewStore<TimeInWordsState, TimeInWordsAction>
+    struct ViewState: Equatable {
+        var highlighted: Bool
+        
+        public init(state: TimeInWordsState) {
+            self.highlighted = state.accessory == .quarter_past
+        }
+    }
+    
+    let store: Store<TimeInWordsState, TimeInWordsAction>
+    @ObservedObject var viewStore: ViewStore<ViewState, TimeInWordsAction>
+    
+    public init(
+        store: Store<TimeInWordsState, TimeInWordsAction>
+    ) {
+        self.store = store
+        self.viewStore = ViewStore(store.scope(state: ViewState.init))
+    }
 
     public var body: some View {
         HStack() {
-            LetterView("A", highlighted: viewStore.accessory == .quarter_past)
+            LetterView("A", highlighted: viewStore.highlighted)
             LetterView("C")
         }
     }
 }
 
 public struct QuarterView: View {
-    @ObservedObject var viewStore: ViewStore<TimeInWordsState, TimeInWordsAction>
+    struct ViewState: Equatable {
+        var highlighted: Bool
+        
+        public init(state: TimeInWordsState) {
+            self.highlighted = state.accessory == .quarter_past || state.accessory == .quarter_to
+        }
+    }
+    
+    let store: Store<TimeInWordsState, TimeInWordsAction>
+    @ObservedObject var viewStore: ViewStore<ViewState, TimeInWordsAction>
+    
+    public init(
+        store: Store<TimeInWordsState, TimeInWordsAction>
+    ) {
+        self.store = store
+        self.viewStore = ViewStore(store.scope(state: ViewState.init))
+    }
     
     public var body: some View {
         HStack() {
-            LetterView("Q", highlighted: viewStore.accessory == .quarter_past || viewStore.accessory == .quarter_to)
-            LetterView("U", highlighted: viewStore.accessory == .quarter_past || viewStore.accessory == .quarter_to)
-            LetterView("A", highlighted: viewStore.accessory == .quarter_past || viewStore.accessory == .quarter_to)
-            LetterView("R", highlighted: viewStore.accessory == .quarter_past || viewStore.accessory == .quarter_to)
-            LetterView("T", highlighted: viewStore.accessory == .quarter_past || viewStore.accessory == .quarter_to)
-            LetterView("E", highlighted: viewStore.accessory == .quarter_past || viewStore.accessory == .quarter_to)
-            LetterView("R", highlighted: viewStore.accessory == .quarter_past || viewStore.accessory == .quarter_to)
+            LetterView("Q", highlighted: viewStore.highlighted)
+            LetterView("U", highlighted: viewStore.highlighted)
+            LetterView("A", highlighted: viewStore.highlighted)
+            LetterView("R", highlighted: viewStore.highlighted)
+            LetterView("T", highlighted: viewStore.highlighted)
+            LetterView("E", highlighted: viewStore.highlighted)
+            LetterView("R", highlighted: viewStore.highlighted)
         }
     }
 }
@@ -46,12 +79,18 @@ public struct DcView: View {
 }
 
 public struct AcQuarterDcView: View {
-    @ObservedObject var viewStore: ViewStore<TimeInWordsState, TimeInWordsAction>
+    let store: Store<TimeInWordsState, TimeInWordsAction>
+    
+    public init(
+        store: Store<TimeInWordsState, TimeInWordsAction>
+    ) {
+        self.store = store
+    }
     
     public var body: some View {
         HStack {
-            AcView(viewStore: viewStore)
-            QuarterView(viewStore: viewStore)
+            AcView(store: store)
+            QuarterView(store: store)
             DcView()
         }
         .padding(EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16))

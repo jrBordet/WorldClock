@@ -8,53 +8,107 @@
 import Foundation
 import SwiftUI
 import ComposableArchitecture
+import TimeInWords
 
 public struct OneSixThreeView: View {
-    @ObservedObject var viewStore: ViewStore<TimeInWordsState, TimeInWordsAction>
-
+    let store: Store<TimeInWordsState, TimeInWordsAction>
+    
+    public init(
+        store: Store<TimeInWordsState, TimeInWordsAction>
+    ) {
+        self.store = store
+    }
+    
     public var body: some View {
         HStack() {
-            OneView(viewStore: viewStore)
-            SixView(viewStore: viewStore)
-            ThreeView(viewStore: viewStore)
+            OneView(store: store)
+            SixView(store: store)
+            ThreeView(store: store)
         }
     }
 }
 
 public struct OneView: View {
-    @ObservedObject var viewStore: ViewStore<TimeInWordsState, TimeInWordsAction>
-
+    struct ViewState: Equatable {
+        var highlighted: Bool
+        
+        public init(state: TimeInWordsState) {
+            self.highlighted = state.hour == .one
+        }
+    }
+    
+    let store: Store<TimeInWordsState, TimeInWordsAction>
+    @ObservedObject var viewStore: ViewStore<ViewState, TimeInWordsAction>
+    
+    public init(
+        store: Store<TimeInWordsState, TimeInWordsAction>
+    ) {
+        self.store = store
+        self.viewStore = ViewStore(store.scope(state: ViewState.init))
+    }
+    
     public var body: some View {
         HStack() {
-            LetterView("O", highlighted: viewStore.hour == .one)
-            LetterView("N", highlighted: viewStore.hour == .one)
-            LetterView("E", highlighted: viewStore.hour == .one)
+            LetterView("O", highlighted: viewStore.highlighted)
+            LetterView("N", highlighted: viewStore.highlighted)
+            LetterView("E", highlighted: viewStore.highlighted)
         }
     }
 }
 
 public struct SixView: View {
-    @ObservedObject var viewStore: ViewStore<TimeInWordsState, TimeInWordsAction>
-
+    struct ViewState: Equatable {
+        var highlighted: Bool
+        
+        public init(state: TimeInWordsState) {
+            self.highlighted = state.hour == .six
+        }
+    }
+    
+    let store: Store<TimeInWordsState, TimeInWordsAction>
+    @ObservedObject var viewStore: ViewStore<ViewState, TimeInWordsAction>
+    
+    public init(
+        store: Store<TimeInWordsState, TimeInWordsAction>
+    ) {
+        self.store = store
+        self.viewStore = ViewStore(store.scope(state: ViewState.init))
+    }
     public var body: some View {
         HStack() {
-            LetterView("S", highlighted: viewStore.hour == .six)
-            LetterView("I", highlighted: viewStore.hour == .six)
-            LetterView("X", highlighted: viewStore.hour == .six)
+            LetterView("S", highlighted: viewStore.highlighted)
+            LetterView("I", highlighted: viewStore.highlighted)
+            LetterView("X", highlighted: viewStore.highlighted)
         }
     }
 }
 
 public struct ThreeView: View {
-    @ObservedObject var viewStore: ViewStore<TimeInWordsState, TimeInWordsAction>
-
+    struct ViewState: Equatable {
+        var highlighted: Bool
+        
+        public init(state: TimeInWordsState) {
+            self.highlighted = state.hour == .three
+        }
+    }
+    
+    let store: Store<TimeInWordsState, TimeInWordsAction>
+    @ObservedObject var viewStore: ViewStore<ViewState, TimeInWordsAction>
+    
+    public init(
+        store: Store<TimeInWordsState, TimeInWordsAction>
+    ) {
+        self.store = store
+        self.viewStore = ViewStore(store.scope(state: ViewState.init))
+    }
+    
     public var body: some View {
         HStack() {
-            LetterView("T", highlighted: viewStore.hour == .three)
-            LetterView("H", highlighted: viewStore.hour == .three)
-            LetterView("R", highlighted: viewStore.hour == .three)
-            LetterView("E", highlighted: viewStore.hour == .three)
-            LetterView("E", highlighted: viewStore.hour == .three)
+            LetterView("T", highlighted: viewStore.highlighted)
+            LetterView("H", highlighted: viewStore.highlighted)
+            LetterView("R", highlighted: viewStore.highlighted)
+            LetterView("E", highlighted: viewStore.highlighted)
+            LetterView("E", highlighted: viewStore.highlighted)
         }
     }
 }

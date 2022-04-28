@@ -48,7 +48,7 @@ let appReducer = Reducer<AppState, AppAction, AppEnvironment>.combine(
 
 final class AppDelegate: NSObject, UIApplicationDelegate {
     let store = Store(
-        initialState: AppState(timeInWords: TimeInWordsState(), appDelegate: nil),
+        initialState: AppState(timeInWords: TimeInWordsState(), appDelegate: .init()),
         reducer: appReducer,
         environment: .live
     )
@@ -61,6 +61,7 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
     ) -> Bool {
+        
         self.viewStore.send(.appDelegate(.didFinishLaunching))
         
         self.viewStore.send(.timeInWords(.toggleTimerButtonTapped))
