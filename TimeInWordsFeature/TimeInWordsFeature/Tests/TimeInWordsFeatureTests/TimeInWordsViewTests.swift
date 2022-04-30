@@ -41,7 +41,7 @@ class TimeInWordsViewTests: XCTestCase {
         timeInWordsView = nil
     }
     
-    func testEightOClock() {        
+    func testEightOClock_iPhoneX() {
         assertSnapshot(
             matching: viewController,
             as: .image(on: .iPhoneX),
@@ -49,7 +49,7 @@ class TimeInWordsViewTests: XCTestCase {
         )
     }
     
-    func testEightOClockViewOniPadPortrait() throws {
+    func testEightOClockViewOniPadPortrait_iPadPro11() throws {
         assertSnapshot(
             matching: viewController,
             as: .image(on: .iPadPro11(.portrait)),
@@ -57,7 +57,7 @@ class TimeInWordsViewTests: XCTestCase {
         )
     }
     
-    func testEightOClockViewOniPhoneDarkMode() throws {
+    func testEightOClockViewOniPhoneDarkMode_iPhoneX() throws {
         let traitDarkMode = UITraitCollection(userInterfaceStyle: UIUserInterfaceStyle.dark)
         
         assertSnapshot(

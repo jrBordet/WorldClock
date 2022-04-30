@@ -14,11 +14,22 @@ extension TimeInWordsEnvironment {
     public static var live: Self = .init(
         mainQueue: DispatchQueue.main.eraseToAnyScheduler(),
         timeInWords: { h, m in
-            Effect(value: timeInWords(h: h, m: m))
+            Effect(value: TimeInWords.timeInWords(h: h, m: m))
         },
         time12InWords: { h, m in
-            Effect(value: time12InWords(h: h, m: m))
+            Effect(value: TimeInWords.time12InWords(h: h, m: m))
         }
     )
 }
 
+
+extension WidgetEnvironment {
+    public static var live: Self = .init(
+        backgroundQueue: DispatchQueue.main.eraseToAnyScheduler(),
+        timeInWords: { value in
+            UserDefaults(suiteName: "group.com.jrbordet.wordclock.contents")!.set(value, forKey: "timeInWords")
+            
+            return .none
+        }
+    )
+}
