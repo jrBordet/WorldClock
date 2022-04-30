@@ -28,9 +28,9 @@ struct TimeInWordsView_fivePastEight_Previews: PreviewProvider {
         TimeInWordsView(
             store: Store(
                 initialState: TimeInWordsState(
-                    hour: .zero,
-                    minutes: .twenty,
-                    accessory: .to
+                    hour: .nine,
+                    minutes: .five,
+                    accessory: .past
                 ),
                 reducer: timeInWordsReducer,
                 environment: .mock(

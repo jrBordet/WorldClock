@@ -56,7 +56,10 @@ let appReducer = Reducer<AppState, AppAction, AppEnvironment>.combine(
 
 final class AppDelegate: NSObject, UIApplicationDelegate {
     let store = Store(
-        initialState: AppState(timeInWords: TimeInWordsState(), appDelegate: .init()),
+        initialState: AppState(
+            timeInWords: .init(date: Date.quarterPastEight, hour: .eight, minutes: .fifteen, accessory: .quarter_to),
+            appDelegate: .init()
+        ),
         reducer: appReducer,
         environment: .live
     )
