@@ -19,7 +19,6 @@ var calendar = Calendar.current
 
 public struct TimeInWordsState: Equatable {
     public var date: Date? = nil
-    public var isTimerActive = false
     public var secondsElapsed = 0
     public var timeInWords: String = ""
     
@@ -44,7 +43,7 @@ public enum TimeInWordsAction: Equatable {
     case timerTicked
     case didFinishLaunchingWithOptions
     case startTimer
-    case toggleTimerButtonTapped
+    case stopTimer
     case timeInWords, timeInWordsResponse(Result<String, Error>)
     
     case timw12InWordsResponse(Result<TimeIn12Components, Error>)
@@ -84,16 +83,6 @@ public let timeInWordsReducer = Reducer<TimeInWordsState, TimeInWordsAction, Tim
     struct TimerId: Hashable {}
     
     switch action {
-    case .toggleTimerButtonTapped:
-        state.isTimerActive.toggle()
-        
-        return state.isTimerActive
-        ? Effect
-            .timer(id: TimerId(), every: 1, tolerance: .zero, on: environment.mainQueue)
-            .map { _ in TimeInWordsAction.timerTicked }
-        : Effect
-            .cancel(id: TimerId())
-        
     case .timerTicked:
         var dateComponent = DateComponents()
         dateComponent.second = 1
@@ -155,5 +144,8 @@ public let timeInWordsReducer = Reducer<TimeInWordsState, TimeInWordsAction, Tim
         return Effect
             .timer(id: TimerId(), every: 1, tolerance: .zero, on: environment.mainQueue)
             .map { _ in TimeInWordsAction.timerTicked }
+    
+    case .stopTimer:
+        return Effect.cancel(id: TimerId())
     }
 }

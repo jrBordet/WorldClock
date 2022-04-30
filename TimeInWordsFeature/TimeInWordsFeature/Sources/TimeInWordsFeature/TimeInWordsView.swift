@@ -50,7 +50,7 @@ public struct TimeInWordsView: View {
             
             TenOClockView(store: store)
         }.onAppear {
-            viewStore.send(.toggleTimerButtonTapped)
+            viewStore.send(.startTimer)
         }
     }
 }

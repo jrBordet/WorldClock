@@ -25,16 +25,17 @@ final class TimeInWordsFeatureTests: XCTestCase {
             )
         )
         
-        store.send(.toggleTimerButtonTapped, {
-            $0.isTimerActive = true
-        })
+        store.send(.startTimer)
         
         self.scheduler.advance(by: 1)
         
         var dateComponent = DateComponents()
         dateComponent.second = 1
         
-        let date: Date = Calendar.current.date(byAdding: dateComponent, to: .eightoClock) ?? Date()
+        let date: Date = Calendar.current.date(
+            byAdding: dateComponent,
+            to: .eightoClock
+        )!
         
         store.receive(.timerTicked) {
             $0.secondsElapsed = 1
@@ -53,8 +54,6 @@ final class TimeInWordsFeatureTests: XCTestCase {
             $0.accessory = .o_clock
         })
         
-        store.send(.toggleTimerButtonTapped) {
-            $0.isTimerActive = false
-        }
+        store.send(.stopTimer)
     }
 }

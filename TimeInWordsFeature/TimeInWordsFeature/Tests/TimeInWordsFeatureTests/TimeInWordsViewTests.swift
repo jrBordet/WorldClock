@@ -14,7 +14,7 @@ import SwiftUI
 
 class TimeInWordsViewTests: XCTestCase {
     let scheduler = DispatchQueue.test
-
+    
     var viewController: UIViewController!
     var record = false
     var timeInWordsView: TimeInWordsView!
@@ -66,26 +66,26 @@ class TimeInWordsViewTests: XCTestCase {
             as: .image(on: .iPhoneX, traits: traitDarkMode),
             record: record
         )
-
-    
-    func testEightOClockOniPhoneDarkMode_iPhone8Plus() {
-        let traitDarkMode = UITraitCollection(userInterfaceStyle: UIUserInterfaceStyle.dark)
         
-        assertSnapshot(
-            matching: viewController,
-            as: .image(on: .iPhone8Plus, traits: traitDarkMode),
-            record: record
-        )
+        
+        func testEightOClockOniPhoneDarkMode_iPhone8Plus() {
+            let traitDarkMode = UITraitCollection(userInterfaceStyle: UIUserInterfaceStyle.dark)
+            
+            assertSnapshot(
+                matching: viewController,
+                as: .image(on: .iPhone8Plus, traits: traitDarkMode),
+                record: record
+            )
+        }
+        
+        func testEightOClockViewOniPadPortrait_iPadPro11() throws {
+            assertSnapshot(
+                matching: viewController,
+                as: .image(on: .iPadPro11(.portrait)),
+                record: record
+            )
+        }
+        
     }
     
-    func testEightOClockViewOniPadPortrait_iPadPro11() throws {
-        assertSnapshot(
-            matching: viewController,
-            as: .image(on: .iPadPro11(.portrait)),
-            record: record
-        )
-    }
-    
-}
-
 }
