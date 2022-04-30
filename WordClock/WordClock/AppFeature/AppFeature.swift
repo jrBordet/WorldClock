@@ -25,6 +25,20 @@ enum AppAction: Equatable {
 struct AppEnvironment {
     var mainQueue: AnySchedulerOf<DispatchQueue>
     var timeInWords: TimeInWordsEnvironment
+    var widgetEnvironment: WidgetEnvironment
+}
+
+public struct WidgetEnvironment {
+    var backgroundQueue: AnySchedulerOf<DispatchQueue>
+    var timeInWords: (String) -> Effect<Never, Never>
+    
+    public init(
+        backgroundQueue: AnySchedulerOf<DispatchQueue> = .immediate,
+        timeInWords: @escaping(String) -> Effect<Never, Never>
+    ) {
+        self.backgroundQueue = backgroundQueue
+        self.timeInWords = timeInWords
+    }
 }
 
 struct AppView: View {
@@ -32,10 +46,10 @@ struct AppView: View {
     @ObservedObject var viewStore: ViewStore<ViewState, AppAction>
     
     struct ViewState: Equatable {
-        let isGameActive: Bool
+        let isActive: Bool
         
         init(state: AppState) {
-            self.isGameActive = true
+            self.isActive = state.timeInWords.hour != .zero
         }
     }
     
@@ -51,5 +65,12 @@ struct AppView: View {
                 action: AppAction.timeInWords
             )
         )
+    }
+}
+
+
+struct AppCommonView: View {
+    var body: some View {
+        Text("shared view")
     }
 }

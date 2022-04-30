@@ -25,7 +25,8 @@ extension AppEnvironment {
     static var live: Self {
         .init(
             mainQueue: DispatchQueue.main.eraseToAnyScheduler(),
-            timeInWords: .live
+            timeInWords: .live,
+            widgetEnvironment: .live
         )
     }
 }
@@ -44,6 +45,13 @@ let appReducer = Reducer<AppState, AppAction, AppEnvironment>.combine(
             action: /AppAction.timeInWords,
             environment: { $0.timeInWords }
         )
+        .onChange(of: \.timeInWords.timeInWords) { timeInWords, state, action, environment in
+            return environment
+                .widgetEnvironment
+                .timeInWords(timeInWords)
+                .fireAndForget()
+        }
+                
 )
 
 final class AppDelegate: NSObject, UIApplicationDelegate {
@@ -62,9 +70,11 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
     ) -> Bool {
         
+        UserDefaults(suiteName: "group.com.jrbordet.wordclock.contents")!.set(42, forKey: "test")
+        
         self.viewStore.send(.appDelegate(.didFinishLaunching))
         
-        self.viewStore.send(.timeInWords(.toggleTimerButtonTapped))
+        self.viewStore.send(.timeInWords(.didFinishLaunchingWithOptions))
         
         return true
     }
@@ -75,5 +85,42 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
     
     func applicationWillEnterForeground(_ application: UIApplication) {
         self.viewStore.send(.timeInWords(.startTimer))
+    }
+}
+
+
+extension Reducer {
+    public func onChange<LocalState>(
+        of toLocalState: @escaping (State) -> LocalState,
+        perform additionalEffects: @escaping (LocalState, inout State, Action, Environment) -> Effect<
+        Action, Never
+        >
+    ) -> Self where LocalState: Equatable {
+        .init { state, action, environment in
+            let previousLocalState = toLocalState(state)
+            let effects = self.run(&state, action, environment)
+            let localState = toLocalState(state)
+            
+            return previousLocalState != localState
+            ? .merge(effects, additionalEffects(localState, &state, action, environment))
+            : effects
+        }
+    }
+    
+    public func onChange<LocalState>(
+        of toLocalState: @escaping (State) -> LocalState,
+        perform additionalEffects: @escaping (LocalState, LocalState, inout State, Action, Environment)
+        -> Effect<Action, Never>
+    ) -> Self where LocalState: Equatable {
+        .init { state, action, environment in
+            let previousLocalState = toLocalState(state)
+            let effects = self.run(&state, action, environment)
+            let localState = toLocalState(state)
+            
+            return previousLocalState != localState
+            ? .merge(
+                effects, additionalEffects(previousLocalState, localState, &state, action, environment))
+            : effects
+        }
     }
 }

@@ -57,23 +57,13 @@
             </BuildableReference>
          </TestableReference>
          <TestableReference
-            skipped = "NO">
+            skipped = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F8B1349027D74E8900BE6503"
-               BuildableName = "WordClockUITests.xctest"
-               BlueprintName = "WordClockUITests"
-               ReferencedContainer = "container:WordClock.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "TimeInWorldFeatureTests"
-               BuildableName = "TimeInWorldFeatureTests"
-               BlueprintName = "TimeInWorldFeatureTests"
-               ReferencedContainer = "container:../TimeInWorldFeature">
+               BlueprintIdentifier = "TimeInWordsFeatureTests"
+               BuildableName = "TimeInWordsFeatureTests"
+               BlueprintName = "TimeInWordsFeatureTests"
+               ReferencedContainer = "container:../TimeInWordsFeature/TimeInWordsFeature">
             </BuildableReference>
          </TestableReference>
       </Testables>

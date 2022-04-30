@@ -42,6 +42,7 @@ public struct TimeInWordsState: Equatable {
 
 public enum TimeInWordsAction: Equatable {
     case timerTicked
+    case didFinishLaunchingWithOptions
     case startTimer
     case toggleTimerButtonTapped
     case timeInWords, timeInWordsResponse(Result<String, Error>)
@@ -50,9 +51,9 @@ public enum TimeInWordsAction: Equatable {
 }
 
 public struct TimeInWordsEnvironment {
-    var mainQueue: AnySchedulerOf<DispatchQueue>
-    var timeInWords: (Int, Int) -> Effect<String, Error>
-    var time12InWords: (Int, Int) -> Effect<TimeIn12Components, Error>
+    public var mainQueue: AnySchedulerOf<DispatchQueue>
+    public var timeInWords: (Int, Int) -> Effect<String, Error>
+    public var time12InWords: (Int, Int) -> Effect<TimeIn12Components, Error>
     
     public init(
         mainQueue: AnySchedulerOf<DispatchQueue>,
@@ -104,6 +105,11 @@ public let timeInWordsReducer = Reducer<TimeInWordsState, TimeInWordsAction, Tim
         
         return Effect<TimeInWordsAction, Never>(value: .timeInWords)
         
+    case .didFinishLaunchingWithOptions:
+        state.date = Date()
+                
+        return Effect<TimeInWordsAction, Never>(value: .timeInWords)
+        
     case .timeInWords:
         let hour = calendar.component(.hour, from: state.date)
         let minutes = calendar.component(.minute, from: state.date)
@@ -142,7 +148,6 @@ public let timeInWordsReducer = Reducer<TimeInWordsState, TimeInWordsAction, Tim
 
         return Effect.timer(id: TimerId(), every: 1, tolerance: .zero, on: environment.mainQueue)
             .map { _ in TimeInWordsAction.timerTicked }
-        
     }
 }
     .signpost()

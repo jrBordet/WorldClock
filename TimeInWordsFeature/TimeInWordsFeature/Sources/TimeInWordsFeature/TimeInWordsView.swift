@@ -51,7 +51,8 @@ public struct TimeInWordsView: View {
 
                 TenOClockView(store: store)
             }
+        }.onAppear {
+            viewStore.send(.toggleTimerButtonTapped)
         }
-        .padding(4)
     }
 }
