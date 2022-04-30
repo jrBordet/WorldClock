@@ -112,7 +112,7 @@
 		<key>TimeInWordsClip.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>21</integer>
 		</dict>
 		<key>WordClock.xcscheme_^#shared#^_</key>
 		<dict>
@@ -122,7 +122,7 @@
 		<key>WordClockWidgetExtension.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>19</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
