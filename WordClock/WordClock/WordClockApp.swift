@@ -46,7 +46,7 @@ let appReducer = Reducer<AppState, AppAction, AppEnvironment>.combine(
             environment: { $0.timeInWords }
         )
         .onChange(of: \.timeInWords.timeInWords) { timeInWords, state, action, environment in
-            return environment
+            environment
                 .widgetEnvironment
                 .timeInWords(timeInWords)
                 .fireAndForget()
@@ -57,7 +57,7 @@ let appReducer = Reducer<AppState, AppAction, AppEnvironment>.combine(
 final class AppDelegate: NSObject, UIApplicationDelegate {
     let store = Store(
         initialState: AppState(
-            timeInWords: .init(date: Date.quarterPastEight, hour: .eight, minutes: .fifteen, accessory: .quarter_to),
+            timeInWords: .init(),
             appDelegate: .init()
         ),
         reducer: appReducer,
@@ -72,9 +72,6 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
     ) -> Bool {
-        
-        UserDefaults(suiteName: "group.com.jrbordet.wordclock.contents")!.set(42, forKey: "test")
-        
         self.viewStore.send(.appDelegate(.didFinishLaunching))
         
         self.viewStore.send(.timeInWords(.didFinishLaunchingWithOptions))

@@ -29,17 +29,12 @@ final class TimeInWordsFeatureTests: XCTestCase {
             $0.isTimerActive = true
         })
         
-        //var dateComponent = DateComponents()
-        //dateComponent.second = 1
-                
-       // state.date = Calendar.current.date(byAdding: dateComponent, to: state.date) ?? Date()
-        
         self.scheduler.advance(by: 1)
         
         var dateComponent = DateComponents()
         dateComponent.second = 1
         
-        let date: Date = .eightoClock//Calendar.current.date(byAdding: dateComponent, to: .eightoClock) ?? Date()
+        let date: Date = Calendar.current.date(byAdding: dateComponent, to: .eightoClock) ?? Date()
         
         store.receive(.timerTicked) {
             $0.secondsElapsed = 1
