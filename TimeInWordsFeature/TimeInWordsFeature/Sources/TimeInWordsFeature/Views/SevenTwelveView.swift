@@ -62,7 +62,7 @@ public struct TwelveView: View {
         var highlighted: Bool
         
         public init(state: TimeInWordsState) {
-            self.highlighted = state.hour == .twelve
+            self.highlighted = state.hour == .twelve || state.hour == .zero
         }
     }
     

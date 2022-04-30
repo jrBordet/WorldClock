@@ -14,7 +14,7 @@ public struct TimeInWordsView: View {
         public var show: Bool
         
         public init(state: TimeInWordsState) {
-            self.show = state.hour != .zero
+            self.show = true
         }
     }
     
@@ -30,27 +30,25 @@ public struct TimeInWordsView: View {
     
     public var body: some View {
         VStack(alignment: .center, spacing: 16) {
-            if viewStore.show {
-                ItIsAsexlaView()
-                
-                AcQuarterDcView(store: store)
-                
-                TwentyFiveXView(store: store)
-
-                HalfTenToView(store: store)
-
-                PastNineView(store: store)
-
-                OneSixThreeView(store: store)
-
-                FourFiveTwoView(store: store)
-
-                EightElevenView(store: store)
-
-                SevenTwelveView(store: store)
-
-                TenOClockView(store: store)
-            }
+            ItIsAsexlaView()
+            
+            AcQuarterDcView(store: store)
+            
+            TwentyFiveXView(store: store)
+            
+            HalfTenToView(store: store)
+            
+            PastNineView(store: store)
+            
+            OneSixThreeView(store: store)
+            
+            FourFiveTwoView(store: store)
+            
+            EightElevenView(store: store)
+            
+            SevenTwelveView(store: store)
+            
+            TenOClockView(store: store)
         }.onAppear {
             viewStore.send(.toggleTimerButtonTapped)
         }
