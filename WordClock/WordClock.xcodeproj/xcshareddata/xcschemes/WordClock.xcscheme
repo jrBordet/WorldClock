@@ -43,6 +43,13 @@
             BlueprintName = "WordClock"
             ReferencedContainer = "container:WordClock.xcodeproj">
          </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "TimeInWordsFeature"
+            BuildableName = "TimeInWordsFeature"
+            BlueprintName = "TimeInWordsFeature"
+            ReferencedContainer = "container:../TimeInWordsFeature/TimeInWordsFeature">
+         </BuildableReference>
       </CodeCoverageTargets>
       <Testables>
          <TestableReference
