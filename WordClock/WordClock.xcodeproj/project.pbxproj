@@ -7,18 +7,72 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3852F4B3281BB6FC00D869FC /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3852F4B2281BB6FC00D869FC /* WidgetKit.framework */; };
+		3852F4B5281BB6FC00D869FC /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3852F4B4281BB6FC00D869FC /* SwiftUI.framework */; };
+		3852F4B8281BB6FD00D869FC /* WordClockWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3852F4B7281BB6FD00D869FC /* WordClockWidget.swift */; };
+		3852F4BA281BB70000D869FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3852F4B9281BB70000D869FC /* Assets.xcassets */; };
+		3852F4BE281BB70000D869FC /* WordClockWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3852F4B1281BB6FC00D869FC /* WordClockWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3852F4E0281BEBE100D869FC /* WordNumber+12.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3852F4DC281BEBE000D869FC /* WordNumber+12.swift */; };
+		3852F4E1281BEBE100D869FC /* TimeInWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3852F4DD281BEBE000D869FC /* TimeInWords.swift */; };
+		3852F4E2281BEBE100D869FC /* WordNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3852F4DE281BEBE000D869FC /* WordNumber.swift */; };
+		3852F4E3281BEBE100D869FC /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3852F4DF281BEBE000D869FC /* Time.swift */; };
+		3852F4EE281C25FC00D869FC /* TimeInWordsClipApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3852F4ED281C25FC00D869FC /* TimeInWordsClipApp.swift */; };
+		3852F4F0281C25FC00D869FC /* TimeInWordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3852F4EF281C25FC00D869FC /* TimeInWordsView.swift */; };
+		3852F4F2281C25FF00D869FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3852F4F1281C25FF00D869FC /* Assets.xcassets */; };
+		3852F4F5281C25FF00D869FC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3852F4F4281C25FF00D869FC /* Preview Assets.xcassets */; };
+		3852F501281C260000D869FC /* TimeInWordsClipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3852F500281C260000D869FC /* TimeInWordsClipTests.swift */; };
+		3852F50B281C260000D869FC /* TimeInWordsClipUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3852F50A281C260000D869FC /* TimeInWordsClipUITests.swift */; };
+		3852F50D281C260000D869FC /* TimeInWordsClipUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3852F50C281C260000D869FC /* TimeInWordsClipUITestsLaunchTests.swift */; };
+		3852F510281C260100D869FC /* TimeInWordsClip.app in Embed App Clips */ = {isa = PBXBuildFile; fileRef = 3852F4EB281C25FC00D869FC /* TimeInWordsClip.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3852F51C281C2A1D00D869FC /* TimeInWordsFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 3852F51B281C2A1D00D869FC /* TimeInWordsFeature */; };
+		3852F51E281C2A2400D869FC /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 3852F51D281C2A2400D869FC /* ComposableArchitecture */; };
+		3852F520281C2A2800D869FC /* TimeInWords in Frameworks */ = {isa = PBXBuildFile; productRef = 3852F51F281C2A2800D869FC /* TimeInWords */; };
+		38783FD22815E56A0044F7AA /* TimeInWordsFeature_Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38783FD12815E56A0044F7AA /* TimeInWordsFeature_Preview.swift */; };
+		38ADDEA02818768E00DD1940 /* TimeInWords in Frameworks */ = {isa = PBXBuildFile; productRef = 38ADDE9F2818768E00DD1940 /* TimeInWords */; };
+		38ADDEA92819222300DD1940 /* TimeInWordsFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 38ADDEA82819222300DD1940 /* TimeInWordsFeature */; };
+		38ADDEAD2819231F00DD1940 /* AppFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38ADDEAC2819231F00DD1940 /* AppFeature.swift */; };
+		38ADDEB02819282100DD1940 /* AppDelegateFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38ADDEAF2819282100DD1940 /* AppDelegateFeature.swift */; };
+		38B74025281811860095E534 /* TimeInWordsEnvironment+live.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B74024281811860095E534 /* TimeInWordsEnvironment+live.swift */; };
+		38D67729281A789900BA991E /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38D67727281A789800BA991E /* Roboto-Bold.ttf */; };
+		38D6772A281A789900BA991E /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38D67728281A789900BA991E /* Roboto-Regular.ttf */; };
 		F8B1347B27D74E8600BE6503 /* WordClockApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B1347A27D74E8600BE6503 /* WordClockApp.swift */; };
-		F8B1347D27D74E8600BE6503 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B1347C27D74E8600BE6503 /* ContentView.swift */; };
 		F8B1347F27D74E8800BE6503 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8B1347E27D74E8800BE6503 /* Assets.xcassets */; };
 		F8B1348227D74E8800BE6503 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8B1348127D74E8800BE6503 /* Preview Assets.xcassets */; };
 		F8B1348C27D74E8900BE6503 /* WordClockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B1348B27D74E8900BE6503 /* WordClockTests.swift */; };
 		F8B1349627D74E8900BE6503 /* WordClockUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B1349527D74E8900BE6503 /* WordClockUITests.swift */; };
 		F8B1349827D74E8900BE6503 /* WordClockUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B1349727D74E8900BE6503 /* WordClockUITestsLaunchTests.swift */; };
-		F8B134A627D74EBD00BE6503 /* TimeInWords in Frameworks */ = {isa = PBXBuildFile; productRef = F8B134A527D74EBD00BE6503 /* TimeInWords */; };
 		F8B134A927D751A900BE6503 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = F8B134A827D751A900BE6503 /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		3852F4BC281BB70000D869FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8B1346F27D74E8600BE6503 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3852F4B0281BB6FC00D869FC;
+			remoteInfo = WordClockWidgetExtension;
+		};
+		3852F4FD281C260000D869FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8B1346F27D74E8600BE6503 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3852F4EA281C25FC00D869FC;
+			remoteInfo = TimeInWordsClip;
+		};
+		3852F507281C260000D869FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8B1346F27D74E8600BE6503 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3852F4EA281C25FC00D869FC;
+			remoteInfo = TimeInWordsClip;
+		};
+		3852F50E281C260100D869FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8B1346F27D74E8600BE6503 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3852F4EA281C25FC00D869FC;
+			remoteInfo = TimeInWordsClip;
+		};
 		F8B1348827D74E8900BE6503 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F8B1346F27D74E8600BE6503 /* Project object */;
@@ -35,10 +89,65 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		3852F4C2281BB70000D869FC /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				3852F4BE281BB70000D869FC /* WordClockWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3852F514281C260100D869FC /* Embed App Clips */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/AppClips";
+			dstSubfolderSpec = 16;
+			files = (
+				3852F510281C260100D869FC /* TimeInWordsClip.app in Embed App Clips */,
+			);
+			name = "Embed App Clips";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		3852F4B1281BB6FC00D869FC /* WordClockWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WordClockWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		3852F4B2281BB6FC00D869FC /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		3852F4B4281BB6FC00D869FC /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		3852F4B7281BB6FD00D869FC /* WordClockWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordClockWidget.swift; sourceTree = "<group>"; };
+		3852F4B9281BB70000D869FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3852F4BB281BB70000D869FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3852F4C3281BBB0E00D869FC /* WordClock.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WordClock.entitlements; sourceTree = "<group>"; };
+		3852F4DC281BEBE000D869FC /* WordNumber+12.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WordNumber+12.swift"; sourceTree = "<group>"; };
+		3852F4DD281BEBE000D869FC /* TimeInWords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeInWords.swift; sourceTree = "<group>"; };
+		3852F4DE281BEBE000D869FC /* WordNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordNumber.swift; sourceTree = "<group>"; };
+		3852F4DF281BEBE000D869FC /* Time.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
+		3852F4EB281C25FC00D869FC /* TimeInWordsClip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeInWordsClip.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3852F4ED281C25FC00D869FC /* TimeInWordsClipApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeInWordsClipApp.swift; sourceTree = "<group>"; };
+		3852F4EF281C25FC00D869FC /* TimeInWordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeInWordsView.swift; sourceTree = "<group>"; };
+		3852F4F1281C25FF00D869FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3852F4F4281C25FF00D869FC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3852F4F6281C260000D869FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3852F4F7281C260000D869FC /* TimeInWordsClip.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TimeInWordsClip.entitlements; sourceTree = "<group>"; };
+		3852F4FC281C260000D869FC /* TimeInWordsClipTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeInWordsClipTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3852F500281C260000D869FC /* TimeInWordsClipTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeInWordsClipTests.swift; sourceTree = "<group>"; };
+		3852F506281C260000D869FC /* TimeInWordsClipUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeInWordsClipUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3852F50A281C260000D869FC /* TimeInWordsClipUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeInWordsClipUITests.swift; sourceTree = "<group>"; };
+		3852F50C281C260000D869FC /* TimeInWordsClipUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeInWordsClipUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		38783FD12815E56A0044F7AA /* TimeInWordsFeature_Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeInWordsFeature_Preview.swift; sourceTree = "<group>"; };
+		38ADDEA72819207100DD1940 /* TimeInWordsFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = TimeInWordsFeature; path = ../TimeInWordsFeature/TimeInWordsFeature; sourceTree = "<group>"; };
+		38ADDEAC2819231F00DD1940 /* AppFeature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppFeature.swift; sourceTree = "<group>"; };
+		38ADDEAF2819282100DD1940 /* AppDelegateFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateFeature.swift; sourceTree = "<group>"; };
+		38B740202816829B0095E534 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		38B74024281811860095E534 /* TimeInWordsEnvironment+live.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInWordsEnvironment+live.swift"; sourceTree = "<group>"; };
+		38D67727281A789800BA991E /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		38D67728281A789900BA991E /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		F8B1347727D74E8600BE6503 /* WordClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8B1347A27D74E8600BE6503 /* WordClockApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordClockApp.swift; sourceTree = "<group>"; };
-		F8B1347C27D74E8600BE6503 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F8B1347E27D74E8800BE6503 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8B1348127D74E8800BE6503 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F8B1348727D74E8900BE6503 /* WordClockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordClockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,12 +158,46 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3852F4AE281BB6FC00D869FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3852F4B5281BB6FC00D869FC /* SwiftUI.framework in Frameworks */,
+				3852F4B3281BB6FC00D869FC /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3852F4E8281C25FC00D869FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3852F51E281C2A2400D869FC /* ComposableArchitecture in Frameworks */,
+				3852F520281C2A2800D869FC /* TimeInWords in Frameworks */,
+				3852F51C281C2A1D00D869FC /* TimeInWordsFeature in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3852F4F9281C260000D869FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3852F503281C260000D869FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F8B1347427D74E8600BE6503 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38ADDEA92819222300DD1940 /* TimeInWordsFeature in Frameworks */,
 				F8B134A927D751A900BE6503 /* ComposableArchitecture in Frameworks */,
-				F8B134A627D74EBD00BE6503 /* TimeInWords in Frameworks */,
+				38ADDEA02818768E00DD1940 /* TimeInWords in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,13 +218,113 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3852F4B6281BB6FC00D869FC /* WordClockWidget */ = {
+			isa = PBXGroup;
+			children = (
+				3852F4DB281BEBE000D869FC /* TimeInWords */,
+				3852F4B7281BB6FD00D869FC /* WordClockWidget.swift */,
+				3852F4B9281BB70000D869FC /* Assets.xcassets */,
+				3852F4BB281BB70000D869FC /* Info.plist */,
+			);
+			path = WordClockWidget;
+			sourceTree = "<group>";
+		};
+		3852F4DB281BEBE000D869FC /* TimeInWords */ = {
+			isa = PBXGroup;
+			children = (
+				3852F4DC281BEBE000D869FC /* WordNumber+12.swift */,
+				3852F4DD281BEBE000D869FC /* TimeInWords.swift */,
+				3852F4DE281BEBE000D869FC /* WordNumber.swift */,
+				3852F4DF281BEBE000D869FC /* Time.swift */,
+			);
+			path = TimeInWords;
+			sourceTree = "<group>";
+		};
+		3852F4EC281C25FC00D869FC /* TimeInWordsClip */ = {
+			isa = PBXGroup;
+			children = (
+				3852F4ED281C25FC00D869FC /* TimeInWordsClipApp.swift */,
+				3852F4EF281C25FC00D869FC /* TimeInWordsView.swift */,
+				3852F4F1281C25FF00D869FC /* Assets.xcassets */,
+				3852F4F6281C260000D869FC /* Info.plist */,
+				3852F4F7281C260000D869FC /* TimeInWordsClip.entitlements */,
+				3852F4F3281C25FF00D869FC /* Preview Content */,
+			);
+			path = TimeInWordsClip;
+			sourceTree = "<group>";
+		};
+		3852F4F3281C25FF00D869FC /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3852F4F4281C25FF00D869FC /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3852F4FF281C260000D869FC /* TimeInWordsClipTests */ = {
+			isa = PBXGroup;
+			children = (
+				3852F500281C260000D869FC /* TimeInWordsClipTests.swift */,
+			);
+			path = TimeInWordsClipTests;
+			sourceTree = "<group>";
+		};
+		3852F509281C260000D869FC /* TimeInWordsClipUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3852F50A281C260000D869FC /* TimeInWordsClipUITests.swift */,
+				3852F50C281C260000D869FC /* TimeInWordsClipUITestsLaunchTests.swift */,
+			);
+			path = TimeInWordsClipUITests;
+			sourceTree = "<group>";
+		};
+		38783FC0281589260044F7AA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3852F4B2281BB6FC00D869FC /* WidgetKit.framework */,
+				3852F4B4281BB6FC00D869FC /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		38ADDEAB2819231F00DD1940 /* AppFeature */ = {
+			isa = PBXGroup;
+			children = (
+				38ADDEAC2819231F00DD1940 /* AppFeature.swift */,
+			);
+			path = AppFeature;
+			sourceTree = "<group>";
+		};
+		38ADDEAE2819280E00DD1940 /* AppDelegateFeature */ = {
+			isa = PBXGroup;
+			children = (
+				38ADDEAF2819282100DD1940 /* AppDelegateFeature.swift */,
+			);
+			path = AppDelegateFeature;
+			sourceTree = "<group>";
+		};
+		38B74017281682450095E534 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				38D67727281A789800BA991E /* Roboto-Bold.ttf */,
+				38D67728281A789900BA991E /* Roboto-Regular.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
 		F8B1346E27D74E8600BE6503 = {
 			isa = PBXGroup;
 			children = (
+				38ADDEA72819207100DD1940 /* TimeInWordsFeature */,
 				F8B1347927D74E8600BE6503 /* WordClock */,
 				F8B1348A27D74E8900BE6503 /* WordClockTests */,
 				F8B1349427D74E8900BE6503 /* WordClockUITests */,
+				3852F4B6281BB6FC00D869FC /* WordClockWidget */,
+				3852F4EC281C25FC00D869FC /* TimeInWordsClip */,
+				3852F4FF281C260000D869FC /* TimeInWordsClipTests */,
+				3852F509281C260000D869FC /* TimeInWordsClipUITests */,
 				F8B1347827D74E8600BE6503 /* Products */,
+				38783FC0281589260044F7AA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,6 +334,10 @@
 				F8B1347727D74E8600BE6503 /* WordClock.app */,
 				F8B1348727D74E8900BE6503 /* WordClockTests.xctest */,
 				F8B1349127D74E8900BE6503 /* WordClockUITests.xctest */,
+				3852F4B1281BB6FC00D869FC /* WordClockWidgetExtension.appex */,
+				3852F4EB281C25FC00D869FC /* TimeInWordsClip.app */,
+				3852F4FC281C260000D869FC /* TimeInWordsClipTests.xctest */,
+				3852F506281C260000D869FC /* TimeInWordsClipUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -98,9 +345,14 @@
 		F8B1347927D74E8600BE6503 /* WordClock */ = {
 			isa = PBXGroup;
 			children = (
+				3852F4C3281BBB0E00D869FC /* WordClock.entitlements */,
+				38ADDEAE2819280E00DD1940 /* AppDelegateFeature */,
+				38ADDEAB2819231F00DD1940 /* AppFeature */,
+				38B740202816829B0095E534 /* Info.plist */,
 				F8B1347A27D74E8600BE6503 /* WordClockApp.swift */,
-				F8B1347C27D74E8600BE6503 /* ContentView.swift */,
+				38B74024281811860095E534 /* TimeInWordsEnvironment+live.swift */,
 				F8B1347E27D74E8800BE6503 /* Assets.xcassets */,
+				38B74017281682450095E534 /* fonts */,
 				F8B1348027D74E8800BE6503 /* Preview Content */,
 			);
 			path = WordClock;
@@ -110,6 +362,7 @@
 			isa = PBXGroup;
 			children = (
 				F8B1348127D74E8800BE6503 /* Preview Assets.xcassets */,
+				38783FD12815E56A0044F7AA /* TimeInWordsFeature_Preview.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -134,6 +387,81 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		3852F4B0281BB6FC00D869FC /* WordClockWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3852F4BF281BB70000D869FC /* Build configuration list for PBXNativeTarget "WordClockWidgetExtension" */;
+			buildPhases = (
+				3852F4AD281BB6FC00D869FC /* Sources */,
+				3852F4AE281BB6FC00D869FC /* Frameworks */,
+				3852F4AF281BB6FC00D869FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WordClockWidgetExtension;
+			productName = WordClockWidgetExtension;
+			productReference = 3852F4B1281BB6FC00D869FC /* WordClockWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		3852F4EA281C25FC00D869FC /* TimeInWordsClip */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3852F511281C260100D869FC /* Build configuration list for PBXNativeTarget "TimeInWordsClip" */;
+			buildPhases = (
+				3852F4E7281C25FC00D869FC /* Sources */,
+				3852F4E8281C25FC00D869FC /* Frameworks */,
+				3852F4E9281C25FC00D869FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TimeInWordsClip;
+			packageProductDependencies = (
+				3852F51B281C2A1D00D869FC /* TimeInWordsFeature */,
+				3852F51D281C2A2400D869FC /* ComposableArchitecture */,
+				3852F51F281C2A2800D869FC /* TimeInWords */,
+			);
+			productName = TimeInWordsClip;
+			productReference = 3852F4EB281C25FC00D869FC /* TimeInWordsClip.app */;
+			productType = "com.apple.product-type.application.on-demand-install-capable";
+		};
+		3852F4FB281C260000D869FC /* TimeInWordsClipTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3852F515281C260100D869FC /* Build configuration list for PBXNativeTarget "TimeInWordsClipTests" */;
+			buildPhases = (
+				3852F4F8281C260000D869FC /* Sources */,
+				3852F4F9281C260000D869FC /* Frameworks */,
+				3852F4FA281C260000D869FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3852F4FE281C260000D869FC /* PBXTargetDependency */,
+			);
+			name = TimeInWordsClipTests;
+			productName = TimeInWordsClipTests;
+			productReference = 3852F4FC281C260000D869FC /* TimeInWordsClipTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3852F505281C260000D869FC /* TimeInWordsClipUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3852F518281C260100D869FC /* Build configuration list for PBXNativeTarget "TimeInWordsClipUITests" */;
+			buildPhases = (
+				3852F502281C260000D869FC /* Sources */,
+				3852F503281C260000D869FC /* Frameworks */,
+				3852F504281C260000D869FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3852F508281C260000D869FC /* PBXTargetDependency */,
+			);
+			name = TimeInWordsClipUITests;
+			productName = TimeInWordsClipUITests;
+			productReference = 3852F506281C260000D869FC /* TimeInWordsClipUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		F8B1347627D74E8600BE6503 /* WordClock */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F8B1349B27D74E8900BE6503 /* Build configuration list for PBXNativeTarget "WordClock" */;
@@ -141,15 +469,20 @@
 				F8B1347327D74E8600BE6503 /* Sources */,
 				F8B1347427D74E8600BE6503 /* Frameworks */,
 				F8B1347527D74E8600BE6503 /* Resources */,
+				3852F4C2281BB70000D869FC /* Embed App Extensions */,
+				3852F514281C260100D869FC /* Embed App Clips */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				3852F4BD281BB70000D869FC /* PBXTargetDependency */,
+				3852F50F281C260100D869FC /* PBXTargetDependency */,
 			);
 			name = WordClock;
 			packageProductDependencies = (
-				F8B134A527D74EBD00BE6503 /* TimeInWords */,
 				F8B134A827D751A900BE6503 /* ComposableArchitecture */,
+				38ADDE9F2818768E00DD1940 /* TimeInWords */,
+				38ADDEA82819222300DD1940 /* TimeInWordsFeature */,
 			);
 			productName = WordClock;
 			productReference = F8B1347727D74E8600BE6503 /* WordClock.app */;
@@ -201,6 +534,20 @@
 				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
+					3852F4B0281BB6FC00D869FC = {
+						CreatedOnToolsVersion = 13.2;
+					};
+					3852F4EA281C25FC00D869FC = {
+						CreatedOnToolsVersion = 13.2;
+					};
+					3852F4FB281C260000D869FC = {
+						CreatedOnToolsVersion = 13.2;
+						TestTargetID = 3852F4EA281C25FC00D869FC;
+					};
+					3852F505281C260000D869FC = {
+						CreatedOnToolsVersion = 13.2;
+						TestTargetID = 3852F4EA281C25FC00D869FC;
+					};
 					F8B1347627D74E8600BE6503 = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
@@ -224,8 +571,8 @@
 			);
 			mainGroup = F8B1346E27D74E8600BE6503;
 			packageReferences = (
-				F8B134A427D74EBD00BE6503 /* XCRemoteSwiftPackageReference "TimeInWords" */,
 				F8B134A727D751A900BE6503 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				38ADDE9E2818768E00DD1940 /* XCRemoteSwiftPackageReference "TimeInWords" */,
 			);
 			productRefGroup = F8B1347827D74E8600BE6503 /* Products */;
 			projectDirPath = "";
@@ -234,16 +581,53 @@
 				F8B1347627D74E8600BE6503 /* WordClock */,
 				F8B1348627D74E8900BE6503 /* WordClockTests */,
 				F8B1349027D74E8900BE6503 /* WordClockUITests */,
+				3852F4B0281BB6FC00D869FC /* WordClockWidgetExtension */,
+				3852F4EA281C25FC00D869FC /* TimeInWordsClip */,
+				3852F4FB281C260000D869FC /* TimeInWordsClipTests */,
+				3852F505281C260000D869FC /* TimeInWordsClipUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3852F4AF281BB6FC00D869FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3852F4BA281BB70000D869FC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3852F4E9281C25FC00D869FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3852F4F5281C25FF00D869FC /* Preview Assets.xcassets in Resources */,
+				3852F4F2281C25FF00D869FC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3852F4FA281C260000D869FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3852F504281C260000D869FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F8B1347527D74E8600BE6503 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38D6772A281A789900BA991E /* Roboto-Regular.ttf in Resources */,
 				F8B1348227D74E8800BE6503 /* Preview Assets.xcassets in Resources */,
+				38D67729281A789900BA991E /* Roboto-Bold.ttf in Resources */,
 				F8B1347F27D74E8800BE6503 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,12 +649,53 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3852F4AD281BB6FC00D869FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3852F4E2281BEBE100D869FC /* WordNumber.swift in Sources */,
+				3852F4B8281BB6FD00D869FC /* WordClockWidget.swift in Sources */,
+				3852F4E3281BEBE100D869FC /* Time.swift in Sources */,
+				3852F4E1281BEBE100D869FC /* TimeInWords.swift in Sources */,
+				3852F4E0281BEBE100D869FC /* WordNumber+12.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3852F4E7281C25FC00D869FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3852F4F0281C25FC00D869FC /* TimeInWordsView.swift in Sources */,
+				3852F4EE281C25FC00D869FC /* TimeInWordsClipApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3852F4F8281C260000D869FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3852F501281C260000D869FC /* TimeInWordsClipTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3852F502281C260000D869FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3852F50D281C260000D869FC /* TimeInWordsClipUITestsLaunchTests.swift in Sources */,
+				3852F50B281C260000D869FC /* TimeInWordsClipUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F8B1347327D74E8600BE6503 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8B1347D27D74E8600BE6503 /* ContentView.swift in Sources */,
+				38ADDEAD2819231F00DD1940 /* AppFeature.swift in Sources */,
+				38B74025281811860095E534 /* TimeInWordsEnvironment+live.swift in Sources */,
 				F8B1347B27D74E8600BE6503 /* WordClockApp.swift in Sources */,
+				38783FD22815E56A0044F7AA /* TimeInWordsFeature_Preview.swift in Sources */,
+				38ADDEB02819282100DD1940 /* AppDelegateFeature.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +719,26 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		3852F4BD281BB70000D869FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3852F4B0281BB6FC00D869FC /* WordClockWidgetExtension */;
+			targetProxy = 3852F4BC281BB70000D869FC /* PBXContainerItemProxy */;
+		};
+		3852F4FE281C260000D869FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3852F4EA281C25FC00D869FC /* TimeInWordsClip */;
+			targetProxy = 3852F4FD281C260000D869FC /* PBXContainerItemProxy */;
+		};
+		3852F508281C260000D869FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3852F4EA281C25FC00D869FC /* TimeInWordsClip */;
+			targetProxy = 3852F507281C260000D869FC /* PBXContainerItemProxy */;
+		};
+		3852F50F281C260100D869FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3852F4EA281C25FC00D869FC /* TimeInWordsClip */;
+			targetProxy = 3852F50E281C260100D869FC /* PBXContainerItemProxy */;
+		};
 		F8B1348927D74E8900BE6503 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F8B1347627D74E8600BE6503 /* WordClock */;
@@ -307,6 +752,210 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		3852F4C0281BB70000D869FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = WordClockWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = XP6P798NUV;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WordClockWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WordClockWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jrbordet.thewordclock.WordClockWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3852F4C1281BB70000D869FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = WordClockWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = XP6P798NUV;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WordClockWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WordClockWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jrbordet.thewordclock.WordClockWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3852F512281C260100D869FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TimeInWordsClip/TimeInWordsClip.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_ASSET_PATHS = "\"TimeInWordsClip/Preview Content\"";
+				DEVELOPMENT_TEAM = XP6P798NUV;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TimeInWordsClip/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WordClock;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jrbordet.thewordclock.Clip;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3852F513281C260100D869FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TimeInWordsClip/TimeInWordsClip.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_ASSET_PATHS = "\"TimeInWordsClip/Preview Content\"";
+				DEVELOPMENT_TEAM = XP6P798NUV;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TimeInWordsClip/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WordClock;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jrbordet.thewordclock.Clip;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3852F516281C260100D869FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 29Q5J7K7B2;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jrbordet.thewordclock.TimeInWordsClipTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TimeInWordsClip.app/TimeInWordsClip";
+			};
+			name = Debug;
+		};
+		3852F517281C260100D869FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 29Q5J7K7B2;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jrbordet.thewordclock.TimeInWordsClipTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TimeInWordsClip.app/TimeInWordsClip";
+			};
+			name = Release;
+		};
+		3852F519281C260100D869FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 29Q5J7K7B2;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jrbordet.thewordclock.TimeInWordsClipUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TimeInWordsClip;
+			};
+			name = Debug;
+		};
+		3852F51A281C260100D869FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 29Q5J7K7B2;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jrbordet.thewordclock.TimeInWordsClipUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TimeInWordsClip;
+			};
+			name = Release;
+		};
 		F8B1349927D74E8900BE6503 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -358,7 +1007,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -413,7 +1062,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -426,25 +1075,29 @@
 		F8B1349C27D74E8900BE6503 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WordClock/WordClock.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"WordClock/Preview Content\"";
 				DEVELOPMENT_TEAM = XP6P798NUV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WordClock/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jrbordet.WordClock;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jrbordet.thewordclock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -455,25 +1108,29 @@
 		F8B1349D27D74E8900BE6503 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WordClock/WordClock.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"WordClock/Preview Content\"";
 				DEVELOPMENT_TEAM = XP6P798NUV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WordClock/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jrbordet.WordClock;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jrbordet.thewordclock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -560,6 +1217,42 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3852F4BF281BB70000D869FC /* Build configuration list for PBXNativeTarget "WordClockWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3852F4C0281BB70000D869FC /* Debug */,
+				3852F4C1281BB70000D869FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3852F511281C260100D869FC /* Build configuration list for PBXNativeTarget "TimeInWordsClip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3852F512281C260100D869FC /* Debug */,
+				3852F513281C260100D869FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3852F515281C260100D869FC /* Build configuration list for PBXNativeTarget "TimeInWordsClipTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3852F516281C260100D869FC /* Debug */,
+				3852F517281C260100D869FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3852F518281C260100D869FC /* Build configuration list for PBXNativeTarget "TimeInWordsClipUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3852F519281C260100D869FC /* Debug */,
+				3852F51A281C260100D869FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F8B1347227D74E8600BE6503 /* Build configuration list for PBXProject "WordClock" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -599,12 +1292,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		F8B134A427D74EBD00BE6503 /* XCRemoteSwiftPackageReference "TimeInWords" */ = {
+		38ADDE9E2818768E00DD1940 /* XCRemoteSwiftPackageReference "TimeInWords" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/jrBordet/TimeInWords.git";
+			repositoryURL = "https://github.com/jrBordet/TimeInWords";
 			requirement = {
-				branch = master;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.4;
 			};
 		};
 		F8B134A727D751A900BE6503 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
@@ -618,10 +1311,28 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		F8B134A527D74EBD00BE6503 /* TimeInWords */ = {
+		3852F51B281C2A1D00D869FC /* TimeInWordsFeature */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = F8B134A427D74EBD00BE6503 /* XCRemoteSwiftPackageReference "TimeInWords" */;
+			productName = TimeInWordsFeature;
+		};
+		3852F51D281C2A2400D869FC /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F8B134A727D751A900BE6503 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+		3852F51F281C2A2800D869FC /* TimeInWords */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 38ADDE9E2818768E00DD1940 /* XCRemoteSwiftPackageReference "TimeInWords" */;
 			productName = TimeInWords;
+		};
+		38ADDE9F2818768E00DD1940 /* TimeInWords */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 38ADDE9E2818768E00DD1940 /* XCRemoteSwiftPackageReference "TimeInWords" */;
+			productName = TimeInWords;
+		};
+		38ADDEA82819222300DD1940 /* TimeInWordsFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TimeInWordsFeature;
 		};
 		F8B134A827D751A900BE6503 /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
