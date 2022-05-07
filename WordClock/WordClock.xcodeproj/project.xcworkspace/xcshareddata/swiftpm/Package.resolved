@@ -65,6 +65,15 @@
         }
       },
       {
+        "package": "TimeInWords",
+        "repositoryURL": "https://github.com/jrBordet/TimeInWords",
+        "state": {
+          "branch": null,
+          "revision": "68945af57428a4fcc399d17768b8cd6946e6c1ca",
+          "version": "0.0.6"
+        }
+      },
+      {
         "package": "xctest-dynamic-overlay",
         "repositoryURL": "https://github.com/pointfreeco/xctest-dynamic-overlay",
         "state": {
