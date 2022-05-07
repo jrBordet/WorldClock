@@ -15,21 +15,49 @@ var calendar = Calendar.current
 
 struct Provider: TimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
+        let h = calendar.component(.hour, from: Date())
+        let m = calendar.component(.minute, from: Date())
+        
         let timeInWords = timeInWords(
-            h: calendar.component(.hour, from: Date()),
-            m: calendar.component(.minute, from: Date())
+            h: h,
+            m: m
         )
         
-        return SimpleEntry(date: Date(), timeInWords: timeInWords)
+        let timeIn12Words = time12InWords(
+            h: h,
+            m: m
+        )
+        
+        return SimpleEntry(
+            date: Date(),
+            timeInWords: timeInWords,
+            hour: timeIn12Words.hour,
+            minutes: timeIn12Words.minutes,
+            accessory: timeIn12Words.accessory
+        )
     }
     
     func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let timeInWords = TimeInWords.timeInWords(
-            h: calendar.component(.hour, from: Date()),
-            m: calendar.component(.minute, from: Date())
+        let h = calendar.component(.hour, from: Date())
+        let m = calendar.component(.minute, from: Date())
+        
+        let timeInWords = timeInWords(
+            h: h,
+            m: m
         )
         
-        let entry = SimpleEntry(date: Date(), timeInWords: timeInWords)
+        let timeIn12Words = time12InWords(
+            h: h,
+            m: m
+        )
+        
+        let entry = SimpleEntry(
+            date: Date(),
+            timeInWords: timeInWords,
+            hour: timeIn12Words.hour,
+            minutes: timeIn12Words.minutes,
+            accessory: timeIn12Words.accessory
+        )
         
         completion(entry)
     }
@@ -43,12 +71,28 @@ struct Provider: TimelineProvider {
         for offset in 0 ..< 60 * 24 {
             let entryDate = Calendar.current.date(byAdding: .minute, value: offset, to: midnight)!
             
+            let h = calendar.component(.hour, from: Date())
+            let m = calendar.component(.minute, from: Date())
+            
             let timeInWords = timeInWords(
-                h: calendar.component(.hour, from: entryDate),
-                m: calendar.component(.minute, from: entryDate)
+                h: h,
+                m: m
             )
             
-            entries.append(SimpleEntry(date: entryDate, timeInWords: timeInWords))
+            let timeIn12Words = time12InWords(
+                h: h,
+                m: m
+            )
+            
+            entries.append(
+                SimpleEntry(
+                    date: entryDate,
+                    timeInWords: timeInWords,
+                    hour: timeIn12Words.hour,
+                    minutes: timeIn12Words.minutes,
+                    accessory: timeIn12Words.accessory
+                )
+            )
         }
         
         let timeline = Timeline(entries: entries, policy: .after(nextMidnight))
@@ -60,6 +104,9 @@ struct Provider: TimelineProvider {
 struct SimpleEntry: TimelineEntry {
     let date: Date
     let timeInWords: String
+    let hour: WordNumber
+    let minutes: WordNumber
+    let accessory: Accessory
 }
 
 struct WordClockWidgetView : View {
@@ -125,9 +172,9 @@ struct WordClockWidgetEntryLargeView : View {
         TimeInWordsView(
             store: Store(
                 initialState: TimeInWordsState(
-                    hour: .nine,
-                    minutes: .five,
-                    accessory: .past
+                    hour: entry.hour,
+                    minutes: entry.minutes,
+                    accessory: entry.accessory
                 ),
                 reducer: timeInWordsReducer,
                 environment: .mock(
@@ -151,11 +198,17 @@ struct WordClockWidget: Widget {
     }
 }
 
-// eight o'clock
 struct WordClockWidget_Previews: PreviewProvider {
     static var previews: some View {
-        WordClockWidgetEntryView(entry: SimpleEntry(date: Date(), timeInWords: "one minute to eight"))
-            .previewContext(WidgetPreviewContext(family: .systemSmall))
+        WordClockWidgetEntryView(
+            entry: SimpleEntry(
+                date: Date(),
+                timeInWords: "one minute to eight",
+                hour: .nine,
+                minutes: .five,
+                accessory: .past
+            )
+        ).previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }
 
@@ -164,7 +217,10 @@ struct WordClockWidget_Large_Previews: PreviewProvider {
         WordClockWidgetEntryLargeView(
             entry: SimpleEntry(
                 date: Date(),
-                timeInWords: "one minute to eight"
+                timeInWords: "one minute to eight",
+                hour: .nine,
+                minutes: .zero,
+                accessory: .o_clock
             )
         ).previewContext(WidgetPreviewContext(family: .systemLarge))
     }
