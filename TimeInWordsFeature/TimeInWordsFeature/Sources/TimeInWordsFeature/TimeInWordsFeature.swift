@@ -79,6 +79,11 @@ extension TimeInWordsEnvironment {
     }
 }
 
+public let timeInWidgetReducer = Reducer<TimeInWordsState, TimeInWordsAction, TimeInWordsEnvironment> { _, _, _ in
+    .none
+}
+
+
 public let timeInWordsReducer = Reducer<TimeInWordsState, TimeInWordsAction, TimeInWordsEnvironment> { state, action, environment in
     struct TimerId: Hashable {}
     

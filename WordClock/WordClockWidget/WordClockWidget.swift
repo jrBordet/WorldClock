@@ -117,13 +117,39 @@ struct WordClockWidgetView : View {
     var body: some View {
         switch family {
         case .systemSmall:
-            WordClockWidgetEntryView(entry: entry)
+            BohView(entry: entry)
+            //WordClockWidgetEntryView(entry: entry)
         case .systemMedium:
             WordClockWidgetEntryView(entry: entry)
         case .systemLarge:
             WordClockWidgetEntryLargeView(entry: entry)
             
         default: WordClockWidgetEntryView(entry: entry)
+        }
+    }
+}
+
+struct BohView: View {
+    struct ViewState {
+        var time12: String
+    }
+    
+    var entry: Provider.Entry
+    
+    var viewState: ViewState?
+    
+    init(entry: Provider.Entry) {
+        self.entry = entry
+        self.viewState = nil
+    }
+    
+    var body: some View {
+        VStack {
+            Text("boh")
+                .font(.custom("Roboto-Bold", size: 16))
+                .lineSpacing(8)
+                .multilineTextAlignment(.center)
+                .padding(8)
         }
     }
 }
@@ -144,7 +170,6 @@ struct WordClockWidgetEntryView: View {
     
     var body: some View {
         VStack {
-            //Text(entry.date, style: .time)
             Text("\(entry.timeInWords.uppercased())")
                 .font(.custom("Roboto-Bold", size: 16))
                 .lineSpacing(8)
@@ -176,7 +201,7 @@ struct WordClockWidgetEntryLargeView : View {
                     minutes: entry.minutes,
                     accessory: entry.accessory
                 ),
-                reducer: timeInWordsReducer,
+                reducer: timeInWidgetReducer,
                 environment: .mock(
                     mainQueue: DispatchQueue.main.eraseToAnyScheduler()
                 )
