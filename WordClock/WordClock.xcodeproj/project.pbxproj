@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		380989E028202181002DAB50 /* WordClockWatch WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 380989DF28202181002DAB50 /* WordClockWatch WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		380989E528202185002DAB50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 380989E428202185002DAB50 /* Assets.xcassets */; };
+		380989EB28202185002DAB50 /* WordClockWatch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 380989EA28202185002DAB50 /* WordClockWatch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		380989F028202185002DAB50 /* WordClockApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380989EF28202185002DAB50 /* WordClockApp.swift */; };
+		380989F228202185002DAB50 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380989F128202185002DAB50 /* ContentView.swift */; };
+		380989F428202185002DAB50 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380989F328202185002DAB50 /* NotificationController.swift */; };
+		380989F628202185002DAB50 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380989F528202185002DAB50 /* NotificationView.swift */; };
+		380989F828202185002DAB50 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380989F728202185002DAB50 /* ComplicationController.swift */; };
+		380989FA28202187002DAB50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 380989F928202187002DAB50 /* Assets.xcassets */; };
+		380989FD28202187002DAB50 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 380989FC28202187002DAB50 /* Preview Assets.xcassets */; };
+		38098A0928202187002DAB50 /* WordClockWatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38098A0828202187002DAB50 /* WordClockWatchTests.swift */; };
+		38098A1328202187002DAB50 /* WordClockWatchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38098A1228202187002DAB50 /* WordClockWatchUITests.swift */; };
+		38098A1528202187002DAB50 /* WordClockWatchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38098A1428202187002DAB50 /* WordClockWatchUITestsLaunchTests.swift */; };
 		3852F4B3281BB6FC00D869FC /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3852F4B2281BB6FC00D869FC /* WidgetKit.framework */; };
 		3852F4B5281BB6FC00D869FC /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3852F4B4281BB6FC00D869FC /* SwiftUI.framework */; };
 		3852F4B8281BB6FD00D869FC /* WordClockWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3852F4B7281BB6FD00D869FC /* WordClockWidget.swift */; };
@@ -35,6 +48,9 @@
 		38B74025281811860095E534 /* TimeInWordsEnvironment+live.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B74024281811860095E534 /* TimeInWordsEnvironment+live.swift */; };
 		38D67729281A789900BA991E /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38D67727281A789800BA991E /* Roboto-Bold.ttf */; };
 		38D6772A281A789900BA991E /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38D67728281A789900BA991E /* Roboto-Regular.ttf */; };
+		38F6FD3928266DCF0096F3F3 /* TimeInWords in Frameworks */ = {isa = PBXBuildFile; productRef = 38F6FD3828266DCF0096F3F3 /* TimeInWords */; };
+		38F6FD3B282671270096F3F3 /* TimeInWordsFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 38F6FD3A282671270096F3F3 /* TimeInWordsFeature */; };
+		38F6FD3D2826712D0096F3F3 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 38F6FD3C2826712D0096F3F3 /* ComposableArchitecture */; };
 		F8B1347B27D74E8600BE6503 /* WordClockApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B1347A27D74E8600BE6503 /* WordClockApp.swift */; };
 		F8B1347F27D74E8800BE6503 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8B1347E27D74E8800BE6503 /* Assets.xcassets */; };
 		F8B1348227D74E8800BE6503 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8B1348127D74E8800BE6503 /* Preview Assets.xcassets */; };
@@ -45,6 +61,34 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		380989E128202181002DAB50 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8B1346F27D74E8600BE6503 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 380989DE28202181002DAB50;
+			remoteInfo = "WordClockWatch WatchKit App";
+		};
+		380989EC28202185002DAB50 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8B1346F27D74E8600BE6503 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 380989E928202185002DAB50;
+			remoteInfo = "WordClockWatch WatchKit Extension";
+		};
+		38098A0528202187002DAB50 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8B1346F27D74E8600BE6503 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 380989E928202185002DAB50;
+			remoteInfo = "WordClockWatch WatchKit Extension";
+		};
+		38098A0F28202187002DAB50 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8B1346F27D74E8600BE6503 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 380989DE28202181002DAB50;
+			remoteInfo = "WordClockWatch WatchKit App";
+		};
 		3852F4BC281BB70000D869FC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F8B1346F27D74E8600BE6503 /* Project object */;
@@ -90,6 +134,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		38098A1828202187002DAB50 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				380989E028202181002DAB50 /* WordClockWatch WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38098A1B28202187002DAB50 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				380989EB28202185002DAB50 /* WordClockWatch WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3852F4C2281BB70000D869FC /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -115,6 +181,24 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		380989DC28202181002DAB50 /* WordClockWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordClockWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		380989DF28202181002DAB50 /* WordClockWatch WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WordClockWatch WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		380989E428202185002DAB50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		380989EA28202185002DAB50 /* WordClockWatch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WordClockWatch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		380989EF28202185002DAB50 /* WordClockApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordClockApp.swift; sourceTree = "<group>"; };
+		380989F128202185002DAB50 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		380989F328202185002DAB50 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		380989F528202185002DAB50 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		380989F728202185002DAB50 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		380989F928202187002DAB50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		380989FC28202187002DAB50 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		380989FE28202187002DAB50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		380989FF28202187002DAB50 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		38098A0428202187002DAB50 /* WordClockWatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordClockWatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		38098A0828202187002DAB50 /* WordClockWatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordClockWatchTests.swift; sourceTree = "<group>"; };
+		38098A0E28202187002DAB50 /* WordClockWatchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordClockWatchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		38098A1228202187002DAB50 /* WordClockWatchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordClockWatchUITests.swift; sourceTree = "<group>"; };
+		38098A1428202187002DAB50 /* WordClockWatchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordClockWatchUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3852F4B1281BB6FC00D869FC /* WordClockWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WordClockWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		3852F4B2281BB6FC00D869FC /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		3852F4B4281BB6FC00D869FC /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -158,12 +242,36 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		380989E728202185002DAB50 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38098A0128202187002DAB50 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38098A0B28202187002DAB50 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3852F4AE281BB6FC00D869FC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38F6FD3D2826712D0096F3F3 /* ComposableArchitecture in Frameworks */,
 				3852F4B5281BB6FC00D869FC /* SwiftUI.framework in Frameworks */,
+				38F6FD3928266DCF0096F3F3 /* TimeInWords in Frameworks */,
 				3852F4B3281BB6FC00D869FC /* WidgetKit.framework in Frameworks */,
+				38F6FD3B282671270096F3F3 /* TimeInWordsFeature in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +326,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		380989E328202181002DAB50 /* WordClockWatch WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				380989E428202185002DAB50 /* Assets.xcassets */,
+			);
+			path = "WordClockWatch WatchKit App";
+			sourceTree = "<group>";
+		};
+		380989EE28202185002DAB50 /* WordClockWatch WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				380989EF28202185002DAB50 /* WordClockApp.swift */,
+				380989F128202185002DAB50 /* ContentView.swift */,
+				380989F328202185002DAB50 /* NotificationController.swift */,
+				380989F528202185002DAB50 /* NotificationView.swift */,
+				380989F728202185002DAB50 /* ComplicationController.swift */,
+				380989F928202187002DAB50 /* Assets.xcassets */,
+				380989FE28202187002DAB50 /* Info.plist */,
+				380989FF28202187002DAB50 /* PushNotificationPayload.apns */,
+				380989FB28202187002DAB50 /* Preview Content */,
+			);
+			path = "WordClockWatch WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		380989FB28202187002DAB50 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				380989FC28202187002DAB50 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		38098A0728202187002DAB50 /* WordClockWatchTests */ = {
+			isa = PBXGroup;
+			children = (
+				38098A0828202187002DAB50 /* WordClockWatchTests.swift */,
+			);
+			path = WordClockWatchTests;
+			sourceTree = "<group>";
+		};
+		38098A1128202187002DAB50 /* WordClockWatchUITests */ = {
+			isa = PBXGroup;
+			children = (
+				38098A1228202187002DAB50 /* WordClockWatchUITests.swift */,
+				38098A1428202187002DAB50 /* WordClockWatchUITestsLaunchTests.swift */,
+			);
+			path = WordClockWatchUITests;
+			sourceTree = "<group>";
+		};
 		3852F4B6281BB6FC00D869FC /* WordClockWidget */ = {
 			isa = PBXGroup;
 			children = (
@@ -323,6 +480,10 @@
 				3852F4EC281C25FC00D869FC /* TimeInWordsClip */,
 				3852F4FF281C260000D869FC /* TimeInWordsClipTests */,
 				3852F509281C260000D869FC /* TimeInWordsClipUITests */,
+				380989E328202181002DAB50 /* WordClockWatch WatchKit App */,
+				380989EE28202185002DAB50 /* WordClockWatch WatchKit Extension */,
+				38098A0728202187002DAB50 /* WordClockWatchTests */,
+				38098A1128202187002DAB50 /* WordClockWatchUITests */,
 				F8B1347827D74E8600BE6503 /* Products */,
 				38783FC0281589260044F7AA /* Frameworks */,
 			);
@@ -338,6 +499,11 @@
 				3852F4EB281C25FC00D869FC /* TimeInWordsClip.app */,
 				3852F4FC281C260000D869FC /* TimeInWordsClipTests.xctest */,
 				3852F506281C260000D869FC /* TimeInWordsClipUITests.xctest */,
+				380989DC28202181002DAB50 /* WordClockWatch.app */,
+				380989DF28202181002DAB50 /* WordClockWatch WatchKit App.app */,
+				380989EA28202185002DAB50 /* WordClockWatch WatchKit Extension.appex */,
+				38098A0428202187002DAB50 /* WordClockWatchTests.xctest */,
+				38098A0E28202187002DAB50 /* WordClockWatchUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -387,6 +553,93 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		380989DB28202181002DAB50 /* WordClockWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38098A2428202187002DAB50 /* Build configuration list for PBXNativeTarget "WordClockWatch" */;
+			buildPhases = (
+				380989DA28202181002DAB50 /* Resources */,
+				38098A1828202187002DAB50 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				380989E228202181002DAB50 /* PBXTargetDependency */,
+			);
+			name = WordClockWatch;
+			productName = WordClockWatch;
+			productReference = 380989DC28202181002DAB50 /* WordClockWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		380989DE28202181002DAB50 /* WordClockWatch WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38098A2328202187002DAB50 /* Build configuration list for PBXNativeTarget "WordClockWatch WatchKit App" */;
+			buildPhases = (
+				380989DD28202181002DAB50 /* Resources */,
+				38098A1B28202187002DAB50 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				380989ED28202185002DAB50 /* PBXTargetDependency */,
+			);
+			name = "WordClockWatch WatchKit App";
+			productName = "WordClockWatch WatchKit App";
+			productReference = 380989DF28202181002DAB50 /* WordClockWatch WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		380989E928202185002DAB50 /* WordClockWatch WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38098A2228202187002DAB50 /* Build configuration list for PBXNativeTarget "WordClockWatch WatchKit Extension" */;
+			buildPhases = (
+				380989E628202185002DAB50 /* Sources */,
+				380989E728202185002DAB50 /* Frameworks */,
+				380989E828202185002DAB50 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WordClockWatch WatchKit Extension";
+			productName = "WordClockWatch WatchKit Extension";
+			productReference = 380989EA28202185002DAB50 /* WordClockWatch WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+		38098A0328202187002DAB50 /* WordClockWatchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38098A2528202187002DAB50 /* Build configuration list for PBXNativeTarget "WordClockWatchTests" */;
+			buildPhases = (
+				38098A0028202187002DAB50 /* Sources */,
+				38098A0128202187002DAB50 /* Frameworks */,
+				38098A0228202187002DAB50 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				38098A0628202187002DAB50 /* PBXTargetDependency */,
+			);
+			name = WordClockWatchTests;
+			productName = WordClockWatchTests;
+			productReference = 38098A0428202187002DAB50 /* WordClockWatchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		38098A0D28202187002DAB50 /* WordClockWatchUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38098A2628202187002DAB50 /* Build configuration list for PBXNativeTarget "WordClockWatchUITests" */;
+			buildPhases = (
+				38098A0A28202187002DAB50 /* Sources */,
+				38098A0B28202187002DAB50 /* Frameworks */,
+				38098A0C28202187002DAB50 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				38098A1028202187002DAB50 /* PBXTargetDependency */,
+			);
+			name = WordClockWatchUITests;
+			productName = WordClockWatchUITests;
+			productReference = 38098A0E28202187002DAB50 /* WordClockWatchUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		3852F4B0281BB6FC00D869FC /* WordClockWidgetExtension */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3852F4BF281BB70000D869FC /* Build configuration list for PBXNativeTarget "WordClockWidgetExtension" */;
@@ -398,8 +651,16 @@
 			buildRules = (
 			);
 			dependencies = (
+				38F6FD3728266BF10096F3F3 /* PBXTargetDependency */,
+				38F6FD3528266BEC0096F3F3 /* PBXTargetDependency */,
+				38F6FD3328266BE60096F3F3 /* PBXTargetDependency */,
 			);
 			name = WordClockWidgetExtension;
+			packageProductDependencies = (
+				38F6FD3828266DCF0096F3F3 /* TimeInWords */,
+				38F6FD3A282671270096F3F3 /* TimeInWordsFeature */,
+				38F6FD3C2826712D0096F3F3 /* ComposableArchitecture */,
+			);
 			productName = WordClockWidgetExtension;
 			productReference = 3852F4B1281BB6FC00D869FC /* WordClockWidgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
@@ -534,6 +795,23 @@
 				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
+					380989DB28202181002DAB50 = {
+						CreatedOnToolsVersion = 13.2;
+					};
+					380989DE28202181002DAB50 = {
+						CreatedOnToolsVersion = 13.2;
+					};
+					380989E928202185002DAB50 = {
+						CreatedOnToolsVersion = 13.2;
+					};
+					38098A0328202187002DAB50 = {
+						CreatedOnToolsVersion = 13.2;
+						TestTargetID = 380989E928202185002DAB50;
+					};
+					38098A0D28202187002DAB50 = {
+						CreatedOnToolsVersion = 13.2;
+						TestTargetID = 380989DE28202181002DAB50;
+					};
 					3852F4B0281BB6FC00D869FC = {
 						CreatedOnToolsVersion = 13.2;
 					};
@@ -585,11 +863,54 @@
 				3852F4EA281C25FC00D869FC /* TimeInWordsClip */,
 				3852F4FB281C260000D869FC /* TimeInWordsClipTests */,
 				3852F505281C260000D869FC /* TimeInWordsClipUITests */,
+				380989DB28202181002DAB50 /* WordClockWatch */,
+				380989DE28202181002DAB50 /* WordClockWatch WatchKit App */,
+				380989E928202185002DAB50 /* WordClockWatch WatchKit Extension */,
+				38098A0328202187002DAB50 /* WordClockWatchTests */,
+				38098A0D28202187002DAB50 /* WordClockWatchUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		380989DA28202181002DAB50 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		380989DD28202181002DAB50 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				380989E528202185002DAB50 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		380989E828202185002DAB50 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				380989FD28202187002DAB50 /* Preview Assets.xcassets in Resources */,
+				380989FA28202187002DAB50 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38098A0228202187002DAB50 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38098A0C28202187002DAB50 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3852F4AF281BB6FC00D869FC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -649,6 +970,35 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		380989E628202185002DAB50 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				380989F428202185002DAB50 /* NotificationController.swift in Sources */,
+				380989F228202185002DAB50 /* ContentView.swift in Sources */,
+				380989F828202185002DAB50 /* ComplicationController.swift in Sources */,
+				380989F028202185002DAB50 /* WordClockApp.swift in Sources */,
+				380989F628202185002DAB50 /* NotificationView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38098A0028202187002DAB50 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38098A0928202187002DAB50 /* WordClockWatchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38098A0A28202187002DAB50 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38098A1328202187002DAB50 /* WordClockWatchUITests.swift in Sources */,
+				38098A1528202187002DAB50 /* WordClockWatchUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3852F4AD281BB6FC00D869FC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -719,6 +1069,26 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		380989E228202181002DAB50 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 380989DE28202181002DAB50 /* WordClockWatch WatchKit App */;
+			targetProxy = 380989E128202181002DAB50 /* PBXContainerItemProxy */;
+		};
+		380989ED28202185002DAB50 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 380989E928202185002DAB50 /* WordClockWatch WatchKit Extension */;
+			targetProxy = 380989EC28202185002DAB50 /* PBXContainerItemProxy */;
+		};
+		38098A0628202187002DAB50 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 380989E928202185002DAB50 /* WordClockWatch WatchKit Extension */;
+			targetProxy = 38098A0528202187002DAB50 /* PBXContainerItemProxy */;
+		};
+		38098A1028202187002DAB50 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 380989DE28202181002DAB50 /* WordClockWatch WatchKit App */;
+			targetProxy = 38098A0F28202187002DAB50 /* PBXContainerItemProxy */;
+		};
 		3852F4BD281BB70000D869FC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 3852F4B0281BB6FC00D869FC /* WordClockWidgetExtension */;
@@ -739,6 +1109,18 @@
 			target = 3852F4EA281C25FC00D869FC /* TimeInWordsClip */;
 			targetProxy = 3852F50E281C260100D869FC /* PBXContainerItemProxy */;
 		};
+		38F6FD3328266BE60096F3F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 38F6FD3228266BE60096F3F3 /* TimeInWordsFeature */;
+		};
+		38F6FD3528266BEC0096F3F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 38F6FD3428266BEC0096F3F3 /* ComposableArchitecture */;
+		};
+		38F6FD3728266BF10096F3F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 38F6FD3628266BF10096F3F3 /* TimeInWords */;
+		};
 		F8B1348927D74E8900BE6503 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F8B1347627D74E8600BE6503 /* WordClock */;
@@ -752,6 +1134,226 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		38098A1628202187002DAB50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 29Q5J7K7B2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jrbordet.WordClockWatch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		38098A1728202187002DAB50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 29Q5J7K7B2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jrbordet.WordClockWatch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		38098A1928202187002DAB50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 29Q5J7K7B2;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = WordClockWatch_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = "WordClockWatch WatchKit App";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jrbordet.WordClockWatch.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Debug;
+		};
+		38098A1A28202187002DAB50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 29Q5J7K7B2;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = WordClockWatch_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = "WordClockWatch WatchKit App";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jrbordet.WordClockWatch.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Release;
+		};
+		38098A1C28202187002DAB50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WordClockWatch WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 29Q5J7K7B2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "WordClockWatch WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "WordClockWatch WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jrbordet.WordClockWatch.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Debug;
+		};
+		38098A1D28202187002DAB50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WordClockWatch WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 29Q5J7K7B2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "WordClockWatch WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "WordClockWatch WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jrbordet.WordClockWatch.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Release;
+		};
+		38098A1E28202187002DAB50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 29Q5J7K7B2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jrbordet.WordClockWatchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WordClockWatch WatchKit Extension.appex/WordClockWatch WatchKit Extension";
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Debug;
+		};
+		38098A1F28202187002DAB50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 29Q5J7K7B2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jrbordet.WordClockWatchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WordClockWatch WatchKit Extension.appex/WordClockWatch WatchKit Extension";
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Release;
+		};
+		38098A2028202187002DAB50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 29Q5J7K7B2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jrbordet.WordClockWatchUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "WordClockWatch WatchKit App";
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Debug;
+		};
+		38098A2128202187002DAB50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 29Q5J7K7B2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jrbordet.WordClockWatchUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "WordClockWatch WatchKit App";
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Release;
+		};
 		3852F4C0281BB70000D869FC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1217,6 +1819,51 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		38098A2228202187002DAB50 /* Build configuration list for PBXNativeTarget "WordClockWatch WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38098A1C28202187002DAB50 /* Debug */,
+				38098A1D28202187002DAB50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38098A2328202187002DAB50 /* Build configuration list for PBXNativeTarget "WordClockWatch WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38098A1928202187002DAB50 /* Debug */,
+				38098A1A28202187002DAB50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38098A2428202187002DAB50 /* Build configuration list for PBXNativeTarget "WordClockWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38098A1628202187002DAB50 /* Debug */,
+				38098A1728202187002DAB50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38098A2528202187002DAB50 /* Build configuration list for PBXNativeTarget "WordClockWatchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38098A1E28202187002DAB50 /* Debug */,
+				38098A1F28202187002DAB50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38098A2628202187002DAB50 /* Build configuration list for PBXNativeTarget "WordClockWatchUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38098A2028202187002DAB50 /* Debug */,
+				38098A2128202187002DAB50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		3852F4BF281BB70000D869FC /* Build configuration list for PBXNativeTarget "WordClockWidgetExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1333,6 +1980,34 @@
 		38ADDEA82819222300DD1940 /* TimeInWordsFeature */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = TimeInWordsFeature;
+		};
+		38F6FD3228266BE60096F3F3 /* TimeInWordsFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TimeInWordsFeature;
+		};
+		38F6FD3428266BEC0096F3F3 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F8B134A727D751A900BE6503 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+		38F6FD3628266BF10096F3F3 /* TimeInWords */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 38ADDE9E2818768E00DD1940 /* XCRemoteSwiftPackageReference "TimeInWords" */;
+			productName = TimeInWords;
+		};
+		38F6FD3828266DCF0096F3F3 /* TimeInWords */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 38ADDE9E2818768E00DD1940 /* XCRemoteSwiftPackageReference "TimeInWords" */;
+			productName = TimeInWords;
+		};
+		38F6FD3A282671270096F3F3 /* TimeInWordsFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TimeInWordsFeature;
+		};
+		38F6FD3C2826712D0096F3F3 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F8B134A727D751A900BE6503 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
 		};
 		F8B134A827D751A900BE6503 /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
