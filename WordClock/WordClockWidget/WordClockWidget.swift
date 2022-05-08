@@ -17,12 +17,12 @@ struct Provider: TimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
         let h = calendar.component(.hour, from: Date())
         let m = calendar.component(.minute, from: Date())
-        
+
         let timeInWords = timeInWords(
             h: h,
             m: m
         )
-        
+
         let timeIn12Words = time12InWords(
             h: h,
             m: m
@@ -30,7 +30,7 @@ struct Provider: TimelineProvider {
         
         return SimpleEntry(
             date: Date(),
-            timeInWords: timeInWords,
+            timeInWords:timeInWords,
             hour: timeIn12Words.hour,
             minutes: timeIn12Words.minutes,
             accessory: timeIn12Words.accessory
@@ -40,17 +40,17 @@ struct Provider: TimelineProvider {
     func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
         let h = calendar.component(.hour, from: Date())
         let m = calendar.component(.minute, from: Date())
-        
+
         let timeInWords = timeInWords(
             h: h,
             m: m
         )
-        
+
         let timeIn12Words = time12InWords(
             h: h,
             m: m
         )
-        
+
         let entry = SimpleEntry(
             date: Date(),
             timeInWords: timeInWords,
@@ -73,12 +73,12 @@ struct Provider: TimelineProvider {
             
             let h = calendar.component(.hour, from: Date())
             let m = calendar.component(.minute, from: Date())
-            
+
             let timeInWords = timeInWords(
                 h: h,
                 m: m
             )
-            
+
             let timeIn12Words = time12InWords(
                 h: h,
                 m: m
@@ -109,7 +109,51 @@ struct SimpleEntry: TimelineEntry {
     let accessory: Accessory
 }
 
-struct WordClockWidgetView : View {
+@main
+struct WordClockWidget: Widget {
+    let kind: String = "WordClockWidget"
+    
+    var body: some WidgetConfiguration {
+        StaticConfiguration(kind: kind, provider: Provider()) { entry in
+            WordClockWidgetView(entry: entry)
+        }
+        .configurationDisplayName("My Widget")
+        .description("This is an example widget.")
+    }
+}
+
+struct WordClockWidgetEntryLargeView: View {
+    struct ViewState {
+        var time12: String
+    }
+
+    var entry: Provider.Entry
+
+    var viewState: ViewState?
+
+    init(entry: Provider.Entry) {
+        self.entry = entry
+        self.viewState = nil
+    }
+
+    var body: some View {
+        TimeInWordsView(
+            store: Store(
+                initialState: TimeInWordsState(
+                    hour: entry.hour,
+                    minutes: entry.minutes,
+                    accessory: entry.accessory
+                ),
+                reducer: timeInWidgetReducer,
+                environment: .mock(
+                    mainQueue: DispatchQueue.main.eraseToAnyScheduler()
+                )
+            )
+        )
+    }
+}
+
+struct WordClockWidgetView: View {
     @Environment(\.widgetFamily) var family: WidgetFamily
     var entry: Provider.Entry
     
@@ -117,39 +161,13 @@ struct WordClockWidgetView : View {
     var body: some View {
         switch family {
         case .systemSmall:
-            BohView(entry: entry)
-            //WordClockWidgetEntryView(entry: entry)
+            WordClockWidgetEntryView(entry: entry)
         case .systemMedium:
             WordClockWidgetEntryView(entry: entry)
         case .systemLarge:
             WordClockWidgetEntryLargeView(entry: entry)
-            
-        default: WordClockWidgetEntryView(entry: entry)
-        }
-    }
-}
 
-struct BohView: View {
-    struct ViewState {
-        var time12: String
-    }
-    
-    var entry: Provider.Entry
-    
-    var viewState: ViewState?
-    
-    init(entry: Provider.Entry) {
-        self.entry = entry
-        self.viewState = nil
-    }
-    
-    var body: some View {
-        VStack {
-            Text("boh")
-                .font(.custom("Roboto-Bold", size: 16))
-                .lineSpacing(8)
-                .multilineTextAlignment(.center)
-                .padding(8)
+        default: WordClockWidgetEntryView(entry: entry)
         }
     }
 }
@@ -179,49 +197,6 @@ struct WordClockWidgetEntryView: View {
     }
 }
 
-struct WordClockWidgetEntryLargeView : View {
-    struct ViewState {
-        var time12: String
-    }
-    
-    var entry: Provider.Entry
-    
-    var viewState: ViewState?
-    
-    init(entry: Provider.Entry) {
-        self.entry = entry
-        self.viewState = nil
-    }
-    
-    var body: some View {
-        TimeInWordsView(
-            store: Store(
-                initialState: TimeInWordsState(
-                    hour: entry.hour,
-                    minutes: entry.minutes,
-                    accessory: entry.accessory
-                ),
-                reducer: timeInWidgetReducer,
-                environment: .mock(
-                    mainQueue: DispatchQueue.main.eraseToAnyScheduler()
-                )
-            )
-        )
-    }
-}
-
-@main
-struct WordClockWidget: Widget {
-    let kind: String = "WordClockWidget"
-    
-    var body: some WidgetConfiguration {
-        StaticConfiguration(kind: kind, provider: Provider()) { entry in
-            WordClockWidgetView(entry: entry)
-        }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
-    }
-}
 
 struct WordClockWidget_Previews: PreviewProvider {
     static var previews: some View {
@@ -248,6 +223,24 @@ struct WordClockWidget_Large_Previews: PreviewProvider {
                 accessory: .o_clock
             )
         ).previewContext(WidgetPreviewContext(family: .systemLarge))
+    }
+}
+
+struct TimeInWordsView_fivePastEight_Previews: PreviewProvider {
+    static var previews: some View {
+        TimeInWordsView(
+            store: Store(
+                initialState: TimeInWordsState(
+                    hour: .nine,
+                    minutes: .five,
+                    accessory: .past
+                ),
+                reducer: timeInWordsReducer,
+                environment: .mock(
+                    mainQueue: DispatchQueue.main.eraseToAnyScheduler()
+                )
+            )
+        )
     }
 }
 

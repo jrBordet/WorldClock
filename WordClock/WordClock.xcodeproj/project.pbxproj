@@ -25,10 +25,6 @@
 		3852F4B8281BB6FD00D869FC /* WordClockWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3852F4B7281BB6FD00D869FC /* WordClockWidget.swift */; };
 		3852F4BA281BB70000D869FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3852F4B9281BB70000D869FC /* Assets.xcassets */; };
 		3852F4BE281BB70000D869FC /* WordClockWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3852F4B1281BB6FC00D869FC /* WordClockWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		3852F4E0281BEBE100D869FC /* WordNumber+12.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3852F4DC281BEBE000D869FC /* WordNumber+12.swift */; };
-		3852F4E1281BEBE100D869FC /* TimeInWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3852F4DD281BEBE000D869FC /* TimeInWords.swift */; };
-		3852F4E2281BEBE100D869FC /* WordNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3852F4DE281BEBE000D869FC /* WordNumber.swift */; };
-		3852F4E3281BEBE100D869FC /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3852F4DF281BEBE000D869FC /* Time.swift */; };
 		3852F4EE281C25FC00D869FC /* TimeInWordsClipApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3852F4ED281C25FC00D869FC /* TimeInWordsClipApp.swift */; };
 		3852F4F0281C25FC00D869FC /* TimeInWordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3852F4EF281C25FC00D869FC /* TimeInWordsView.swift */; };
 		3852F4F2281C25FF00D869FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3852F4F1281C25FF00D869FC /* Assets.xcassets */; };
@@ -206,10 +202,6 @@
 		3852F4B9281BB70000D869FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3852F4BB281BB70000D869FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3852F4C3281BBB0E00D869FC /* WordClock.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WordClock.entitlements; sourceTree = "<group>"; };
-		3852F4DC281BEBE000D869FC /* WordNumber+12.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WordNumber+12.swift"; sourceTree = "<group>"; };
-		3852F4DD281BEBE000D869FC /* TimeInWords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeInWords.swift; sourceTree = "<group>"; };
-		3852F4DE281BEBE000D869FC /* WordNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordNumber.swift; sourceTree = "<group>"; };
-		3852F4DF281BEBE000D869FC /* Time.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
 		3852F4EB281C25FC00D869FC /* TimeInWordsClip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeInWordsClip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3852F4ED281C25FC00D869FC /* TimeInWordsClipApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeInWordsClipApp.swift; sourceTree = "<group>"; };
 		3852F4EF281C25FC00D869FC /* TimeInWordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeInWordsView.swift; sourceTree = "<group>"; };
@@ -378,23 +370,11 @@
 		3852F4B6281BB6FC00D869FC /* WordClockWidget */ = {
 			isa = PBXGroup;
 			children = (
-				3852F4DB281BEBE000D869FC /* TimeInWords */,
 				3852F4B7281BB6FD00D869FC /* WordClockWidget.swift */,
 				3852F4B9281BB70000D869FC /* Assets.xcassets */,
 				3852F4BB281BB70000D869FC /* Info.plist */,
 			);
 			path = WordClockWidget;
-			sourceTree = "<group>";
-		};
-		3852F4DB281BEBE000D869FC /* TimeInWords */ = {
-			isa = PBXGroup;
-			children = (
-				3852F4DC281BEBE000D869FC /* WordNumber+12.swift */,
-				3852F4DD281BEBE000D869FC /* TimeInWords.swift */,
-				3852F4DE281BEBE000D869FC /* WordNumber.swift */,
-				3852F4DF281BEBE000D869FC /* Time.swift */,
-			);
-			path = TimeInWords;
 			sourceTree = "<group>";
 		};
 		3852F4EC281C25FC00D869FC /* TimeInWordsClip */ = {
@@ -1003,11 +983,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3852F4E2281BEBE100D869FC /* WordNumber.swift in Sources */,
 				3852F4B8281BB6FD00D869FC /* WordClockWidget.swift in Sources */,
-				3852F4E3281BEBE100D869FC /* Time.swift in Sources */,
-				3852F4E1281BEBE100D869FC /* TimeInWords.swift in Sources */,
-				3852F4E0281BEBE100D869FC /* WordNumber+12.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1140,7 +1116,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 29Q5J7K7B2;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jrbordet.WordClockWatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1153,7 +1129,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 29Q5J7K7B2;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jrbordet.WordClockWatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1173,7 +1149,7 @@
 				IBSC_MODULE = WordClockWatch_WatchKit_Extension;
 				INFOPLIST_KEY_CFBundleDisplayName = "WordClockWatch WatchKit App";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jrbordet.WordClockWatch.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -1198,7 +1174,7 @@
 				IBSC_MODULE = WordClockWatch_WatchKit_Extension;
 				INFOPLIST_KEY_CFBundleDisplayName = "WordClockWatch WatchKit App";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jrbordet.WordClockWatch.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -1222,7 +1198,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "WordClockWatch WatchKit Extension/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "WordClockWatch WatchKit Extension";
-				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = WordClockWatch_WatchKit_Extension.ComplicationController;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1230,7 +1206,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jrbordet.WordClockWatch.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
@@ -1254,7 +1230,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "WordClockWatch WatchKit Extension/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "WordClockWatch WatchKit Extension";
-				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = WordClockWatch_WatchKit_Extension.ComplicationController;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1262,7 +1238,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jrbordet.WordClockWatch.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
@@ -1373,7 +1349,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jrbordet.thewordclock.WordClockWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1402,7 +1378,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jrbordet.thewordclock.WordClockWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1436,7 +1412,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jrbordet.thewordclock.Clip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1469,7 +1445,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jrbordet.thewordclock.Clip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1698,7 +1674,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jrbordet.thewordclock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1731,7 +1707,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jrbordet.thewordclock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
